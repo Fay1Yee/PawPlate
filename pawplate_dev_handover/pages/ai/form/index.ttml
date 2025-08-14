@@ -1,0 +1,13 @@
+
+<view class="page">
+  <view class="glass" style="padding:16px;">
+    <text class="h2">填写宠物信息</text>
+    <picker mode="selector" range="{{speciesRange}}" bindchange="onSpecies"><view class="input">物种：{{form.species}}</view></picker>
+    <input class="input" placeholder="品种" bindinput="onInput" data-key="breed"/>
+    <input class="input" placeholder="年龄（月）" type="number" bindinput="onInput" data-key="age_months"/>
+    <input class="input" placeholder="体重（kg）" type="digit" bindinput="onInput" data-key="weight_kg"/>
+    <input class="input" placeholder="过敏项（逗号分隔）" bindinput="onInput" data-key="allergies"/>
+    <input class="input" placeholder="口味偏好（逗号分隔）" bindinput="onInput" data-key="taste"/>
+  </view>
+  <view style="position:fixed;left:20px;right:20px;bottom:20px;"><view class="btn-primary" bindtap="submit">立即生成</view></view>
+</view>

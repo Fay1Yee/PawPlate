@@ -1,0 +1,9 @@
+<view class="step-card">
+  <view class="step-header">
+    <text class="step-number">步骤 {{step.number}}</text>
+  </view>
+  <view class="step-content">
+    <text class="step-description">{{step.description}}</text>
+    <image wx:if="{{step.image}}" class="step-image" src="{{step.image}}" mode="widthFix"></image>
+  </view>
+</view>

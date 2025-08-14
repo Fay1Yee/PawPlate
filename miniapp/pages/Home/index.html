@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>PawPlate - Home</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 10px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        .page {
+            max-width: 100%;
+            width: 100%;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 15px;
+            backdrop-filter: blur(10px);
+            box-sizing: border-box;
+        }
+        @media (min-width: 375px) {
+            .page {
+                max-width: 375px;
+                padding: 20px;
+            }
+            body {
+                padding: 20px;
+            }
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        .row {
+            display: flex;
+            gap: 10px;
+        }
+        .col-l, .col-r {
+            flex: 1;
+        }
+        .h2 {
+            font-size: 18px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .ing-list {
+            margin: 10px 0;
+        }
+        .ing {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .name {
+            color: #333;
+        }
+        .g {
+            color: #666;
+            font-weight: bold;
+        }
+        .btn-secondary {
+            background: #f0f0f0;
+            color: #333;
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .btn-primary {
+            background: linear-gradient(45deg, #ff6b6b, #feca57);
+            color: white;
+            padding: 15px;
+            border-radius: 25px;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 20px 0;
+        }
+        .pet-card {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(45deg, #a8edea, #fed6e3);
+        }
+        .recipe-grid {
+            column-count: 2;
+            column-gap: 10px;
+            margin-top: 12px;
+        }
+        .recipe-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            width: 100%;
+            cursor: pointer;
+            margin-bottom: 10px;
+            break-inside: avoid;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .recipe-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        .recipe-card-image {
+            width: 100%;
+            height: 80px;
+            background: linear-gradient(135deg, #F6C642, #E59A00);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 11px;
+        }
+        .recipe-card-content {
+            padding: 12px;
+        }
+        .recipe-card-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: #333;
+            margin: 0 0 6px 0;
+            line-height: 1.2;
+        }
+        .recipe-card-desc {
+            font-size: 11px;
+            color: #666;
+            line-height: 1.3;
+            margin: 0;
+        }
+        .product-shelf {
+            text-align: center;
+        }
+        .product-carousel {
+            position: relative;
+            height: 180px;
+            width: 100%;
+            margin-top: 10px;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+        .product-page {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            padding: 5px;
+            box-sizing: border-box;
+            transition: transform 0.5s ease-in-out;
+        }
+        .product-page.active {
+            display: grid;
+            animation: slideIn 0.5s ease-in-out;
+        }
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 6px;
+            margin-top: 8px;
+        }
+        .indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .indicator.active {
+            background: #F6C642;
+        }
+        .product-item {
+            aspect-ratio: 1;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 6px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+        }
+        .product-item .product-image {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #F6C642, #E59A00);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 10px;
+            margin-bottom: 8px;
+        }
+        .product-item .product-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+        .product-item .product-name {
+            font-size: 12px;
+            font-weight: 600;
+            color: #333;
+            text-align: center;
+            line-height: 1.2;
+            margin: 0;
+        }
+        .product-item .product-btn {
+            background: linear-gradient(135deg, #F6C642, #E59A00);
+            color: #fff;
+            border-radius: 6px;
+            padding: 6px 12px;
+            text-align: center;
+            font-weight: 600;
+            border: none;
+            font-size: 11px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="page home">
+        <!-- Top row: left = video recipe, right = product shelf -->
+        <div class="row">
+            <div class="col-l glass card">
+                <div class="h2">Recipe in Video</div>
+                <div class="ing-list" id="ingredients">
+                    <!-- Ingredients will be loaded via JavaScript -->
+                </div>
+                <div class="btn-secondary mini">View Recipe</div>
+            </div>
+            <div class="col-r glass card">
+                <div class="product-shelf">
+                    <div class="h2">Recommended Products</div>
+                    <div class="product-carousel" id="products">
+                        <!-- Product carousel will be loaded via JavaScript -->
+                    </div>
+                    <div class="carousel-indicators" id="indicators">
+                        <!-- Indicators will be loaded via JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Middle: 3D pet -->
+        <div class="glass card pet-card">
+            <div style="font-size: 48px; margin-bottom: 10px;">🐱</div>
+            <div>Virtual pet is resting</div>
+        </div>
+
+        <!-- Bottom: recommendations -->
+        <div class="glass card">
+            <div class="h2">Recommended Recipes</div>
+            <div id="recommendations">
+                <!-- Recommended recipes will be loaded via JavaScript -->
+            </div>
+        </div>
+
+        <!-- Fixed bottom CTA -->
+        <div class="btn-primary">AI Customize</div>
+    </div>
+
+    <script>
+        // Simulate mini-app environment data loading
+        async function loadData() {
+            try {
+                const response = await fetch('../../assets/data/recipes.json');
+                const recipes = await response.json();
+                
+                // Get URL parameters
+                const urlParams = new URLSearchParams(window.location.search);
+                const rid = urlParams.get('rid') || 'cat_001';
+                const species = urlParams.get('species') || 'cat';
+                
+                // Find current recipe
+                const currentRecipe = recipes.find(r => r.recipe_id === rid) || recipes[0];
+                
+                // Display ingredients
+                const ingredientsEl = document.getElementById('ingredients');
+                if (currentRecipe && currentRecipe.ingredients_json) {
+                    ingredientsEl.innerHTML = currentRecipe.ingredients_json.map(ing => 
+                        `<div class="ing"><span class="name">${ing.name}</span><span class="g">${ing.g}g</span></div>`
+                    ).join('');
+                } else {
+                    ingredientsEl.innerHTML = '<div class="ing">Loading ingredients...</div>';
+                }
+                
+                // Display recommended recipes
+                const recommendationsEl = document.getElementById('recommendations');
+                const recommendations = recipes.filter(r => r.recipe_id !== rid).slice(0, 6);
+                
+                // Create varied recipe descriptions for waterfall effect
+                const recipeDescriptions = [
+                    'A nutritious and balanced meal perfect for adult cats. Rich in protein and essential vitamins.',
+                    'Quick and easy recipe with fresh ingredients.',
+                    'Omega-3 rich meal that supports healthy skin and coat. Made with premium fish and vegetables for optimal nutrition.',
+                    'Simple yet delicious combination of lean protein and fiber.',
+                    'Gourmet recipe featuring organic ingredients and herbs. Perfect for special occasions or daily feeding.',
+                    'Vet-recommended formula with probiotics for digestive health.'
+                ];
+                
+                recommendationsEl.innerHTML = `<div class="recipe-grid">${recommendations.map((recipe, index) => 
+                    `<div class="recipe-card">
+                        <div class="recipe-card-image">Recipe Image</div>
+                        <div class="recipe-card-content">
+                            <div class="recipe-card-title">${recipe.title_en || recipe.title_cn}</div>
+                            <div class="recipe-card-desc">${recipeDescriptions[index] || (recipe.ingredients_json ? recipe.ingredients_json.map(i => i.name).join(', ') : 'Ingredient info')}</div>
+                        </div>
+                    </div>`
+                ).join('')}</div>`;
+                
+                // Display recommended product carousel
+                const productsEl = document.getElementById('products');
+                const indicatorsEl = document.getElementById('indicators');
+                const products = species === 'dog' ? [
+                    'Adult Dog Food 2kg',
+                    'Adult Dog Treats 500g',
+                    'Adult Dog Nutrition Paste 120g',
+                    'Adult Dog Calcium Tablets 60pcs',
+                    'Adult Dog Vitamins 30pcs',
+                    'Adult Dog Probiotics 20g'
+                ] : [
+                    'Adult Cat Food 2kg',
+                    'Adult Cat Treats 300g',
+                    'Adult Cat Nutrition Paste 120g',
+                    'Adult Cat Hairball Paste 100g',
+                    'Adult Cat Vitamins 30pcs',
+                    'Adult Cat Probiotics 15g'
+                ];
+                
+                // Group products by four per page
+                const pagedProducts = [];
+                for (let i = 0; i < products.length; i += 4) {
+                    pagedProducts.push(products.slice(i, i + 4));
+                }
+                
+                productsEl.innerHTML = pagedProducts.map((page, pageIndex) => 
+                    `<div class="product-page ${pageIndex === 0 ? 'active' : ''}">
+                        ${page.map(product => `
+                            <div class="product-item">
+                                <div class="product-image">Product Image</div>
+                                <div class="product-content">
+                                    <div class="product-name">${product}</div>
+                                    <button class="product-btn">Buy</button>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>`
+                ).join('');
+                
+                // Create indicators
+                indicatorsEl.innerHTML = pagedProducts.map((_, index) => 
+                    `<div class="indicator ${index === 0 ? 'active' : ''}" data-index="${index}"></div>`
+                ).join('');
+                
+                // Start product carousel
+                let currentPageIndex = 0;
+                const productPages = productsEl.querySelectorAll('.product-page');
+                const indicators = indicatorsEl.querySelectorAll('.indicator');
+                
+                function showPage(index) {
+                    productPages[currentPageIndex].classList.remove('active');
+                    indicators[currentPageIndex].classList.remove('active');
+                    currentPageIndex = index;
+                    productPages[currentPageIndex].classList.add('active');
+                    indicators[currentPageIndex].classList.add('active');
+                }
+                
+                // Add click handlers to indicators
+                indicators.forEach((indicator, index) => {
+                    indicator.addEventListener('click', () => showPage(index));
+                });
+                
+                // Auto-rotate carousel
+                setInterval(() => {
+                    const nextIndex = (currentPageIndex + 1) % productPages.length;
+                    showPage(nextIndex);
+                }, 4000);
+                
+                console.log('Data loading completed:', { currentRecipe, recommendations, products });
+                
+            } catch (error) {
+                console.error('Data loading failed:', error);
+                document.getElementById('ingredients').innerHTML = '<div class="ing">Data loading failed</div>';
+            }
+        }
+        
+        // Execute when page loads
+        loadData();
+    </script>
+</body>
+</html>

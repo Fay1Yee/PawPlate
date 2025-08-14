@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "product-shelf": "/components/product-shelf/index",
+    "virtual-pet": "/components/virtual-pet/index",
+    "recipe-card": "/components/recipe-card/index"
+  }
+}

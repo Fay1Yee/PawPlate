@@ -1,0 +1,15 @@
+
+.home{ padding: 12px 12px 96px 12px; background: #FFF9EB; color:#3A2E16; }
+.row{ display:flex; gap:12px; align-items:stretch; }
+.col-l{ flex: 2 1 64%; }
+.col-r{ flex: 1 1 36%; }
+.card{ padding: 14px; border-radius: 24px; }
+.glass{ background: rgba(255,246,227,.72); backdrop-filter: blur(16px); box-shadow: 0 10px 28px rgba(58,46,22,.14); }
+.h2{ font-size: 18px; font-weight: 800; }
+.ing-list{ margin-top:8px; }
+.ing{ display:flex; justify-content:space-between; padding:8px 0; border-bottom: 1px dashed rgba(58,46,22,.08); }
+.ing:last-child{ border-bottom: 0; }
+.btn-secondary.mini{ margin-top:12px; width: 120px; text-align:center; padding:10px 12px; border-radius:20px; background: rgba(0,0,0,.06); font-weight:700; }
+.pet-card{ margin-top: 12px; padding: 0; overflow: hidden; }
+.bottom-cta{ position: fixed; left: 20px; right: 20px; bottom: calc(16px + env(safe-area-inset-bottom)); }
+.btn-primary{ background: linear-gradient(180deg,#F6C642, #E59A00); color:#fff; border-radius: 22px; text-align:center; padding: 14px 18px; font-weight: 800; }

@@ -1,0 +1,11 @@
+
+<view class="shelf">
+  <text class="title">推荐商品</text>
+  <scroll-view scroll-x="true" class="row">
+    <view class="card" wx:for="{{items}}" wx:key="name">
+      <view class="thumb"></view>
+      <text class="name">{{item.name}}</text>
+      <view class="btn" bindtap="buy" data-id="{{item.sku}}">购买</view>
+    </view>
+  </scroll-view>
+</view>

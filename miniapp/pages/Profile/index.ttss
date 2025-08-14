@@ -1,0 +1,40 @@
+/* Profile page styles - 卡通字体和图标 */
+.page {
+  background: radial-gradient(120% 100% at 50% 0%, #FFF9EB 0%, #FFE7A8 42%, #F6C642 100%);
+  min-height: 100vh;
+  padding: 20px;
+  color: #3A2E16;
+  font-family: var(--font-cartoon-body);
+}
+
+/* 节标题样式 */
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.h2 {
+  font-size: 18px;
+  font-weight: 400;
+  font-family: var(--font-cartoon-primary);
+  color: #3A2E16;
+  margin: 0;
+}
+
+/* 个人信息样式 */
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-cartoon-body);
+}
+
+/* Favorite item styles */
+.favorite-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-cartoon-body);
+}

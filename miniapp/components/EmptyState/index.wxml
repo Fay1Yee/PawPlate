@@ -1,0 +1,4 @@
+<!--components/EmptyState/index.wxml-->
+<view class="empty-state">
+  <text>No data</text>
+</view>

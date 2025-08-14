@@ -1,0 +1,19 @@
+{
+    "condition": {
+        "miniprogram": {
+            "current": 1755022819467,
+            "list": [
+                {
+                    "id": 1755022819467,
+                    "name": "",
+                    "pathName": "",
+                    "query": "",
+                    "scene": "",
+                    "launchFrom": "",
+                    "location": "",
+                    "mockUpdateType": "Noupdate"
+                }
+            ]
+        }
+    }
+}

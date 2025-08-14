@@ -1,0 +1,20 @@
+<view class="container">
+  <view class="header">
+    <text class="title">Recipe Recommendations</text>
+  </view>
+
+  <scroll-view class="recipe-list" scroll-y="true">
+    <view class="recipe-item" wx:for="{{recipes}}" wx:key="id" bindtap="goToRecipeDetail" data-id="{{item.id}}">
+      <image class="recipe-image" src="{{item.image}}" mode="aspectFill"></image>
+      <view class="recipe-info">
+        <text class="recipe-name">{{item.name}}</text>
+        <text class="recipe-description">{{item.description}}</text>
+        <view class="recipe-meta">
+          <text class="prep-time">Prep: {{item.prepTime}} min</text>
+          <text class="cook-time">Cook: {{item.cookTime}} min</text>
+          <text class="difficulty">Difficulty: {{item.difficulty}}</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

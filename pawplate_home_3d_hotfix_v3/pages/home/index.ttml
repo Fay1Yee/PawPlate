@@ -1,0 +1,35 @@
+
+<view class="page home">
+  <!-- Top row: left = video recipe, right = product shelf -->
+  <view class="row">
+    <view class="col-l glass card">
+      <text class="h2">视频中菜谱</text>
+      <view class="ing-list">
+        <view class="ing" wx:for="{{nowRecipe.ingredients}}" wx:key="name">
+          <text class="name">{{item.name}}</text><text class="g">{{item.grams}}g</text>
+        </view>
+      </view>
+      <view class="btn-secondary mini" bindtap="goDetail">查看做法</view>
+    </view>
+    <view class="col-r glass card">
+      <text class="h2">推荐商品</text>
+      <product-shelf items="{{productItems}}"></product-shelf>
+    </view>
+  </view>
+
+  <!-- Middle: 3D pet -->
+  <view class="glass card pet-card">
+    <virtual-pet species="{{videoMeta.species}}"></virtual-pet>
+  </view>
+
+  <!-- Bottom: recommendations -->
+  <view class="glass card">
+    <text class="h2">推荐菜谱</text>
+    <recipe-card wx:for="{{reco}}" wx:key="recipe_id" item="{{item}}"></recipe-card>
+  </view>
+
+  <!-- Fixed bottom CTA -->
+  <view class="bottom-cta">
+    <view class="btn-primary" bindtap="goAI">AI 定制</view>
+  </view>
+</view>

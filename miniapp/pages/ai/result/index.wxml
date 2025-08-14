@@ -1,0 +1,6 @@
+<!--pages/ai/result/index.wxml-->
+<view class="container">
+  <NoticeBar content="Educational content does not replace veterinary advice" />
+  <IngredientList ingredients="{{customizedRecipe.ingredients}}" />
+  <BuyButton />
+</view>

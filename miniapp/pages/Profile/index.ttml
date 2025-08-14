@@ -1,0 +1,27 @@
+
+<view class="page">
+  <view class="glass" style="padding:16px;">
+    <view class="section-header">
+      <text class="icon-pet icon-md icon-primary"></text>
+      <text class="h2">宠物档案</text>
+    </view>
+    <view class="profile-info" style="margin-top:10px;">
+      <text class="icon-info icon-sm icon-secondary"></text>
+      <text>{{profile.species}} · {{profile.breed}} · {{profile.age_months}}月 · {{profile.weight_kg}}kg</text>
+    </view>
+    <view class="btn-secondary icon-btn" style="margin-top:12px;width:160px;text-align:center;" bindtap="edit">
+      <text class="icon-edit icon-sm"></text>
+      <text>编辑档案</text>
+    </view>
+  </view>
+  <view class="glass" style="padding:16px;margin-top:16px;">
+    <view class="section-header">
+      <text class="icon-heart icon-md icon-primary"></text>
+      <text class="h2">My Favorites</text>
+    </view>
+    <view tt:for="{{favorites}}" tt:key="id" class="favorite-item" style="margin-top:10px;">
+      <text class="icon-star icon-xs icon-accent"></text>
+      <text>{{item}}</text>
+    </view>
+  </view>
+</view>

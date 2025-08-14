@@ -1,0 +1,142 @@
+
+/* Product shelf component styles - 卡通字体和图标 */
+.shelf { 
+  height: 100%;
+  background: rgba(255, 246, 227, 0.85);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 1px solid rgba(246, 198, 66, 0.3);
+  box-shadow: 
+    0 8px 32px rgba(246, 198, 66, 0.15),
+    0 4px 16px rgba(255, 255, 255, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  padding: 20px;
+  font-family: var(--font-cartoon-body);
+}
+
+/* 商品架标题样式 */
+.shelf-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.title { 
+  font-size: 18px; 
+  font-weight: 400; 
+  font-family: var(--font-cartoon-primary);
+  color: #8B4513;
+}
+
+.product-swiper {
+  height: 360px;
+  width: 100%;
+  border-radius: 12px;
+}
+
+.product-pair {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.product-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.product-row {
+  display: flex;
+  gap: 12px;
+}
+
+.product-square {
+  flex: 1;
+  aspect-ratio: 1/1;
+  border-radius: 16px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 12px rgba(229, 154, 0, 0.1);
+}
+
+.product-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.thumb {
+  flex: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  background: rgba(0,0,0,0.06);
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+}
+
+.placeholder-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #F6C642, #E59A00);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholder-text {
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  padding: 8px;
+}
+
+.name {
+  font-size: 14px;
+  font-family: var(--font-cartoon-body);
+  color: #8B4513;
+  margin: 8px 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn {
+  background: linear-gradient(135deg, #F6C642, #E59A00);
+  color: #fff;
+  border-radius: 8px;
+  padding: 6px 8px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.swiper-indicator {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.indicator-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(58, 46, 22, 0.2);
+}

@@ -1,0 +1,18 @@
+
+<view class="page">
+  <view class="glass" style="padding:16px;"><text class="h2">AI 定制结果</text>
+    <text style="display:block;margin-top:8px;">总克数：{{result.adjusted_portion_g}} g</text>
+    <text style="display:block;margin-top:4px;">每日喂食：{{result.feeding_frequency_per_day}} 次</text>
+  </view>
+  <view class="glass" style="padding:16px;margin-top:16px;">
+    <text class="h2">配料克数</text>
+    <view wx:for="{{result.adjusted_ingredients}}" wx:key="name" style="display:flex;justify-content:space-between;margin-top:10px;">
+      <text>{{item.name}}</text><text>{{item.grams}}g</text>
+    </view>
+  </view>
+  <view class="glass" style="padding:12px;margin-top:16px;background:rgba(246,198,66,0.3);"><text>替代食材：{{result.alt_ingredients.join('、')}}</text></view>
+  <view style="position:fixed;left:20px;right:20px;bottom:20px;display:flex;gap:12px;">
+    <view class="btn-secondary" bindtap="goRecipe">返回菜谱</view>
+    <view class="btn-primary" style="flex:1;" bindtap="goBuy">一键买齐</view>
+  </view>
+</view>

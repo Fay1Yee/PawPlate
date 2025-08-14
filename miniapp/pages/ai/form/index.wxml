@@ -1,0 +1,9 @@
+<!--pages/ai/form/index.wxml-->
+<view class="container">
+  <form bindsubmit="formSubmit">
+    <input name="weight" placeholder="Pet weight (kg)" />
+    <input name="age" placeholder="Pet age" />
+    <input name="allergies" placeholder="Allergies (comma separated)" />
+    <button form-type="submit">Submit</button>
+  </form>
+</view>

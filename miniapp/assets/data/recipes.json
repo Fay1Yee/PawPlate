@@ -1,0 +1,64 @@
+[
+  {
+    "recipe_id": "cat_001",
+    "species": "cat",
+    "title_cn": "南瓜鸡肉粥（猫）",
+    "title_en": "Pumpkin Chicken Porridge (Cat)",
+    "base_portion_g": "250",
+    "imageUrl": "cdn://recipes/cat_001.webp",
+    "ingredients_json": [
+      {
+        "name": "Chicken Breast",
+        "g": 120
+      },
+      {
+        "name": "Pumpkin",
+        "g": 100
+      },
+      {
+        "name": "Cat Nutrition Powder",
+        "g": 5
+      },
+      {
+        "name": "Water",
+        "g": 300
+      }
+    ],
+    "steps_cn": "1. Dice chicken breast and blanch; 2. Steam pumpkin and mash; 3. Add water to pot, simmer until soft; 4. Turn off heat, add nutrition powder and mix well, cool before feeding.",
+    "cautions_cn": "Do not add salt, oil, onions, scallions, garlic, chocolate, grapes, xylitol or other forbidden ingredients.",
+    "tags": "Easy to digest|Soft|Beginner friendly"
+  },
+  {
+    "recipe_id": "dog_001",
+    "species": "dog",
+    "title_cn": "三文鱼藜麦饭（犬）",
+    "title_en": "Salmon Quinoa Bowl (Dog)",
+    "base_portion_g": "300",
+    "imageUrl": "cdn://recipes/dog_001.webp",
+    "ingredients_json": [
+      {
+        "name": "Salmon",
+        "g": 120
+      },
+      {
+        "name": "Quinoa",
+        "g": 60
+      },
+      {
+        "name": "Carrot",
+        "g": 60
+      },
+      {
+        "name": "Broccoli",
+        "g": 60
+      },
+      {
+        "name": "Water",
+        "g": 350
+      }
+    ],
+    "steps_cn": "1. Rinse and cook quinoa; 2. Remove skin and bones from salmon, steam; 3. Cut carrot and broccoli into small pieces, blanch; 4. Mix well and cool.",
+    "cautions_cn": "Avoid bones and spines; feed small amounts initially to observe digestive reaction.",
+    "tags": "High protein|Omega-3|Suitable for adult dogs"
+  }
+]

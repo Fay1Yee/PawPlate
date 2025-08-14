@@ -1,0 +1,4 @@
+<!--components/NoticeBar/index.wxml-->
+<view class="notice-bar">
+  <text>{{content}}</text>
+</view>

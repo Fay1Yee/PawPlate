@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "precommit": "bash scripts/check-tokens.sh"
+  }
+}

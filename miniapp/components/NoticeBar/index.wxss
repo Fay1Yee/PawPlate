@@ -1,0 +1,7 @@
+/* components/NoticeBar/index.wxss */
+.notice-bar {
+  background-color: #fefcec;
+  color: #f76a24;
+  padding: 10px;
+  text-align: center;
+}

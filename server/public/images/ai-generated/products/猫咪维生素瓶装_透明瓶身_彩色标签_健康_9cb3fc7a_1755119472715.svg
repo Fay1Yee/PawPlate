@@ -1,0 +1,10 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100%" height="100%" fill="#9cb3fc20"/>
+      <rect x="50" y="50" width="300" height="200" rx="20" fill="#9cb3fc40"/>
+      <circle cx="200" cy="120" r="30" fill="#9cb3fc"/>
+      <rect x="80" y="180" width="240" height="20" rx="10" fill="#9cb3fc60"/>
+      <rect x="120" y="220" width="160" height="15" rx="7" fill="#9cb3fc40"/>
+      <text x="200" y="320" text-anchor="middle" font-family="Arial" font-size="14" fill="#9cb3fc">
+        猫咪维生素瓶装，透明瓶身，彩色标签，健康...
+      </text>
+    </svg>

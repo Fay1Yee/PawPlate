@@ -1,0 +1,80 @@
+
+<view class="page">
+  <!-- Chat Hero Image -->
+  <view class="chat-hero" tt:if="{{chatHeroUrl}}">
+    <image mode="aspectFill" src="{{chatHeroUrl}}" class="chat-hero-img"/>
+    <view class="chat-hero-overlay">
+      <view class="hero-title-wrapper">
+        <text class="icon-ai-custom icon-lg icon-primary"></text>
+        <text class="chat-hero-title">AI Nutritionist</text>
+      </view>
+      <text class="chat-hero-subtitle">Customize exclusive nutrition plans for your beloved pet</text>
+    </view>
+  </view>
+  
+  <!-- Chat History -->
+  <scroll-view class="chat-container" scroll-y="true" scroll-top="{{scrollTop}}">
+    <view tt:for="{{messages}}" tt:key="index" class="message-item">
+      <view class="message {{item.role === 'user' ? 'user-message' : 'ai-message'}}">
+        <view class="message-content">{{item.content}}</view>
+        <view class="message-time">{{item.time}}</view>
+      </view>
+    </view>
+    
+    <!-- AI Typing Indicator -->
+    <view tt:if="{{isAiTyping}}" class="message-item">
+      <view class="message ai-message">
+        <view class="message-content typing-indicator">
+          <text>AI is thinking</text>
+          <view class="dots">
+            <view class="dot"></view>
+            <view class="dot"></view>
+            <view class="dot"></view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  
+  <!-- Input Area -->
+  <view class="input-container">
+    <view class="input-wrapper">
+      <input 
+        class="chat-input" 
+        placeholder="{{inputPlaceholder}}" 
+        value="{{userInput}}"
+        bindinput="onInputChange"
+        bindconfirm="sendMessage"
+        disabled="{{isAiTyping || isCompleted}}"
+      />
+      <view 
+        class="send-btn {{userInput.trim() ? 'active' : ''}}" 
+        bindtap="sendMessage"
+      >
+        <text class="icon-chat icon-sm"></text>
+        <text>Send</text>
+      </view>
+    </view>
+    
+    <!-- Quick Reply Options -->
+    <view tt:if="{{quickReplies.length > 0}}" class="quick-replies">
+      <view 
+        tt:for="{{quickReplies}}" 
+        tt:key="index" 
+        class="quick-reply-btn"
+        bindtap="selectQuickReply"
+        data-reply="{{item}}"
+      >
+        {{item}}
+      </view>
+    </view>
+  </view>
+  
+  <!-- Completion Button -->
+  <view tt:if="{{isCompleted}}" class="completion-container">
+    <view class="btn-primary icon-btn" bindtap="generateResult">
+      <text class="icon-star icon-md"></text>
+      <text>Generate Custom Result</text>
+    </view>
+  </view>
+</view>

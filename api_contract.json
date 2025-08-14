@@ -1,0 +1,68 @@
+{
+  "models": {
+    "Ingredient": {
+      "name": "string",
+      "grams": "number",
+      "brand": "string?",
+      "sku_map": {
+        "ddmc_sku_id": "string?",
+        "jddj_sku_id": "string?"
+      }
+    },
+    "Recipe": {
+      "recipe_id": "string",
+      "species": "enum(cat|dog)",
+      "title_cn": "string",
+      "title_en": "string?",
+      "base_portion_g": "number",
+      "ingredients": "Ingredient[]",
+      "steps_cn": "string",
+      "cautions_cn": "string",
+      "tags": "string[]"
+    },
+    "PetProfile": {
+      "species": "enum(cat|dog)",
+      "breed": "string",
+      "age_months": "number",
+      "weight_kg": "number",
+      "allergies": "string[]",
+      "taste": "string[]"
+    },
+    "AIRequest": {
+      "recipe_id": "string",
+      "pet_profile": "PetProfile"
+    },
+    "AIResponse": {
+      "recipe_id": "string",
+      "adjusted_portion_g": "number",
+      "adjusted_ingredients": "Ingredient[]",
+      "feeding_frequency_per_day": "number",
+      "notes_cn": "string",
+      "alt_ingredients": "string[]"
+    },
+    "PurchaseLinkRequest": {
+      "ingredients": "Ingredient[]",
+      "city": "string",
+      "platform": "enum(ddmc|jddj)"
+    },
+    "PurchaseLinkResponse": {
+      "platform": "string",
+      "cart_url": "string",
+      "unmatched_items": "Ingredient[]",
+      "message": "string"
+    }
+  },
+  "endpoints": {
+    "GET /api/recipe/:id": {
+      "resp": "Recipe"
+    },
+    "POST /api/ai/customize": {
+      "req": "AIRequest",
+      "resp": "AIResponse"
+    },
+    "POST /api/purchase/link": {
+      "req": "PurchaseLinkRequest",
+      "resp": "PurchaseLinkResponse"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+
+<view class="recipe-card" bindtap="open" data-id="{{item.recipe_id}}">
+  <image class="recipe-image" src="{{item.imageUrl}}" mode="aspectFill" tt:if="{{item.imageUrl}}"/>
+  <view class="recipe-content">
+    <view class="recipe-title-wrapper">
+      <text class="icon-recipe icon-sm icon-primary"></text>
+      <text class="recipe-title">{{item.title_cn}}</text>
+    </view>
+    <view class="recipe-ingredients-wrapper">
+      <text class="icon-ingredient icon-xs icon-secondary"></text>
+      <text class="recipe-ingredients">{{ingredientsText}}</text>
+    </view>
+    <view class="recipe-tag-wrapper" tt:if="{{item.tags}}">
+      <text class="icon-tag icon-xs icon-accent"></text>
+      <text class="recipe-tag">{{item.tags.join(' / ')}}</text>
+    </view>
+  </view>
+</view>

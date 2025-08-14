@@ -1,0 +1,7 @@
+
+.page{ background:#FFF9EB; padding:16px; color:#3A2E16; font-family: system-ui,'SF Pro Rounded','Nunito',sans-serif;}
+.glass{ background: rgba(255, 246, 227, .68); backdrop-filter: blur(16px); border-radius: 24px; box-shadow: 0 10px 28px rgba(58,46,22,0.14); }
+
+
+/* text defaults */
+.text, text { line-height: 1.5; }

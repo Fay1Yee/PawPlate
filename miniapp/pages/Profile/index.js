@@ -1,0 +1,1 @@
+Page({ data:{ profile:{species:'cat',breed:'英短',age_months:12,weight_kg:3.8}, favorites:['南瓜鸡肉粥（猫）'] }, edit(){ tt.showToast({ title:'TODO: 编辑档案', icon:'none' }); } });

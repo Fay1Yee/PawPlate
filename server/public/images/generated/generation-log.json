@@ -1,0 +1,330 @@
+[
+  {
+    "name": "Adult Cat Food 2kg",
+    "imageUrl": "/images/products/Adult_Cat_Food_2kg_placeholder.svg",
+    "imagePath": "/Users/zephyruszhou/Documents/DOU2025/PawPlate/server/public/images/products/Adult_Cat_Food_2kg_placeholder.svg",
+    "generatedAt": "2025-08-13T20:53:07.878Z",
+    "success": true
+  },
+  {
+    "name": "Cat Treats 500g",
+    "imageUrl": "/images/products/Cat_Treats_500g_placeholder.svg",
+    "imagePath": "/Users/zephyruszhou/Documents/DOU2025/PawPlate/server/public/images/products/Cat_Treats_500g_placeholder.svg",
+    "generatedAt": "2025-08-13T20:53:08.933Z",
+    "success": true
+  },
+  {
+    "name": "Cat Nutrition Paste",
+    "imageUrl": "/images/products/Cat_Nutrition_Paste_placeholder.svg",
+    "imagePath": "/Users/zephyruszhou/Documents/DOU2025/PawPlate/server/public/images/products/Cat_Nutrition_Paste_placeholder.svg",
+    "generatedAt": "2025-08-13T20:53:09.971Z",
+    "success": true
+  },
+  {
+    "name": "Cat Vitamins",
+    "imageUrl": "/images/products/Cat_Vitamins_placeholder.svg",
+    "imagePath": "/Users/zephyruszhou/Documents/DOU2025/PawPlate/server/public/images/products/Cat_Vitamins_placeholder.svg",
+    "generatedAt": "2025-08-13T20:53:11.009Z",
+    "success": true
+  },
+  {
+    "name": "Pet Profile Avatar",
+    "imageUrl": "/images/products/Pet_Profile_Avatar_placeholder.svg",
+    "imagePath": "/Users/zephyruszhou/Documents/DOU2025/PawPlate/server/public/images/products/Pet_Profile_Avatar_placeholder.svg",
+    "generatedAt": "2025-08-13T20:53:12.052Z",
+    "success": true
+  },
+  {
+    "name": "Recipe Default",
+    "imageUrl": "/images/products/Recipe_Default_placeholder.svg",
+    "imagePath": "/Users/zephyruszhou/Documents/DOU2025/PawPlate/server/public/images/products/Recipe_Default_placeholder.svg",
+    "generatedAt": "2025-08-13T20:53:13.086Z",
+    "success": true
+  },
+  {
+    "name": "Adult Cat Food 2kg",
+    "type": "product",
+    "category": "pet-food",
+    "prompt": "卡通毛玻璃风格插画，暖黄色主色，柔和体积光，圆角大卡片与玻璃高光，细腻颗粒点缀，背景简洁留白或浅黄渐变，无文字，无水印，高分辨率, Adult Cat Food 2kg宠物食品包装，精美包装袋或罐头，产品居中展示，温馨宠物用品风格",
+    "fileName": "Adult_Cat_Food_2kg_product.jpg",
+    "imageUrl": "/images/products/Adult_Cat_Food_2kg_placeholder.svg",
+    "imagePath": "/Users/zephyruszhou/Documents/DOU2025/PawPlate/server/public/images/products/Adult_Cat_Food_2kg_placeholder.svg",
+    "generatedAt": "2025-08-13T20:59:02.888Z",
+    "success": true
+  },
+  {
+    "name": "Cat Treats 500g",
+    "type": "product",
+    "category": "pet-food",
+    "prompt": "卡通毛玻璃风格插画，暖黄色主色，柔和体积光，圆角大卡片与玻璃高光，细腻颗粒点缀，背景简洁留白或浅黄渐变，无文字，无水印，高分辨率, Cat Treats 500g宠物食品包装，精美包装袋或罐头，产品居中展示，温馨宠物用品风格",
+    "fileName": "Cat_Treats_500g_product.jpg",
+    "imageUrl": "/images/products/Cat_Treats_500g_placeholder.svg",
+    "imagePath": "/Users/zephyruszhou/Documents/DOU2025/PawPlate/server/public/images/products/Cat_Treats_500g_placeholder.svg",
+    "generatedAt": "2025-08-13T20:59:03.926Z",
+    "success": true
+  },
+  {
+    "name": "Cat Nutrition Paste",
+    "type": "product",
+    "category": "nutrition",
+    "prompt": "卡通毛玻璃风格插画，暖黄色主色，柔和体积光，圆角大卡片与玻璃高光，细腻颗粒点缀，背景简洁留白或浅黄渐变，无文字，无水印，高分辨率, Cat Nutrition Paste宠物营养品，瓶装或袋装营养补充剂，健康活力主题",
+    "fileName": "Cat_Nutrition_Paste_product.jpg",
+    "imageUrl": "/images/products/Cat_Nutrition_Paste_placeholder.svg",
+    "imagePath": "/Users/zephyruszhou/Documents/DOU2025/PawPlate/server/public/images/products/Cat_Nutrition_Paste_placeholder.svg",
+    "generatedAt": "2025-08-13T20:59:04.962Z",
+    "success": true
+  },
+  {
+    "name": "Cat Vitamins",
+    "type": "product",
+    "category": "nutrition",
+    "prompt": "卡通毛玻璃风格插画，暖黄色主色，柔和体积光，圆角大卡片与玻璃高光，细腻颗粒点缀，背景简洁留白或浅黄渐变，无文字，无水印，高分辨率, Cat Vitamins宠物营养品，瓶装或袋装营养补充剂，健康活力主题",
+    "fileName": "Cat_Vitamins_product.jpg",
+    "imageUrl": "/images/products/Cat_Vitamins_placeholder.svg",
+    "imagePath": "/Users/zephyruszhou/Documents/DOU2025/PawPlate/server/public/images/products/Cat_Vitamins_placeholder.svg",
+    "generatedAt": "2025-08-13T20:59:05.999Z",
+    "success": true
+  },
+  {
+    "name": "Dog Food Premium 3kg",
+    "type": "product",
+    "category": "pet-food",
+    "prompt": "卡通毛玻璃风格插画，暖黄色主色，柔和体积光，圆角大卡片与玻璃高光，细腻颗粒点缀，背景简洁留白或浅黄渐变，无文字，无水印，高分辨率, Dog Food Premium 3kg宠物食品包装，精美包装袋或罐头，产品居中展示，温馨宠物用品风格",
+    "fileName": "Dog_Food_Premium_3kg_product.jpg",
+    "imageUrl": "/images/products/Dog_Food_Premium_3kg_placeholder.svg",
+    "imagePath": "/Users/zephyruszhou/Documents/DOU2025/PawPlate/server/public/images/products/Dog_Food_Premium_3kg_placeholder.svg",
+    "generatedAt": "2025-08-13T20:59:07.037Z",
+    "success": true
+  },
+  {
+    "name": "Dog Treats Natural",
+    "type": "product",
+    "category": "pet-food",
+    "prompt": "卡通毛玻璃风格插画，暖黄色主色，柔和体积光，圆角大卡片与玻璃高光，细腻颗粒点缀，背景简洁留白或浅黄渐变，无文字，无水印，高分辨率, Dog Treats Natural宠物食品包装，精美包装袋或罐头，产品居中展示，温馨宠物用品风格",
+    "fileName": "Dog_Treats_Natural_product.jpg",
+    "imageUrl": "/images/products/Dog_Treats_Natural_placeholder.svg",
+    "imagePath": "/Users/zephyruszhou/Documents/DOU2025/PawPlate/server/public/images/products/Dog_Treats_Natural_placeholder.svg",
+    "generatedAt": "2025-08-13T20:59:08.077Z",
+    "success": true
+  },
+  {
+    "name": "Dog Supplements",
+    "type": "product",
+    "category": "nutrition",
+    "prompt": "卡通毛玻璃风格插画，暖黄色主色，柔和体积光，圆角大卡片与玻璃高光，细腻颗粒点缀，背景简洁留白或浅黄渐变，无文字，无水印，高分辨率, Dog Supplements宠物营养品，瓶装或袋装营养补充剂，健康活力主题",
+    "fileName": "Dog_Supplements_product.jpg",
+    "imageUrl": "/images/products/Dog_Supplements_placeholder.svg",
+    "imagePath": "/Users/zephyruszhou/Documents/DOU2025/PawPlate/server/public/images/products/Dog_Supplements_placeholder.svg",
+    "generatedAt": "2025-08-13T20:59:09.134Z",
+    "success": true
+  },
+  {
+    "name": "鸡肉蔬菜营养餐",
+    "type": "recipe",
+    "category": "recipe",
+    "prompt": "卡通毛玻璃风格插画，暖黄色主色，柔和体积光，圆角大卡片与玻璃高光，细腻颗粒点缀，背景简洁留白或浅黄渐变，无文字，无水印，高分辨率, 猫咪家常自制宠物餐：鸡肉蔬菜营养餐，食材展示，摆在浅黄毛玻璃托盘上，俯拍，干净留白，重点突出食材形状与颜色",
+    "fileName": "鸡肉蔬菜营养餐_recipe.jpg",
+    "imageUrl": "/images/products/鸡肉蔬菜营养餐_placeholder.svg",
+    "imagePath": "/Users/zephyruszhou/Documents/DOU2025/PawPlate/server/public/images/products/鸡肉蔬菜营养餐_placeholder.svg",
+    "generatedAt": "2025-08-13T20:59:10.173Z",
+    "success": true
+  },
+  {
+    "name": "三文鱼藜麦饭",
+    "type": "recipe",
+    "category": "recipe",
+    "prompt": "卡通毛玻璃风格插画，暖黄色主色，柔和体积光，圆角大卡片与玻璃高光，细腻颗粒点缀，背景简洁留白或浅黄渐变，无文字，无水印，高分辨率, 狗狗家常自制宠物餐：三文鱼藜麦饭，食材展示，摆在浅黄毛玻璃托盘上，俯拍，干净留白，重点突出食材形状与颜色",
+    "fileName": "三文鱼藜麦饭_recipe.jpg",
+    "imageUrl": "/images/products/三文鱼藜麦饭_placeholder.svg",
+    "imagePath": "/Users/zephyruszhou/Documents/DOU2025/PawPlate/server/public/images/products/三文鱼藜麦饭_placeholder.svg",
+    "generatedAt": "2025-08-13T20:59:11.221Z",
+    "success": true
+  },
+  {
+    "name": "牛肉土豆泥",
+    "type": "recipe",
+    "category": "recipe",
+    "prompt": "卡通毛玻璃风格插画，暖黄色主色，柔和体积光，圆角大卡片与玻璃高光，细腻颗粒点缀，背景简洁留白或浅黄渐变，无文字，无水印，高分辨率, 狗狗家常自制宠物餐：牛肉土豆泥，食材展示，摆在浅黄毛玻璃托盘上，俯拍，干净留白，重点突出食材形状与颜色",
+    "fileName": "牛肉土豆泥_recipe.jpg",
+    "imageUrl": "/images/products/牛肉土豆泥_placeholder.svg",
+    "imagePath": "/Users/zephyruszhou/Documents/DOU2025/PawPlate/server/public/images/products/牛肉土豆泥_placeholder.svg",
+    "generatedAt": "2025-08-13T20:59:12.435Z",
+    "success": true
+  },
+  {
+    "name": "鸡肝菠菜粥",
+    "type": "recipe",
+    "category": "recipe",
+    "prompt": "卡通毛玻璃风格插画，暖黄色主色，柔和体积光，圆角大卡片与玻璃高光，细腻颗粒点缀，背景简洁留白或浅黄渐变，无文字，无水印，高分辨率, 猫咪家常自制宠物餐：鸡肝菠菜粥，食材展示，摆在浅黄毛玻璃托盘上，俯拍，干净留白，重点突出食材形状与颜色",
+    "fileName": "鸡肝菠菜粥_recipe.jpg",
+    "imageUrl": "/images/products/鸡肝菠菜粥_placeholder.svg",
+    "imagePath": "/Users/zephyruszhou/Documents/DOU2025/PawPlate/server/public/images/products/鸡肝菠菜粥_placeholder.svg",
+    "generatedAt": "2025-08-13T20:59:13.470Z",
+    "success": true
+  },
+  {
+    "name": "鱼肉蛋花粥",
+    "type": "recipe",
+    "category": "recipe",
+    "prompt": "卡通毛玻璃风格插画，暖黄色主色，柔和体积光，圆角大卡片与玻璃高光，细腻颗粒点缀，背景简洁留白或浅黄渐变，无文字，无水印，高分辨率, 猫咪家常自制宠物餐：鱼肉蛋花粥，食材展示，摆在浅黄毛玻璃托盘上，俯拍，干净留白，重点突出食材形状与颜色",
+    "fileName": "鱼肉蛋花粥_recipe.jpg",
+    "imageUrl": "/images/products/鱼肉蛋花粥_placeholder.svg",
+    "imagePath": "/Users/zephyruszhou/Documents/DOU2025/PawPlate/server/public/images/products/鱼肉蛋花粥_placeholder.svg",
+    "generatedAt": "2025-08-13T20:59:14.504Z",
+    "success": true
+  },
+  {
+    "name": "鸡肉南瓜粥",
+    "type": "recipe",
+    "category": "recipe",
+    "prompt": "卡通毛玻璃风格插画，暖黄色主色，柔和体积光，圆角大卡片与玻璃高光，细腻颗粒点缀，背景简洁留白或浅黄渐变，无文字，无水印，高分辨率, 狗狗家常自制宠物餐：鸡肉南瓜粥，食材展示，摆在浅黄毛玻璃托盘上，俯拍，干净留白，重点突出食材形状与颜色",
+    "fileName": "鸡肉南瓜粥_recipe.jpg",
+    "imageUrl": "/images/products/鸡肉南瓜粥_placeholder.svg",
+    "imagePath": "/Users/zephyruszhou/Documents/DOU2025/PawPlate/server/public/images/products/鸡肉南瓜粥_placeholder.svg",
+    "generatedAt": "2025-08-13T20:59:15.539Z",
+    "success": true
+  },
+  {
+    "name": "鸡胸肉",
+    "type": "sticker",
+    "category": "ingredient",
+    "prompt": "卡通毛玻璃风格插画，暖黄色主色，柔和体积光，圆角大卡片与玻璃高光，细腻颗粒点缀，背景简洁留白或浅黄渐变，无文字，无水印，高分辨率, 鸡胸肉食材贴纸，单一主体，黄系玻璃质感，透明背景PNG",
+    "fileName": "鸡胸肉_sticker.png",
+    "imageUrl": "/images/products/鸡胸肉_placeholder.svg",
+    "imagePath": "/Users/zephyruszhou/Documents/DOU2025/PawPlate/server/public/images/products/鸡胸肉_placeholder.svg",
+    "generatedAt": "2025-08-13T20:59:16.573Z",
+    "success": true
+  },
+  {
+    "name": "南瓜",
+    "type": "sticker",
+    "category": "ingredient",
+    "prompt": "卡通毛玻璃风格插画，暖黄色主色，柔和体积光，圆角大卡片与玻璃高光，细腻颗粒点缀，背景简洁留白或浅黄渐变，无文字，无水印，高分辨率, 南瓜食材贴纸，单一主体，黄系玻璃质感，透明背景PNG",
+    "fileName": "南瓜_sticker.png",
+    "imageUrl": "/images/products/南瓜_placeholder.svg",
+    "imagePath": "/Users/zephyruszhou/Documents/DOU2025/PawPlate/server/public/images/products/南瓜_placeholder.svg",
+    "generatedAt": "2025-08-13T20:59:17.611Z",
+    "success": true
+  },
+  {
+    "name": "三文鱼",
+    "type": "sticker",
+    "category": "ingredient",
+    "prompt": "卡通毛玻璃风格插画，暖黄色主色，柔和体积光，圆角大卡片与玻璃高光，细腻颗粒点缀，背景简洁留白或浅黄渐变，无文字，无水印，高分辨率, 三文鱼食材贴纸，单一主体，黄系玻璃质感，透明背景PNG",
+    "fileName": "三文鱼_sticker.png",
+    "imageUrl": "/images/products/三文鱼_placeholder.svg",
+    "imagePath": "/Users/zephyruszhou/Documents/DOU2025/PawPlate/server/public/images/products/三文鱼_placeholder.svg",
+    "generatedAt": "2025-08-13T20:59:18.647Z",
+    "success": true
+  },
+  {
+    "name": "胡萝卜",
+    "type": "sticker",
+    "category": "ingredient",
+    "prompt": "卡通毛玻璃风格插画，暖黄色主色，柔和体积光，圆角大卡片与玻璃高光，细腻颗粒点缀，背景简洁留白或浅黄渐变，无文字，无水印，高分辨率, 胡萝卜食材贴纸，单一主体，黄系玻璃质感，透明背景PNG",
+    "fileName": "胡萝卜_sticker.png",
+    "imageUrl": "/images/products/胡萝卜_placeholder.svg",
+    "imagePath": "/Users/zephyruszhou/Documents/DOU2025/PawPlate/server/public/images/products/胡萝卜_placeholder.svg",
+    "generatedAt": "2025-08-13T20:59:19.681Z",
+    "success": true
+  },
+  {
+    "name": "西兰花",
+    "type": "sticker",
+    "category": "ingredient",
+    "prompt": "卡通毛玻璃风格插画，暖黄色主色，柔和体积光，圆角大卡片与玻璃高光，细腻颗粒点缀，背景简洁留白或浅黄渐变，无文字，无水印，高分辨率, 西兰花食材贴纸，单一主体，黄系玻璃质感，透明背景PNG",
+    "fileName": "西兰花_sticker.png",
+    "imageUrl": "/images/products/西兰花_placeholder.svg",
+    "imagePath": "/Users/zephyruszhou/Documents/DOU2025/PawPlate/server/public/images/products/西兰花_placeholder.svg",
+    "generatedAt": "2025-08-13T20:59:20.713Z",
+    "success": true
+  },
+  {
+    "name": "红薯",
+    "type": "sticker",
+    "category": "ingredient",
+    "prompt": "卡通毛玻璃风格插画，暖黄色主色，柔和体积光，圆角大卡片与玻璃高光，细腻颗粒点缀，背景简洁留白或浅黄渐变，无文字，无水印，高分辨率, 红薯食材贴纸，单一主体，黄系玻璃质感，透明背景PNG",
+    "fileName": "红薯_sticker.png",
+    "imageUrl": "/images/products/红薯_placeholder.svg",
+    "imagePath": "/Users/zephyruszhou/Documents/DOU2025/PawPlate/server/public/images/products/红薯_placeholder.svg",
+    "generatedAt": "2025-08-13T20:59:22.153Z",
+    "success": true
+  },
+  {
+    "name": "牛肉",
+    "type": "sticker",
+    "category": "ingredient",
+    "prompt": "卡通毛玻璃风格插画，暖黄色主色，柔和体积光，圆角大卡片与玻璃高光，细腻颗粒点缀，背景简洁留白或浅黄渐变，无文字，无水印，高分辨率, 牛肉食材贴纸，单一主体，黄系玻璃质感，透明背景PNG",
+    "fileName": "牛肉_sticker.png",
+    "imageUrl": "/images/products/牛肉_placeholder.svg",
+    "imagePath": "/Users/zephyruszhou/Documents/DOU2025/PawPlate/server/public/images/products/牛肉_placeholder.svg",
+    "generatedAt": "2025-08-13T20:59:23.187Z",
+    "success": true
+  },
+  {
+    "name": "鸡肝",
+    "type": "sticker",
+    "category": "ingredient",
+    "prompt": "卡通毛玻璃风格插画，暖黄色主色，柔和体积光，圆角大卡片与玻璃高光，细腻颗粒点缀，背景简洁留白或浅黄渐变，无文字，无水印，高分辨率, 鸡肝食材贴纸，单一主体，黄系玻璃质感，透明背景PNG",
+    "fileName": "鸡肝_sticker.png",
+    "imageUrl": "/images/products/鸡肝_placeholder.svg",
+    "imagePath": "/Users/zephyruszhou/Documents/DOU2025/PawPlate/server/public/images/products/鸡肝_placeholder.svg",
+    "generatedAt": "2025-08-13T20:59:24.222Z",
+    "success": true
+  },
+  {
+    "name": "Hero Background Cat",
+    "type": "hero",
+    "category": "decoration",
+    "prompt": "卡通毛玻璃风格插画，暖黄色主色，柔和体积光，圆角大卡片与玻璃高光，细腻颗粒点缀，背景简洁留白或浅黄渐变，无文字，无水印，高分辨率, 可爱猫咪与玻璃态食盆，暖黄渐变背景，轻微光斑，扁平+2.5D融合风，画面中央右偏，留出左侧文案空间",
+    "fileName": "Hero_Background_Cat_decoration.jpg",
+    "imageUrl": "/images/products/Hero_Background_Cat_placeholder.svg",
+    "imagePath": "/Users/zephyruszhou/Documents/DOU2025/PawPlate/server/public/images/products/Hero_Background_Cat_placeholder.svg",
+    "generatedAt": "2025-08-13T20:59:25.255Z",
+    "success": true
+  },
+  {
+    "name": "Hero Background Dog",
+    "type": "hero",
+    "category": "decoration",
+    "prompt": "卡通毛玻璃风格插画，暖黄色主色，柔和体积光，圆角大卡片与玻璃高光，细腻颗粒点缀，背景简洁留白或浅黄渐变，无文字，无水印，高分辨率, 可爱狗狗与玻璃态食盆，暖黄渐变背景，轻微光斑，扁平+2.5D融合风，画面中央右偏，留出左侧文案空间",
+    "fileName": "Hero_Background_Dog_decoration.jpg",
+    "imageUrl": "/images/products/Hero_Background_Dog_placeholder.svg",
+    "imagePath": "/Users/zephyruszhou/Documents/DOU2025/PawPlate/server/public/images/products/Hero_Background_Dog_placeholder.svg",
+    "generatedAt": "2025-08-13T20:59:26.287Z",
+    "success": true
+  },
+  {
+    "name": "Chat Background",
+    "type": "chat",
+    "category": "decoration",
+    "prompt": "卡通毛玻璃风格插画，暖黄色主色，柔和体积光，圆角大卡片与玻璃高光，细腻颗粒点缀，背景简洁留白或浅黄渐变，无文字，无水印，高分辨率, AI聊天助手场景，温暖对话氛围，黄系毛玻璃界面元素，居中构图",
+    "fileName": "Chat_Background_decoration.jpg",
+    "imageUrl": "/images/products/Chat_Background_placeholder.svg",
+    "imagePath": "/Users/zephyruszhou/Documents/DOU2025/PawPlate/server/public/images/products/Chat_Background_placeholder.svg",
+    "generatedAt": "2025-08-13T20:59:27.321Z",
+    "success": true
+  },
+  {
+    "name": "Profile Icon",
+    "type": "icon",
+    "category": "decoration",
+    "prompt": "卡通毛玻璃风格插画，暖黄色主色，柔和体积光，圆角大卡片与玻璃高光，细腻颗粒点缀，背景简洁留白或浅黄渐变，无文字，无水印，高分辨率, Profile Icon的卡通图标，单一主体，黄系玻璃质感，透明背景PNG",
+    "fileName": "Profile_Icon_decoration.jpg",
+    "imageUrl": "/images/products/Profile_Icon_placeholder.svg",
+    "imagePath": "/Users/zephyruszhou/Documents/DOU2025/PawPlate/server/public/images/products/Profile_Icon_placeholder.svg",
+    "generatedAt": "2025-08-13T20:59:28.359Z",
+    "success": true
+  },
+  {
+    "name": "AI Assistant Icon",
+    "type": "icon",
+    "category": "decoration",
+    "prompt": "卡通毛玻璃风格插画，暖黄色主色，柔和体积光，圆角大卡片与玻璃高光，细腻颗粒点缀，背景简洁留白或浅黄渐变，无文字，无水印，高分辨率, AI Assistant Icon的卡通图标，单一主体，黄系玻璃质感，透明背景PNG",
+    "fileName": "AI_Assistant_Icon_decoration.jpg",
+    "imageUrl": "/images/products/AI_Assistant_Icon_placeholder.svg",
+    "imagePath": "/Users/zephyruszhou/Documents/DOU2025/PawPlate/server/public/images/products/AI_Assistant_Icon_placeholder.svg",
+    "generatedAt": "2025-08-13T20:59:29.403Z",
+    "success": true
+  }
+]

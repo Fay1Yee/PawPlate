@@ -1,0 +1,30 @@
+{
+  "上海": [
+    {
+      "ingredient_name": "鸡胸肉",
+      "sku": "sku001",
+      "price": "20",
+      "imageUrl": "cdn://stickers/chicken.png"
+    },
+    {
+      "ingredient_name": "南瓜",
+      "sku": "sku003",
+      "price": "10",
+      "imageUrl": "cdn://stickers/pumpkin.png"
+    }
+  ],
+  "北京": [
+    {
+      "ingredient_name": "鸡胸肉",
+      "sku": "sku002",
+      "price": "22",
+      "imageUrl": "cdn://stickers/chicken.png"
+    },
+    {
+      "ingredient_name": "南瓜",
+      "sku": "sku004",
+      "price": "12",
+      "imageUrl": "cdn://stickers/pumpkin.png"
+    }
+  ]
+}

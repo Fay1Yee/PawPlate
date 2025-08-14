@@ -1,0 +1,62 @@
+<view class="page-container">
+  <view class="recipe-header">
+    <image class="recipe-image" src="{{recipe.image}}" mode="aspectFill"></image>
+    <view class="recipe-title">{{recipe.title_cn || recipe.name}}</view>
+    <view class="recipe-subtitle" wx:if="{{recipe.title_en}}">{{recipe.title_en}}</view>
+    <view class="recipe-description">{{recipe.description || recipe.cautions_cn}}</view>
+  </view>
+  
+  <view class="recipe-info">
+    <view class="info-item">
+      <text class="icon-time icon-sm icon-primary"></text>
+      <text class="info-label">Prep Time:</text>
+      <text class="info-value">{{recipe.prepTime}} min</text>
+    </view>
+    <view class="info-item">
+      <text class="icon-cooking icon-sm icon-secondary"></text>
+      <text class="info-label">Cook Time:</text>
+      <text class="info-value">{{recipe.cookTime}} min</text>
+    </view>
+    <view class="info-item">
+      <text class="icon-difficulty icon-sm icon-accent"></text>
+      <text class="info-label">Difficulty:</text>
+      <text class="info-value">{{recipe.difficulty}}</text>
+    </view>
+  </view>
+  
+  <view class="ingredients-section">
+    <view class="section-header">
+      <text class="icon-ingredient icon-md icon-primary"></text>
+      <view class="section-title">Ingredients</view>
+    </view>
+    <ingredient-list ingredients="{{recipe.ingredients}}"></ingredient-list>
+  </view>
+  
+  <view class="steps-section">
+    <view class="section-header">
+      <text class="icon-steps icon-md icon-primary"></text>
+      <view class="section-title">Steps</view>
+    </view>
+    <block wx:for="{{recipe.steps}}" wx:key="index">
+      <step-card step="{{item}}"></step-card>
+    </block>
+  </view>
+  
+  <view class="cautions-section" wx:if="{{recipe.cautions_cn}}">
+    <view class="section-header">
+      <text class="icon-warning icon-md icon-warning"></text>
+      <view class="section-title">Important Notes</view>
+    </view>
+    <view class="caution-content">
+      <text class="caution-text">{{recipe.cautions_cn}}</text>
+    </view>
+  </view>
+  
+  <view class="actions-section">
+    <buy-button text="Buy Ingredients" type="primary" url="/pages/BuyPage/BuyPage"></buy-button>
+    <button class="custom-button secondary-button icon-btn" bindtap="addToFavorites">
+      <text class="icon-heart icon-sm"></text>
+      <text>{{isFavorited ? 'Favorited' : 'Favorite'}}</text>
+    </button>
+  </view>
+</view>

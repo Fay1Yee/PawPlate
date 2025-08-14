@@ -1,0 +1,28 @@
+
+<view class="page">
+  <!-- Top: now-playing recipe from video -->
+  <view class="glass" style="padding:16px;">
+    <text class="h1">当前视频菜谱</text>
+    <text class="caption">来自视频：{{videoMeta.title || '未命名'}}</text>
+    <view style="margin-top:10px;">
+      <view wx:for="{{nowRecipe.ingredients}}" wx:key="name" style="display:flex;justify-content:space-between;margin-top:8px;">
+        <text>{{item.name}}</text><text>{{item.grams}}g</text>
+      </view>
+    </view>
+    <view style="display:flex; gap:12px; margin-top:12px;">
+      <view class="btn-secondary" bindtap="goDetail">查看做法</view>
+      <view class="btn-primary" bindtap="goAI">AI 定制</view>
+    </view>
+    <!-- Product shelf for cat/dog food -->
+    <product-shelf items="{{productItems}}"></product-shelf>
+  </view>
+
+  <!-- Middle: virtual 3D pet -->
+  <virtual-pet></virtual-pet>
+
+  <!-- Bottom: recommended recipes -->
+  <view class="glass" style="padding:16px;">
+    <text class="h2">推荐菜谱</text>
+    <recipe-card wx:for="{{reco}}" wx:key="recipe_id" item="{{item}}"></recipe-card>
+  </view>
+</view>

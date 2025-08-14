@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/recipe/index",
+    "pages/ai/form",
+    "pages/ai/result",
+    "pages/purchase/handoff",
+    "pages/profile/index"
+  ],
+  "window": {
+    "navigationStyle": "custom",
+    "backgroundTextStyle": "light"
+  }
+}

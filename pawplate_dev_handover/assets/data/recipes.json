@@ -1,0 +1,369 @@
+[
+  {
+    "recipe_id": "cat_001",
+    "species": "cat",
+    "title_cn": "南瓜鸡肉粥（猫）",
+    "title_en": "Pumpkin Chicken Porridge (Cat)",
+    "base_portion_g": 250,
+    "ingredients": [
+      {
+        "name": "鸡胸肉",
+        "grams": 120
+      },
+      {
+        "name": "南瓜",
+        "grams": 100
+      },
+      {
+        "name": "猫用营养粉",
+        "grams": 5
+      },
+      {
+        "name": "水",
+        "grams": 300
+      }
+    ],
+    "steps_cn": "1. 鸡胸肉切小丁焯水；2. 南瓜蒸熟压泥；3. 小火煮至软烂；4. 关火加营养粉拌匀，放温后喂食。",
+    "cautions_cn": "不添加盐、油、洋葱、葱、蒜、巧克力、葡萄、木糖醇等禁忌食材。",
+    "tags": [
+      "易消化",
+      "软烂",
+      "新手友好"
+    ]
+  },
+  {
+    "recipe_id": "cat_002",
+    "species": "cat",
+    "title_cn": "鳕鱼南瓜泥（猫）",
+    "title_en": "Cod & Pumpkin Mash (Cat)",
+    "base_portion_g": 240,
+    "ingredients": [
+      {
+        "name": "鳕鱼",
+        "grams": 120
+      },
+      {
+        "name": "南瓜",
+        "grams": 80
+      },
+      {
+        "name": "猫用营养粉",
+        "grams": 5
+      },
+      {
+        "name": "水",
+        "grams": 250
+      }
+    ],
+    "steps_cn": "1. 鳕鱼去刺蒸熟撕碎；2. 南瓜蒸熟压泥；3. 加入温水拌匀至糊状；4. 放温后加入营养粉。",
+    "cautions_cn": "注意鱼刺；不添加盐与调味品。",
+    "tags": [
+      "低脂",
+      "易消化",
+      "幼猫适量"
+    ]
+  },
+  {
+    "recipe_id": "cat_003",
+    "species": "cat",
+    "title_cn": "鸡肉红薯泥（猫）",
+    "title_en": "Chicken & Sweet Potato Mash (Cat)",
+    "base_portion_g": 240,
+    "ingredients": [
+      {
+        "name": "鸡胸肉",
+        "grams": 120
+      },
+      {
+        "name": "红薯",
+        "grams": 90
+      },
+      {
+        "name": "水",
+        "grams": 250
+      }
+    ],
+    "steps_cn": "1. 红薯蒸熟压泥；2. 鸡胸肉切丁焯水熟透；3. 与温水拌匀至软糊。",
+    "cautions_cn": "红薯不宜过量；不加盐油。",
+    "tags": [
+      "纤维补充",
+      "口感软"
+    ]
+  },
+  {
+    "recipe_id": "cat_004",
+    "species": "cat",
+    "title_cn": "火鸡西葫芦碎（猫）",
+    "title_en": "Turkey & Zucchini Mince (Cat)",
+    "base_portion_g": 230,
+    "ingredients": [
+      {
+        "name": "火鸡胸肉",
+        "grams": 130
+      },
+      {
+        "name": "西葫芦",
+        "grams": 60
+      },
+      {
+        "name": "水",
+        "grams": 220
+      }
+    ],
+    "steps_cn": "1. 火鸡胸肉剁碎蒸熟；2. 西葫芦去籽刨丝焯水；3. 与温水拌匀。",
+    "cautions_cn": "蔬菜比例不宜过高；不加盐油。",
+    "tags": [
+      "低脂",
+      "成猫适用"
+    ]
+  },
+  {
+    "recipe_id": "cat_005",
+    "species": "cat",
+    "title_cn": "鸡肉藜麦小碗（猫）",
+    "title_en": "Chicken Quinoa Bowl (Cat)",
+    "base_portion_g": 220,
+    "ingredients": [
+      {
+        "name": "鸡胸肉",
+        "grams": 130
+      },
+      {
+        "name": "藜麦",
+        "grams": 20
+      },
+      {
+        "name": "南瓜",
+        "grams": 50
+      },
+      {
+        "name": "水",
+        "grams": 240
+      }
+    ],
+    "steps_cn": "1. 藜麦淘洗煮熟；2. 鸡胸肉剁碎蒸熟；3. 南瓜蒸熟压泥；4. 混合加温水调稠度。",
+    "cautions_cn": "谷物占比低于总量15%；不加盐油。",
+    "tags": [
+      "高蛋白",
+      "少量谷物"
+    ]
+  },
+  {
+    "recipe_id": "cat_006",
+    "species": "cat",
+    "title_cn": "三文鱼南瓜小餐（猫）",
+    "title_en": "Salmon Pumpkin Bowl (Cat)",
+    "base_portion_g": 230,
+    "ingredients": [
+      {
+        "name": "三文鱼",
+        "grams": 110
+      },
+      {
+        "name": "南瓜",
+        "grams": 80
+      },
+      {
+        "name": "水",
+        "grams": 240
+      }
+    ],
+    "steps_cn": "1. 三文鱼去皮去刺蒸熟；2. 南瓜蒸熟压泥；3. 加温水拌匀至糊。",
+    "cautions_cn": "三文鱼需全熟且无刺；控制脂肪摄入。",
+    "tags": [
+      "omega-3",
+      "香气强"
+    ]
+  },
+  {
+    "recipe_id": "dog_001",
+    "species": "dog",
+    "title_cn": "三文鱼藜麦饭（犬）",
+    "title_en": "Salmon Quinoa Bowl (Dog)",
+    "base_portion_g": 300,
+    "ingredients": [
+      {
+        "name": "三文鱼",
+        "grams": 120
+      },
+      {
+        "name": "藜麦",
+        "grams": 60
+      },
+      {
+        "name": "胡萝卜",
+        "grams": 60
+      },
+      {
+        "name": "西兰花",
+        "grams": 60
+      },
+      {
+        "name": "水",
+        "grams": 350
+      }
+    ],
+    "steps_cn": "1. 藜麦煮熟；2. 三文鱼去皮去刺蒸熟；3. 胡萝卜西兰花焯水切小；4. 混合拌匀。",
+    "cautions_cn": "注意鱼刺；逐步引入新食材观察。",
+    "tags": [
+      "高蛋白",
+      "omega-3",
+      "成犬适用"
+    ]
+  },
+  {
+    "recipe_id": "dog_002",
+    "species": "dog",
+    "title_cn": "鸡肉南瓜饭（犬）",
+    "title_en": "Chicken Pumpkin Rice (Dog)",
+    "base_portion_g": 320,
+    "ingredients": [
+      {
+        "name": "鸡胸肉",
+        "grams": 140
+      },
+      {
+        "name": "大米",
+        "grams": 70
+      },
+      {
+        "name": "南瓜",
+        "grams": 80
+      },
+      {
+        "name": "水",
+        "grams": 380
+      }
+    ],
+    "steps_cn": "1. 大米煮粥；2. 鸡胸肉切丁煮熟；3. 南瓜蒸熟压泥；4. 混合成软饭。",
+    "cautions_cn": "粥体软烂避免噎食；不加盐。",
+    "tags": [
+      "易消化",
+      "新手友好"
+    ]
+  },
+  {
+    "recipe_id": "dog_003",
+    "species": "dog",
+    "title_cn": "牛肉胡萝卜土豆碗（犬）",
+    "title_en": "Beef Carrot Potato Bowl (Dog)",
+    "base_portion_g": 340,
+    "ingredients": [
+      {
+        "name": "牛肉",
+        "grams": 150
+      },
+      {
+        "name": "胡萝卜",
+        "grams": 90
+      },
+      {
+        "name": "土豆",
+        "grams": 90
+      },
+      {
+        "name": "水",
+        "grams": 380
+      }
+    ],
+    "steps_cn": "1. 牛肉切小块焯水再煮熟；2. 胡萝卜土豆切丁煮软；3. 混合拌匀。",
+    "cautions_cn": "控制脂肪；土豆需熟透。",
+    "tags": [
+      "饱腹",
+      "咀嚼感"
+    ]
+  },
+  {
+    "recipe_id": "dog_004",
+    "species": "dog",
+    "title_cn": "鸡胸肉燕麦粥（犬）",
+    "title_en": "Chicken Oat Porridge (Dog)",
+    "base_portion_g": 320,
+    "ingredients": [
+      {
+        "name": "鸡胸肉",
+        "grams": 140
+      },
+      {
+        "name": "燕麦片",
+        "grams": 60
+      },
+      {
+        "name": "胡萝卜",
+        "grams": 70
+      },
+      {
+        "name": "水",
+        "grams": 420
+      }
+    ],
+    "steps_cn": "1. 燕麦片煮软；2. 鸡胸肉切丁煮熟；3. 胡萝卜丁焯水；4. 混合成粥状。",
+    "cautions_cn": "燕麦吸水性强，注意稠度。",
+    "tags": [
+      "谷物能量",
+      "成犬适用"
+    ]
+  },
+  {
+    "recipe_id": "dog_005",
+    "species": "dog",
+    "title_cn": "火鸡南瓜西兰花（犬）",
+    "title_en": "Turkey Pumpkin Broccoli (Dog)",
+    "base_portion_g": 330,
+    "ingredients": [
+      {
+        "name": "火鸡胸肉",
+        "grams": 160
+      },
+      {
+        "name": "南瓜",
+        "grams": 90
+      },
+      {
+        "name": "西兰花",
+        "grams": 70
+      },
+      {
+        "name": "水",
+        "grams": 360
+      }
+    ],
+    "steps_cn": "1. 火鸡胸肉剁碎蒸熟；2. 南瓜蒸熟压泥；3. 西兰花焯水切小；4. 混合。",
+    "cautions_cn": "西兰花不宜过量产生胀气；不加盐。",
+    "tags": [
+      "低脂肪",
+      "维生素"
+    ]
+  },
+  {
+    "recipe_id": "dog_006",
+    "species": "dog",
+    "title_cn": "鳕鱼红薯饭（犬）",
+    "title_en": "Cod Sweet Potato Rice (Dog)",
+    "base_portion_g": 330,
+    "ingredients": [
+      {
+        "name": "鳕鱼",
+        "grams": 150
+      },
+      {
+        "name": "红薯",
+        "grams": 100
+      },
+      {
+        "name": "大米",
+        "grams": 60
+      },
+      {
+        "name": "水",
+        "grams": 420
+      }
+    ],
+    "steps_cn": "1. 大米煮饭/粥；2. 鳕鱼去刺蒸熟撕碎；3. 红薯蒸熟切小；4. 混合拌匀。",
+    "cautions_cn": "注意鱼刺；红薯不宜过量。",
+    "tags": [
+      "清淡",
+      "幼犬友好"
+    ]
+  }
+]

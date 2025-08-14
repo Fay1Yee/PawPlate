@@ -1,0 +1,57 @@
+{
+  "hero": {
+    "home_cat": "cdn://hero/home_cat.webp",
+    "home_dog": "cdn://hero/home_dog.webp",
+    "home_general": "cdn://hero/home_general.webp",
+    "chat": "cdn://hero/chat.webp"
+  },
+  "icons": {
+    "profile": "cdn://icons/profile.png",
+    "history": "cdn://icons/history.png",
+    "faq": "cdn://icons/faq.png",
+    "ai_custom": "cdn://icons/ai_custom.png",
+    "purchase": "cdn://icons/purchase.png",
+    "activity": "cdn://icons/activity.png"
+  },
+  "recipes": {
+    "cat_001": "cdn://recipes/cat_001.webp",
+    "cat_002": "cdn://recipes/cat_002.webp",
+    "cat_003": "cdn://recipes/cat_003.webp",
+    "cat_004": "cdn://recipes/cat_004.webp",
+    "cat_005": "cdn://recipes/cat_005.webp",
+    "cat_006": "cdn://recipes/cat_006.webp",
+    "dog_001": "cdn://recipes/dog_001.webp",
+    "dog_002": "cdn://recipes/dog_002.webp",
+    "dog_003": "cdn://recipes/dog_003.webp",
+    "dog_004": "cdn://recipes/dog_004.webp",
+    "dog_005": "cdn://recipes/dog_005.webp",
+    "dog_006": "cdn://recipes/dog_006.webp"
+  },
+  "stickers": {
+    "chicken": "cdn://stickers/chicken.png",
+    "pumpkin": "cdn://stickers/pumpkin.png",
+    "sweet_potato": "cdn://stickers/sweet_potato.png",
+    "salmon": "cdn://stickers/salmon.png",
+    "beef": "cdn://stickers/beef.png",
+    "carrot": "cdn://stickers/carrot.png",
+    "rice": "cdn://stickers/rice.png",
+    "broccoli": "cdn://stickers/broccoli.png",
+    "egg": "cdn://stickers/egg.png",
+    "fish": "cdn://stickers/fish.png",
+    "potato": "cdn://stickers/potato.png",
+    "spinach": "cdn://stickers/spinach.png",
+    "turkey": "cdn://stickers/turkey.png",
+    "apple": "cdn://stickers/apple.png",
+    "blueberry": "cdn://stickers/blueberry.png",
+    "quinoa": "cdn://stickers/quinoa.png"
+  },
+  "empty_states": {
+    "no_network": "cdn://empty/no_network.png",
+    "no_recommendations": "cdn://empty/no_recommendations.png",
+    "no_favorites": "cdn://empty/no_favorites.png"
+  },
+  "dynamic": {
+    "result_covers": {},
+    "achievements": {}
+  }
+}

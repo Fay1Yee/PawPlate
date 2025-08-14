@@ -1,0 +1,20 @@
+
+<view class="page">
+  <view class="glass" style="padding:16px;">
+    <text class="h1">{{recipe.title_cn}}</text>
+    <view style="margin-top:12px;"><text class="caption">禁忌：{{recipe.cautions_cn}}</text></view>
+  </view>
+  <view class="glass" style="margin-top:16px; padding:16px;">
+    <text class="h2">食材</text>
+    <view wx:for="{{recipe.ingredients}}" wx:key="name" style="display:flex;justify-content:space-between;margin-top:10px;">
+      <text>{{item.name}}</text><text>{{item.grams}}g</text>
+    </view>
+  </view>
+  <view class="glass" style="margin-top:16px; padding:16px;">
+    <text class="h2">做法</text><text style="display:block;margin-top:10px;">{{recipe.steps_cn}}</text>
+  </view>
+  <view style="position:fixed;left:20px;right:20px;bottom:20px;display:flex;gap:12px;">
+    <view class="btn-secondary" bindtap="goBuy">一键买齐</view>
+    <view class="btn-primary" style="flex:1;" bindtap="goAI">AI 定制</view>
+  </view>
+</view>

@@ -1,0 +1,68 @@
+<view class="page-container">
+  <view class="form-header">
+    <view class="header-title-wrapper">
+      <text class="icon-pet icon-lg icon-primary"></text>
+      <text class="header-title">宠物信息</text>
+    </view>
+    <text class="header-subtitle">请填写您的宠物信息，以便我们为您推荐合适的食谱</text>
+  </view>
+  
+  <view class="form-section">
+    <view class="form-item">
+      <view class="form-label-wrapper">
+        <text class="icon-category icon-sm icon-secondary"></text>
+        <text class="form-label">宠物类型</text>
+      </view>
+      <picker bindchange="onPetTypeChange" value="{{petTypeIndex}}" range="{{petTypes}}">
+        <view class="picker">
+          {{petTypes[petTypeIndex]}}
+        </view>
+      </picker>
+    </view>
+    
+    <view class="form-item">
+      <view class="form-label-wrapper">
+        <text class="icon-breed icon-sm icon-secondary"></text>
+        <text class="form-label">宠物品种</text>
+      </view>
+      <input class="form-input" placeholder="请输入宠物品种" value="{{breed}}" bindinput="onBreedInput" />
+    </view>
+    
+    <view class="form-item">
+      <view class="form-label-wrapper">
+        <text class="icon-age icon-sm icon-secondary"></text>
+        <text class="form-label">宠物年龄</text>
+      </view>
+      <input class="form-input" type="number" placeholder="请输入宠物年龄（月）" value="{{age}}" bindinput="onAgeInput" />
+    </view>
+    
+    <view class="form-item">
+      <view class="form-label-wrapper">
+        <text class="icon-weight icon-sm icon-secondary"></text>
+        <text class="form-label">宠物体重</text>
+      </view>
+      <input class="form-input" type="digit" placeholder="请输入宠物体重（kg）" value="{{weight}}" bindinput="onWeightInput" />
+    </view>
+    
+    <view class="form-item">
+      <view class="form-label-wrapper">
+        <text class="icon-allergy icon-sm icon-warning"></text>
+        <text class="form-label">过敏史</text>
+      </view>
+      <textarea class="form-textarea" placeholder="请输入宠物过敏的食物，如鸡肉、牛肉等" value="{{allergies}}" bindinput="onAllergiesInput" />
+    </view>
+    
+    <view class="form-item">
+      <view class="form-label-wrapper">
+        <text class="icon-special icon-sm icon-accent"></text>
+        <text class="form-label">特殊需求</text>
+      </view>
+      <textarea class="form-textarea" placeholder="请输入宠物的特殊需求，如减肥、增重等" value="{{specialNeeds}}" bindinput="onSpecialNeedsInput" />
+    </view>
+  </view>
+  
+  <button class="custom-button primary-button icon-btn" bindtap="submitForm">
+    <text class="icon-ai-custom icon-sm"></text>
+    <text>生成推荐</text>
+  </button>
+</view>

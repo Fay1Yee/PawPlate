@@ -1,0 +1,5 @@
+
+<view class="card" bindtap="open" data-id="{{item.recipe_id}}">
+  <text class="title">{{item.title_cn}}</text>
+  <text class="tag">{{item.tags.join(' / ')}}</text>
+</view>

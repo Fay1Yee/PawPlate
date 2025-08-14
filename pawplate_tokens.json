@@ -1,0 +1,67 @@
+{
+  "colors": {
+    "primary": "#F6C642",
+    "primary-deep": "#E59A00",
+    "accent-carrot": "#FF8A3D",
+    "accent-leaf": "#35C26B",
+    "glass": "#FFF6E3",
+    "bg": "#FFF9EB",
+    "text": "#3A2E16",
+    "text-secondary": "#6B5B35",
+    "border": "#F0E3C8"
+  },
+  "radius": {
+    "xs": 8,
+    "sm": 12,
+    "md": 16,
+    "lg": 20,
+    "xl": 24,
+    "xxl": 32
+  },
+  "spacing": {
+    "xs": 4,
+    "sm": 8,
+    "md": 12,
+    "lg": 16,
+    "xl": 20,
+    "xxl": 24,
+    "xxxl": 32
+  },
+  "shadow": {
+    "glass-1": "0 6 16 rgba(229,154,0,0.10)",
+    "glass-2": "0 10 28 rgba(58,46,22,0.14)",
+    "float": "0 14 40 rgba(0,0,0,0.16)"
+  },
+  "typography": {
+    "fontFamily": "system-ui, 'SF Pro Rounded','Nunito',sans-serif",
+    "h1": {
+      "size": 24,
+      "weight": 700,
+      "lineHeight": 30
+    },
+    "h2": {
+      "size": 20,
+      "weight": 700,
+      "lineHeight": 26
+    },
+    "body": {
+      "size": 16,
+      "weight": 500,
+      "lineHeight": 24
+    },
+    "caption": {
+      "size": 12,
+      "weight": 500,
+      "lineHeight": 16
+    },
+    "button": {
+      "size": 18,
+      "weight": 700,
+      "lineHeight": 22
+    }
+  },
+  "elevation": {
+    "glass-blur": 18,
+    "grain-opacity": 0.08
+  }
+}

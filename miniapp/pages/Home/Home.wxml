@@ -1,0 +1,39 @@
+<view class="container">
+  <view class="header">
+    <image class="logo" src="/images/logo.png" mode="aspectFit"></image>
+    <text class="title">Pet Nutritionist</text>
+    <text class="subtitle">Customize exclusive nutrition meals for your beloved pet</text>
+  </view>
+
+  <view class="pet-info" wx:if="{{petProfile}}">
+    <view class="pet-avatar">
+      <image src="/images/pet-avatar.png" mode="aspectFit"></image>
+    </view>
+    <view class="pet-details">
+      <text class="pet-name">{{petProfile.name || 'My Pet'}}</text>
+      <text class="pet-breed">{{petProfile.breed}}</text>
+      <text class="pet-age">{{petProfile.age}} months old</text>
+    </view>
+    <button class="edit-btn" bindtap="editPetProfile">Edit</button>
+  </view>
+
+  <view class="features">
+    <view class="feature-card" bindtap="goToAIConsultation">
+      <image src="/images/ai-icon.png" mode="aspectFit"></image>
+      <text>AI Nutrition Consultation</text>
+    </view>
+    <view class="feature-card" bindtap="goToRecipeList">
+      <image src="/images/recipe-icon.png" mode="aspectFit"></image>
+      <text>Recipe Recommendations</text>
+    </view>
+    <view class="feature-card" bindtap="goToFavorites">
+      <image src="/images/favorite-icon.png" mode="aspectFit"></image>
+      <text>My Favorites</text>
+    </view>
+  </view>
+
+  <view class="daily-tip">
+    <text class="tip-title">Daily Nutrition Tip</text>
+    <text class="tip-content">{{dailyTip}}</text>
+  </view>
+</view>

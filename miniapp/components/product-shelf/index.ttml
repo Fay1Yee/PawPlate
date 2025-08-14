@@ -1,0 +1,41 @@
+
+<view class="shelf">
+  <view class="shelf-header">
+    <text class="icon-purchase icon-md icon-primary"></text>
+    <text class="title">Recommended Products</text>
+  </view>
+  
+  <swiper 
+    class="product-swiper" 
+    vertical="{{true}}"
+    autoplay="{{true}}" 
+    interval="{{4000}}" 
+    circular="{{true}}"
+    bindchange="swiperChange"
+    current="{{current}}"
+  >
+    <swiper-item tt:for="{{pagedItems}}" tt:key="index">
+      <view class="product-pair">
+        <view class="product-square" tt:for="{{item}}" tt:key="sku" tt:for-item="product">
+          <view class="product-content">
+            <view class="thumb">
+              <image tt:if="{{product.imageUrl}}" src="{{product.imageUrl}}" class="product-image" mode="aspectFill"></image>
+              <view tt:else class="placeholder-image">
+                <text class="placeholder-text">{{product.name}}</text>
+              </view>
+            </view>
+            <text class="name">{{product.name}}</text>
+            <view class="btn icon-btn" bindtap="buy" data-id="{{product.sku}}">
+              <text class="icon-purchase icon-sm"></text>
+              <text>Buy</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+  
+  <view class="swiper-indicator">
+    <text class="indicator-dot" tt:for="{{pagedItems}}" tt:key="index" style="{{index === current ? 'background: #F6C642' : ''}}"></text>
+  </view>
+</view>

@@ -1,0 +1,16 @@
+// 将 JSON 转换为 JS 模块导出
+const TOKENS = {
+  colors: {
+    primary: "#F6C642",
+    secondary: "#E59A00",
+    text: "#3A2E16",
+    textSecondary: "#6B5B35",
+    background: "#FFF9EB"
+  },
+  spacing: {
+    sm: "8px",
+    md: "16px",
+    lg: "24px"
+  }
+};
+module.exports = TOKENS;

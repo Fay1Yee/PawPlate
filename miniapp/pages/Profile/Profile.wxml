@@ -1,0 +1,50 @@
+<view class="page-container">
+  <view class="profile-header">
+    <image class="avatar" src="{{user.avatar || '/images/default-avatar.png'}}" mode="aspectFill"></image>
+    <text class="username">{{user.name || 'Not logged in'}}</text>
+  </view>
+  
+  <view class="profile-section">
+    <view class="section-title">Pet Information</view>
+    <view wx:if="{{petProfile.breed}}" class="pet-card">
+      <view class="pet-info">
+        <text class="pet-name">{{petProfile.breed}}</text>
+        <text class="pet-details">{{petProfile.type}} | {{petProfile.age}} months | {{petProfile.weight}}kg</text>
+      </view>
+      <button class="custom-button secondary-button" bindtap="editPetProfile">Edit</button>
+    </view>
+    <view wx:else class="empty-state">
+      <text>No pet information</text>
+      <button class="custom-button primary-button" bindtap="addPetProfile">Add Pet</button>
+    </view>
+  </view>
+  
+  <view class="profile-section">
+    <view class="section-title">My Favorites</view>
+    <view wx:if="{{favoritedRecipes.length > 0}}" class="favorites-list">
+      <block wx:for="{{favoritedRecipes}}" wx:key="id">
+        <view class="recipe-item" bindtap="goToRecipeDetail" data-id="{{item.id}}">
+          <image class="recipe-image" src="{{item.image}}" mode="aspectFill"></image>
+          <text class="recipe-name">{{item.name}}</text>
+        </view>
+      </block>
+    </view>
+    <view wx:else class="empty-state">
+      <text>No favorite recipes</text>
+    </view>
+  </view>
+  
+  <view class="profile-section">
+    <view class="section-title">Settings</view>
+    <view class="settings-list">
+      <view class="setting-item" bindtap="clearCache">
+        <text>Clear Cache</text>
+        <image class="arrow" src="/images/arrow-right.png" mode="aspectFit"></image>
+      </view>
+      <view class="setting-item" bindtap="aboutApp">
+        <text>About App</text>
+        <image class="arrow" src="/images/arrow-right.png" mode="aspectFit"></image>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,9 @@
+
+<view class="page">
+  <view class="glass" style="padding:18px;"><text class="h2">购物车已准备好</text><text style="display:block;margin-top:8px;">请选择平台打开购买</text></view>
+  <view style="margin-top:16px;display:flex;gap:12px;">
+    <view class="btn-primary" style="flex:1;" bindtap="open('ddmc')">打开叮咚</view>
+    <view class="btn-secondary" style="flex:1;" bindtap="open('jddj')">打开京东到家</view>
+  </view>
+  <view class="glass" style="padding:12px;margin-top:16px;"><text class="caption">若当前城市不支持，将展示自备清单</text></view>
+</view>

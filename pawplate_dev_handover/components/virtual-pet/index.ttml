@@ -1,0 +1,5 @@
+
+<view class="vp">
+  <canvas id="webgl" type="webgl" style="width:100%;height:200px;border-radius:20px;background:rgba(255,255,255,0.45)"></canvas>
+  <view class="fallback" wx:if="{{fallback}}">Loading virtual pet…</view>
+</view>

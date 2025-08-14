@@ -1,0 +1,1 @@
+Page({ open(p){ tt.showToast({ title:'模拟打开 '+p, icon:'none' }); } });

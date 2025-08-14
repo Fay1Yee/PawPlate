@@ -1,0 +1,8 @@
+<!--pages/Home/index.wxml-->
+<view class="container">
+  <view class="recipe-list">
+    <view wx:for="{{recipes}}" wx:key="recipe_id" class="recipe-item" bindtap="goToRecipe" data-id="{{item.recipe_id}}">
+      <text>{{item.title}}</text>
+    </view>
+  </view>
+</view>

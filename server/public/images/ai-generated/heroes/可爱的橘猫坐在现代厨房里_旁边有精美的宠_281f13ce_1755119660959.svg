@@ -1,0 +1,10 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100%" height="100%" fill="#281f1320"/>
+      <rect x="50" y="50" width="300" height="200" rx="20" fill="#281f1340"/>
+      <circle cx="200" cy="120" r="30" fill="#281f13"/>
+      <rect x="80" y="180" width="240" height="20" rx="10" fill="#281f1360"/>
+      <rect x="120" y="220" width="160" height="15" rx="7" fill="#281f1340"/>
+      <text x="200" y="320" text-anchor="middle" font-family="Arial" font-size="14" fill="#281f13">
+        可爱的橘猫坐在现代厨房里，旁边有精美的宠...
+      </text>
+    </svg>

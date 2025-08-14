@@ -1,0 +1,16 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFE4B5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFD700;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bgGradient)"/>
+  <circle cx="200" cy="120" r="30" fill="#FF6B35" opacity="0.7"/>
+  <circle cx="160" cy="160" r="20" fill="#FF8E53" opacity="0.8"/>
+  <circle cx="240" cy="160" r="25" fill="#FF6B35" opacity="0.6"/>
+  <circle cx="180" cy="190" r="15" fill="#FF8E53" opacity="0.9"/>
+  <circle cx="220" cy="190" r="18" fill="#FF6B35" opacity="0.7"/>
+  <text x="200" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#8B4513">美味食谱</text>
+  <text x="200" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#A0522D">营养丰富 · 健康美味</text>
+</svg>
