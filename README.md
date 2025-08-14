@@ -1,99 +1,133 @@
-# PawPlate
+# PawPlate - 智能宠物食谱小程序
 
-## 项目结构
+一个为宠物主人提供个性化食谱推荐的微信小程序，集成AI图片生成和智能推荐功能。
 
+## 🐾 项目特色
+
+- **AI食谱推荐**: 基于宠物品种、年龄、健康状况的个性化食谱
+- **AI图片生成**: 自动生成精美的食谱配图
+- **双语支持**: 中英文双语标题显示
+- **完整购买流程**: 从食谱到食材采购的一站式服务
+- **现代化UI**: 遵循设计系统规范的美观界面
+
+## 🚀 技术栈
+
+### 前端 (微信小程序)
+- **框架**: 微信小程序原生开发
+- **样式**: WXSS + 设计系统Token
+- **状态管理**: 小程序原生状态管理
+- **组件**: 模块化组件设计
+
+### 后端 (Node.js)
+- **框架**: Express.js
+- **AI服务**: 集成多个AI图片生成服务
+  - Stability AI
+- **图片处理**: 自动图片生成和优化
+- **API设计**: RESTful API架构
+
+## 📱 主要功能
+
+### 1. 食谱详情页面
+- 完整的食谱信息展示
+- AI生成的精美配图
+- 双语标题支持(中文+英文)
+- 营养成分和注意事项
+- 制作步骤详细说明
+
+### 2. AI图片生成
+- 根据食谱内容自动生成配图
+- 支持多种AI服务提供商
+- 图片缓存和优化
+- 自动降级到默认图片
+
+### 3. 智能推荐
+- 基于宠物信息的个性化推荐
+- 考虑过敏原和健康状况
+- 营养均衡分析
+
+## 🛠️ 开发环境设置
+
+### 前端开发
+```bash
+cd miniapp
+# 使用微信开发者工具打开项目
+# 或使用静态服务器预览
+python -m http.server 8080
 ```
-PawPlate/
-├── server/         # Node.js 后端（Express）
-│   ├── controllers/ # 控制器
-│   ├── models/     # 数据模型
-│   ├── routes/     # 路由
-│   ├── services/   # 业务逻辑
-│   ├── utils/      # 工具函数
-│   ├── app.js      # 后端入口文件
-│   └── package.json # 项目配置
-├── miniapp/        # PawPlate小程序前端
-│   ├── pages/      # 页面
-│   │   ├── RecipeDetail/ # 菜谱详情页
-│   │   ├── AIForm/       # AI定制表单页
-│   │   ├── AIResult/     # AI结果页
-│   │   └── Profile/      # 个人资料页
-│   ├── components/ # 组件
-│   │   ├── IngredientList/ # 食材列表组件
-│   │   ├── StepCard/       # 步骤卡片组件
-│   │   ├── BuyButton/      # 购买按钮组件
-│   │   └── Toast/          # 提示组件
-│   ├── store/      # 状态管理
-│   ├── app.js      # 小程序入口文件
-│   ├── app.json    # 小程序配置文件
-│   └── app.wxss    # 小程序全局样式
-├── README.md
-└── .gitignore
-```
-
-## 功能描述
-
-PawPlate 是一个智能宠物营养餐推荐平台，主要功能包括：
-
-### 前端功能
-
-1. **页面**:
-   - RecipeDetail: 菜谱详情页
-   - AIForm: AI定制表单页
-   - AIResult: AI结果页
-   - Profile: 个人资料页
-
-2. **组件**:
-   - IngredientList: 食材列表组件
-   - StepCard: 步骤卡片组件
-   - BuyButton: 购买按钮组件
-   - Toast: 提示组件
-
-3. **状态管理**:
-   - user: 用户信息
-   - petProfile: 宠物资料
-   - favoritedRecipes: 收藏的菜谱
-
-### 后端功能
-
-1. **菜谱/食材/映射表CRUD**
-2. **AI定制接口封装**（失败兜底模板）
-3. **统计埋点写库**（pv/uv、点击、转化）
-4. **AI逻辑**（首版规则+大模型混合）
-   - 规则库：不同体重段每日热量建议
-   - 模型：根据体重/年龄调整克数与比例，生成注意事项
-5. **过敏/禁忌词过滤**（葱、巧克力、葡萄、木糖醇等）
-6. **第三方平台对接**（先模拟，后正式）
-   - 叮咚/京东到家：组合跳转URL生成
-   - 城市不可达兜底：提示"换平台/自备"文案
-
-### 合规与提示
-
-- 明确"科普信息，不替代兽医建议"
-- 生食/熟食安全提示、分量与保存说明
-
-## 技术栈
-
-- **后端**: Node.js + Express
-- **前端**: PawPlate 小程序
-- **AI服务**: 规则引擎 + 大模型混合
-- **数据库**: TBD
-
-## 开发指南
 
 ### 后端开发
 ```bash
 cd server
 npm install
-npm run dev
+npm start
 ```
 
-### 小程序开发
+## 📦 项目结构
+
+```
+PawPlate/
+├── miniapp/                 # 微信小程序前端
+│   ├── pages/               # 页面文件
+│   │   ├── RecipeDetail/    # 食谱详情页
+│   │   ├── Home/           # 首页
+│   │   └── ...
+│   ├── components/          # 组件库
+│   ├── utils/              # 工具函数
+│   └── assets/             # 静态资源
+├── server/                  # Node.js后端
+│   ├── controllers/         # 控制器
+│   ├── services/           # 服务层
+│   ├── routes/             # 路由
+│   └── public/             # 静态文件
+└── docs/                   # 项目文档
+```
+
+## 🎨 设计系统
+
+项目采用统一的设计系统，包括：
+- 色彩变量系统
+- 字体层级规范
+- 间距和圆角标准
+- 组件设计规范
+
+## 🔧 配置说明
+
+### 环境变量
 ```bash
-cd miniapp
-# 使用 PawPlate 开发者工具打开项目
+# server/.env
+PORT=3000
+STABILITY_API_KEY=your_api_key
 ```
 
-## 项目状态
+### AI服务配置
+项目支持多个AI图片生成服务，可在 `server/services/realImageService.js` 中配置。
 
-🚧 开发中...
+## 📝 版本历史
+
+### v1.0.0 (2025-08-14)
+- ✅ 完整的食谱详情页面UI
+- ✅ AI生成图片集成
+- ✅ 双语标题支持
+- ✅ 注意事项显示
+- ✅ 设计系统规范应用
+
+## 🤝 贡献指南
+
+1. Fork 项目
+2. 创建功能分支 (`git checkout -b feature/AmazingFeature`)
+3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
+4. 推送到分支 (`git push origin feature/AmazingFeature`)
+5. 打开 Pull Request
+
+## 📄 许可证
+
+本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情。
+
+## 📞 联系方式
+
+- GitHub: [@Fay1Yee](https://github.com/Fay1Yee)
+- 项目链接: [https://github.com/Fay1Yee/PawPlate](https://github.com/Fay1Yee/PawPlate)
+
+---
+
+**PawPlate** - 让每一餐都充满爱 🐾❤️
