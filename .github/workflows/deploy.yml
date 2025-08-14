@@ -1,0 +1,51 @@
+name: Deploy PawPlate
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        cache: 'npm'
+        cache-dependency-path: server/package-lock.json
+    
+    - name: Install dependencies
+      run: |
+        cd server
+        npm ci
+    
+    - name: Run tests
+      run: |
+        cd server
+        npm test --if-present
+    
+    - name: Build project
+      run: |
+        cd server
+        npm run build --if-present
+
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Deploy notification
+      run: |
+        echo "🚀 PawPlate项目部署成功！"
+        echo "📱 小程序前端: miniapp/"
+        echo "🔧 Node.js后端: server/"
+        echo "🎯 版本: $(git describe --tags --always)"

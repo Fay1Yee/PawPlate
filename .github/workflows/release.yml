@@ -1,0 +1,88 @@
+name: Auto Release
+
+on:
+  push:
+    branches: [ main ]
+    paths-ignore:
+      - 'README.md'
+      - 'docs/**'
+      - '*.md'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, 'docs:')"
+    
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+    
+    - name: Generate version
+      id: version
+      run: |
+        # 获取最新标签
+        LATEST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "v1.1.0")
+        echo "Latest tag: $LATEST_TAG"
+        
+        # 生成新版本号（补丁版本递增）
+        if [[ $LATEST_TAG =~ v([0-9]+)\.([0-9]+)\.([0-9]+) ]]; then
+          MAJOR=${BASH_REMATCH[1]}
+          MINOR=${BASH_REMATCH[2]}
+          PATCH=${BASH_REMATCH[3]}
+          NEW_PATCH=$((PATCH + 1))
+          NEW_VERSION="v${MAJOR}.${MINOR}.${NEW_PATCH}"
+        else
+          NEW_VERSION="v1.1.1"
+        fi
+        
+        echo "New version: $NEW_VERSION"
+        echo "version=$NEW_VERSION" >> $GITHUB_OUTPUT
+    
+    - name: Create Release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ steps.version.outputs.version }}
+        release_name: PawPlate ${{ steps.version.outputs.version }}
+        body: |
+          ## 🎉 PawPlate 新版本发布
+          
+          ### 📋 更新内容
+          - 自动生成的版本发布
+          - 最新提交: ${{ github.event.head_commit.message }}
+          - 提交者: ${{ github.event.head_commit.author.name }}
+          
+          ### 🔗 相关链接
+          - [查看完整更改](https://github.com/Fay1Yee/PawPlate/compare/${{ github.event.before }}...${{ github.sha }})
+          - [项目主页](https://github.com/Fay1Yee/PawPlate)
+          
+          ### 🚀 快速开始
+          ```bash
+          # 克隆项目
+          git clone https://github.com/Fay1Yee/PawPlate.git
+          cd PawPlate
+          
+          # 启动后端服务
+          cd server
+          npm install
+          npm start
+          
+          # 启动前端服务（新终端窗口）
+          cd miniapp
+          python -m http.server 8080
+          ```
+          
+          ### 🐾 主要功能
+          - ✅ AI食谱推荐
+          - ✅ AI图片生成
+          - ✅ 双语标题支持
+          - ✅ 完整购买流程
+          - ✅ 现代化UI设计
+          
+          ---
+          
+          **PawPlate** - 让每一餐都充满爱 🐾❤️
+        draft: false
+        prerelease: false
