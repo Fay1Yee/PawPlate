@@ -1,0 +1,82 @@
+[
+  {
+    "key": "product.adult_cat_food",
+    "success": true,
+    "fileName": "product_adult_cat_food_realistic_1755175900966.svg",
+    "localPath": "/images/ai-generated/products/product_adult_cat_food_realistic_1755175900966.svg",
+    "title": "Premium Adult Cat Food",
+    "category": "products"
+  },
+  {
+    "key": "product.cat_treats",
+    "success": true,
+    "fileName": "product_cat_treats_realistic_1755175900967.svg",
+    "localPath": "/images/ai-generated/products/product_cat_treats_realistic_1755175900967.svg",
+    "title": "Delicious Cat Treats",
+    "category": "products"
+  },
+  {
+    "key": "product.cat_nutrition_paste",
+    "success": true,
+    "fileName": "product_cat_nutrition_paste_realistic_1755175900968.svg",
+    "localPath": "/images/ai-generated/products/product_cat_nutrition_paste_realistic_1755175900968.svg",
+    "title": "Cat Nutrition Paste",
+    "category": "products"
+  },
+  {
+    "key": "product.cat_vitamins",
+    "success": true,
+    "fileName": "product_cat_vitamins_realistic_1755175900968.svg",
+    "localPath": "/images/ai-generated/products/product_cat_vitamins_realistic_1755175900968.svg",
+    "title": "Cat Vitamin Supplements",
+    "category": "products"
+  },
+  {
+    "key": "recipe.healthy_cat_meal",
+    "success": true,
+    "fileName": "recipe_healthy_cat_meal_realistic_1755175900968.svg",
+    "localPath": "/images/ai-generated/recipes/recipe_healthy_cat_meal_realistic_1755175900968.svg",
+    "title": "Healthy Chicken & Veggie Bowl",
+    "category": "recipes"
+  },
+  {
+    "key": "recipe.salmon_delight",
+    "success": true,
+    "fileName": "recipe_salmon_delight_realistic_1755175900968.svg",
+    "localPath": "/images/ai-generated/recipes/recipe_salmon_delight_realistic_1755175900968.svg",
+    "title": "Fresh Salmon Delight",
+    "category": "recipes"
+  },
+  {
+    "key": "recipe.nutritious_cat_food",
+    "success": true,
+    "fileName": "recipe_nutritious_cat_food_realistic_1755175900969.svg",
+    "localPath": "/images/ai-generated/recipes/recipe_nutritious_cat_food_realistic_1755175900969.svg",
+    "title": "Nutritious Fish & Rice",
+    "category": "recipes"
+  },
+  {
+    "key": "recipe.turkey_feast",
+    "success": true,
+    "fileName": "recipe_turkey_feast_realistic_1755175900969.svg",
+    "localPath": "/images/ai-generated/recipes/recipe_turkey_feast_realistic_1755175900969.svg",
+    "title": "Turkey Feast with Broccoli",
+    "category": "recipes"
+  },
+  {
+    "key": "hero.home_cat",
+    "success": true,
+    "fileName": "hero_home_cat_realistic_1755175900969.svg",
+    "localPath": "/images/ai-generated/heroes/hero_home_cat_realistic_1755175900969.svg",
+    "title": "Happy Cat in Kitchen",
+    "category": "heroes"
+  },
+  {
+    "key": "hero.home_dog",
+    "success": true,
+    "fileName": "hero_home_dog_realistic_1755175900970.svg",
+    "localPath": "/images/ai-generated/heroes/hero_home_dog_realistic_1755175900970.svg",
+    "title": "Golden Retriever in Kitchen",
+    "category": "heroes"
+  }
+]

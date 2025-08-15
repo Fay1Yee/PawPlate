@@ -1,126 +1,175 @@
-
 <view class="page">
-  <!-- Hero Section: Video Recipe + Product Shelf -->
+  <!-- Profile Entry -->
+  <view class="card glass profile-entry-card" bindtap="goToProfile">
+    <view class="profile-entry-content">
+      <view class="profile-avatar">
+        <image class="avatar-image" src="/images/e802aa65c735bb665914e18bfa000010.jpg" mode="aspectFit"></image>
+      </view>
+      <view class="profile-info">
+        <text class="profile-title">Profile</text>
+        <text class="profile-subtitle">Active Days: {{activeDays}} days</text>
+      </view>
+      <view class="profile-arrow">
+        <text class="icon-chevron-right">›</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- Daily Tips Bar -->
+  <view class="top-tip-bar">
+    <text class="tip-content">{{dailyTips[currentTipIndex]}}</text>
+  </view>
+
+  <!-- 第一行：视频中菜谱和推荐商品 -->
   <view class="row">
-    <view class="col-l glass card">
-      <text class="h2">Recipe in Video</text>
-      <view class="ing-list">
-        <view class="ing">
-          <text class="name">Chicken Breast</text>
-          <text class="g">200g</text>
+    <view class="col-l">
+      <view class="card glass video-recipe-card">
+        <text class="h2">Recipe in Video</text>
+        <view class="ing-list">
+          <view class="ing" tt:for="{{videoRecipe.ingredients}}" tt:key="*this">
+            <image class="ing-icon" src="{{ingredientIcons[item.name] || '/images/ingredients/default.svg'}}" mode="aspectFit"></image>
+            <text class="ing-name">{{item.name}}</text>
+            <text class="ing-amount">{{item.g}}g</text>
+          </view>
         </view>
-        <view class="ing">
-          <text class="name">Sweet Potato</text>
-          <text class="g">100g</text>
-        </view>
-        <view class="ing">
-          <text class="name">Carrot</text>
-          <text class="g">50g</text>
-        </view>
+        <button class="btn-secondary mini" bindtap="viewVideoRecipe">
+          <text>View Recipe</text>
+        </button>
       </view>
-      <navigator url="/pages/recipe/index" class="btn-secondary mini">View Recipe</navigator>
     </view>
-    <view class="col-r glass card">
-      <view class="product-shelf">
+    <view class="col-r">
+      <view class="card glass product-shelf-card">
         <text class="h2">Recommended Products</text>
-        <swiper class="product-carousel" indicator-dots="true" autoplay="true" interval="4000" duration="500">
-          <swiper-item class="product-page">
-            <view class="product-item">
-              <image class="product-image" src="http://localhost:3000/images/ai-generated/products/Premium_adult_cat_fo_8b9e8d4b_1755120448631.png" mode="aspectFill"></image>
+        <view class="product-carousel">
+          <view class="product-page {{currentProductPage === index ? 'active' : ''}}" tt:for="{{productPages}}" tt:key="index">
+            <view class="product-item" tt:for="{{item}}" tt:key="id" tt:for-item="product">
+              <image class="product-image" src="{{product.image}}" mode="aspectFit"></image>
               <view class="product-content">
-                <view class="product-name">Adult Cat Food 2kg</view>
-                <button class="product-btn" bindtap="onBuyProduct" data-product="Adult Cat Food 2kg">Buy</button>
+                <text class="product-name">{{product.name}}</text>
+                <button class="product-btn" bindtap="buyProduct" data-id="{{product.id}}">
+                  <text>Buy</text>
+                </button>
               </view>
             </view>
-            <view class="product-item">
-              <image class="product-image" src="http://localhost:3000/images/ai-generated/products/Luxury_cat_treats_pa_b30c5bd8_1755120455692.png" mode="aspectFill"></image>
-              <view class="product-content">
-                <view class="product-name">Cat Treats 500g</view>
-                <button class="product-btn" bindtap="onBuyProduct" data-product="Cat Treats 500g">Buy</button>
-              </view>
-            </view>
-          </swiper-item>
-          <swiper-item class="product-page">
-            <view class="product-item">
-              <image class="product-image" src="http://localhost:3000/images/ai-generated/products/Cat_nutrition_paste__3b202467_1755120462659.png" mode="aspectFill"></image>
-              <view class="product-content">
-                <view class="product-name">Cat Nutrition Paste</view>
-                <button class="product-btn" bindtap="onBuyProduct" data-product="Cat Nutrition Paste">Buy</button>
-              </view>
-            </view>
-            <view class="product-item">
-              <image class="product-image" src="http://localhost:3000/images/ai-generated/products/Cat_vitamin_suppleme_db7e5603_1755120471210.png" mode="aspectFill"></image>
-              <view class="product-content">
-                <view class="product-name">Cat Vitamins</view>
-                <button class="product-btn" bindtap="onBuyProduct" data-product="Cat Vitamins">Buy</button>
-              </view>
-            </view>
-          </swiper-item>
-        </swiper>
+          </view>
+        </view>
+        <view class="carousel-indicators">
+          <view class="indicator {{currentProductPage === index ? 'active' : ''}}" tt:for="{{productPages}}" tt:key="index" bindtap="switchProductPage" data-index="{{index}}"></view>
+        </view>
       </view>
-
-
     </view>
   </view>
 
-  <!-- Virtual Pet Section -->
-  <view class="glass card pet-card">
-    <text style="font-size: 64px; margin-bottom: 16px;">🐱</text>
-    <text class="text" style="font-size: 18px; font-weight: 600;">Virtual pet is resting</text>
-    <text class="text" style="font-size: 14px; color: #6B5B35; margin-top: 8px;">Tap to interact</text>
+
+
+  <!-- Waterfall Content Section -->
+  <view class="card glass waterfall-content-card">
+    <text class="h2">More Recipes & Pet Videos</text>
+    <view class="waterfall-container">
+      <!-- 左列 -->
+      <view class="waterfall-column">
+        <view class="waterfall-item {{item.type}}" tt:for="{{leftColumnItems}}" tt:key="id">
+          <!-- 食谱卡片 -->
+          <view tt:if="{{item.type === 'recipe'}}" class="recipe-card" bindtap="goToRecipe" data-id="{{item.id}}">
+            <image class="card-image" src="{{item.image}}" mode="aspectFill"></image>
+            <view class="card-content">
+              <text class="card-title">{{item.name}}</text>
+              <view class="recipe-meta">
+                <view class="recipe-tags">
+                  <view class="recipe-tag time-tag">
+                    <text class="icon-clock"></text>
+                    <text class="recipe-time">{{item.cookTime}}</text>
+                  </view>
+                  <view class="recipe-tag difficulty-tag">
+                    <text class="recipe-difficulty">{{item.difficulty}}</text>
+                  </view>
+                </view>
+                <button class="view-btn">
+                  <text>View</text>
+                </button>
+              </view>
+            </view>
+          </view>
+          <!-- 宠物喂食短视频卡片 -->
+          <view tt:elif="{{item.type === 'video'}}" class="video-card" bindtap="playVideo" data-id="{{item.id}}">
+            <view class="video-thumbnail">
+              <image class="card-image" src="{{item.thumbnail}}" mode="aspectFill"></image>
+              <view class="play-button">
+                <text class="icon-play"></text>
+              </view>
+              <view class="video-duration">{{item.duration}}</view>
+            </view>
+            <view class="card-content">
+              <text class="card-title">{{item.title}}</text>
+              <view class="video-meta">
+                <view class="meta-item">
+                  <text class="icon-eye"></text>
+                  <text class="video-views">{{item.views}}</text>
+                </view>
+                <view class="meta-item">
+                  <text class="icon-heart"></text>
+                  <text class="video-likes">{{item.likes}}</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 右列 -->
+      <view class="waterfall-column">
+        <view class="waterfall-item {{item.type}}" tt:for="{{rightColumnItems}}" tt:key="id">
+          <!-- 食谱卡片 -->
+          <view tt:if="{{item.type === 'recipe'}}" class="recipe-card" bindtap="goToRecipe" data-id="{{item.id}}">
+            <image class="card-image" src="{{item.image}}" mode="aspectFill"></image>
+            <view class="card-content">
+              <text class="card-title">{{item.name}}</text>
+              <view class="recipe-meta">
+                <view class="recipe-tags">
+                  <view class="recipe-tag time-tag">
+                    <text class="icon-clock"></text>
+                    <text class="recipe-time">{{item.cookTime}}</text>
+                  </view>
+                  <view class="recipe-tag difficulty-tag">
+                    <text class="recipe-difficulty">{{item.difficulty}}</text>
+                  </view>
+                </view>
+                <button class="view-btn">
+                  <text>View</text>
+                </button>
+              </view>
+            </view>
+          </view>
+          <!-- 宠物喂食短视频卡片 -->
+          <view tt:elif="{{item.type === 'video'}}" class="video-card" bindtap="playVideo" data-id="{{item.id}}">
+            <view class="video-thumbnail">
+              <image class="card-image" src="{{item.thumbnail}}" mode="aspectFill"></image>
+              <view class="play-button">
+                <text class="icon-play"></text>
+              </view>
+              <view class="video-duration">{{item.duration}}</view>
+            </view>
+            <view class="card-content">
+              <text class="card-title">{{item.title}}</text>
+              <view class="video-meta">
+                <view class="meta-item">
+                  <text class="icon-eye"></text>
+                  <text class="video-views">{{item.views}}</text>
+                </view>
+                <view class="meta-item">
+                  <text class="icon-heart"></text>
+                  <text class="video-likes">{{item.likes}}</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
   </view>
 
-  <!-- Recommended Recipes Section -->
-  <view class="glass card">
-    <text class="h2">Recommended Recipes</text>
-    <view class="recipe-grid">
-       <navigator url="/pages/recipe/detail?id=1" class="recipe-card">
-         <image class="recipe-card-image" src="http://localhost:3000/images/ai-generated/recipes/Healthy_chicken_and__0e988e1d_1755136940918.png" mode="aspectFill"></image>
-         <view class="recipe-card-content">
-           <text class="recipe-card-title">Healthy Cat Meal</text>
-           <text class="recipe-card-desc">Chicken, Rice, Vegetables.\nA nutritious and balanced meal perfect for adult cats with essential nutrients.</text>
-         </view>
-       </navigator>
-       <navigator url="/pages/recipe/detail?id=2" class="recipe-card">
-         <image class="recipe-card-image" src="http://localhost:3000/images/ai-generated/recipes/Fresh_salmon_delight_fd850e9c_1755136947650.png" mode="aspectFill"></image>
-         <view class="recipe-card-content">
-           <text class="recipe-card-title">Salmon Delight</text>
-           <text class="recipe-card-desc">Fresh salmon with quinoa and carrots\nfor omega-3 rich nutrition.</text>
-         </view>
-       </navigator>
-       <navigator url="/pages/recipe/detail?id=3" class="recipe-card">
-          <image class="recipe-card-image" src="http://localhost:3000/images/ai-generated/recipes/Nutritious_fish_and__e1d62954_1755136956726.png" mode="aspectFill"></image>
-          <view class="recipe-card-content">
-            <text class="recipe-card-title">Nutritious Cat Food</text>
-            <text class="recipe-card-desc">Fish, Sweet Potato, Spinach.\nRich in omega-3 fatty acids and essential vitamins for optimal health and shiny coat.</text>
-          </view>
-        </navigator>
-        <navigator url="/pages/recipe/detail?id=4" class="recipe-card">
-          <image class="recipe-card-image" src="http://localhost:3000/images/ai-generated/recipes/Turkey_feast_with_br_2e27819d_1755136963920.png" mode="aspectFill"></image>
-         <view class="recipe-card-content">
-           <text class="recipe-card-title">Turkey Feast</text>
-           <text class="recipe-card-desc">Lean turkey with brown rice and peas\nfor digestive health.</text>
-         </view>
-       </navigator>
-       <navigator url="/pages/recipe/detail?id=5" class="recipe-card">
-          <image class="recipe-card-image" src="http://localhost:3000/images/ai-generated/recipes/Chicken_and_vegetabl_637b6b85_1755164338443.png" mode="aspectFill"></image>
-          <view class="recipe-card-content">
-            <text class="recipe-card-title">Chicken & Veggie Bowl</text>
-            <text class="recipe-card-desc">Lean chicken breast with fresh vegetables and herbs.\nEasy to digest and full of flavor for sensitive stomachs.</text>
-          </view>
-        </navigator>
-        <navigator url="/pages/recipe/detail?id=6" class="recipe-card">
-          <image class="recipe-card-image" src="http://localhost:3000/images/ai-generated/recipes/Tuna_surprise_with_s_3a6b0b37_1755164345457.png" mode="aspectFill"></image>
-          <view class="recipe-card-content">
-            <text class="recipe-card-title">Tuna Surprise</text>
-            <text class="recipe-card-desc">Fresh tuna with sweet potato\nfor a protein-rich treat.</text>
-          </view>
-        </navigator>
-     </view>
+
+  <!-- AI定制按钮 -->
+  <view class="ai-customize-btn" bindtap="goToAICustomize">
+    <text>AI Customize</text>
   </view>
-
-  <!-- Fixed bottom CTA -->
-  <navigator url="/pages/AIForm/index" class="btn-primary">AI Customize</navigator>
-
-
 </view>

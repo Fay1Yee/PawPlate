@@ -1,2 +1,2 @@
 
-.input{margin-top:12px;background:rgba(255,255,255,0.6);padding:12px 14px;border-radius:20px;}
+.input{margin-top:12px;background:rgba(255,255,255,0.6);padding:12px 14px;border-radius:var(--radius-lg);}

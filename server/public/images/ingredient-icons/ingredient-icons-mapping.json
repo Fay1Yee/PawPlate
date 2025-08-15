@@ -1,0 +1,82 @@
+{
+  "chicken_breast": {
+    "name": "鸡胸肉",
+    "path": "/images/ingredient-icons/chicken_breast_icon.svg",
+    "colors": {
+      "primary": "#F6C642",
+      "secondary": "#E59A00",
+      "accent": "#FFE4B5"
+    },
+    "emoji": "🍗"
+  },
+  "salmon": {
+    "name": "三文鱼",
+    "path": "/images/ingredient-icons/salmon_icon.svg",
+    "colors": {
+      "primary": "#FF7F7F",
+      "secondary": "#FF6B6B",
+      "accent": "#FFE4E1"
+    },
+    "emoji": "🐟"
+  },
+  "beef": {
+    "name": "牛肉",
+    "path": "/images/ingredient-icons/beef_icon.svg",
+    "colors": {
+      "primary": "#8B4513",
+      "secondary": "#A0522D",
+      "accent": "#DEB887"
+    },
+    "emoji": "🥩"
+  },
+  "pumpkin": {
+    "name": "南瓜",
+    "path": "/images/ingredient-icons/pumpkin_icon.svg",
+    "colors": {
+      "primary": "#FF8C00",
+      "secondary": "#FF7F00",
+      "accent": "#FFEFD5"
+    },
+    "emoji": "🎃"
+  },
+  "carrot": {
+    "name": "胡萝卜",
+    "path": "/images/ingredient-icons/carrot_icon.svg",
+    "colors": {
+      "primary": "#FF8C00",
+      "secondary": "#FF6347",
+      "accent": "#FFE4B5"
+    },
+    "emoji": "🥕"
+  },
+  "broccoli": {
+    "name": "西兰花",
+    "path": "/images/ingredient-icons/broccoli_icon.svg",
+    "colors": {
+      "primary": "#32CD32",
+      "secondary": "#228B22",
+      "accent": "#E6FFE6"
+    },
+    "emoji": "🥦"
+  },
+  "sweet_potato": {
+    "name": "红薯",
+    "path": "/images/ingredient-icons/sweet_potato_icon.svg",
+    "colors": {
+      "primary": "#CD853F",
+      "secondary": "#D2691E",
+      "accent": "#FFEFD5"
+    },
+    "emoji": "🍠"
+  },
+  "chicken_liver": {
+    "name": "鸡肝",
+    "path": "/images/ingredient-icons/chicken_liver_icon.svg",
+    "colors": {
+      "primary": "#8B0000",
+      "secondary": "#A0522D",
+      "accent": "#FFE4E1"
+    },
+    "emoji": "🫘"
+  }
+}

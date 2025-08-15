@@ -1,0 +1,311 @@
+/* 引入Lexend字体 */
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import './assets/styles/daisy-ui-icons.ttss';
+
+:root {
+  /* 高明度黄绿系主色调 */
+  --color-primary: #F8F34A;         /* 柠檬黄 */
+  --color-primary-lime: #C8FF4D;    /* 荧光绿 */
+  --color-accent-orange: #FFA73A;   /* 胡萝卜橙 */
+  --color-accent-pink: #FF6FAE;     /* 果冻粉 */
+  --color-accent-sky: #8FD2FF;      /* 天空蓝 */
+  --color-ink: #141414;             /* 深黑 */
+  --color-bg: #FFFBF0;              /* 奶白背景 */
+  --color-card: #FFFFFF;            /* 卡片白 */
+  --color-stroke: #EFEFEF;          /* 描边灰 */
+  --color-halo: rgba(255,255,0,.25); /* 光晕黄 */
+  
+  /* 圆角系统 */
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+  
+  /* 阴影系统 */
+  --shadow-lift: 0 10px 24px rgba(0,0,0,.16);
+  --shadow-sticker: 0 14px 0 #E09B20, 0 18px 28px rgba(224,155,32,.25);
+  --shadow-soft: 0 6px 16px rgba(0,0,0,.12);
+  
+  /* Lexend字体系统 */
+  --font-primary: 'Lexend', 'PingFang SC', 'HarmonyOS Sans', sans-serif;
+  --font-secondary: 'Lexend', 'PingFang SC', 'HarmonyOS Sans', sans-serif;
+  --font-body: 'Lexend', 'PingFang SC', 'HarmonyOS Sans', sans-serif;
+  
+  /* 字号规范 */
+  --font-size-xs: 12px;    /* 小字 */
+  --font-size-sm: 14px;    /* 次要文本 */
+  --font-size-base: 16px;  /* 正文 */
+  --font-size-lg: 18px;    /* 副标题 */
+  --font-size-xl: 20px;    /* 小标题 */
+  --font-size-2xl: 24px;   /* 主标题 */
+  --font-size-3xl: 28px;   /* 大标题 */
+  --font-size-4xl: 32px;   /* 超大标题 */
+  
+  /* 字重规范 */
+  --font-weight-light: 300;    /* 轻量 */
+  --font-weight-normal: 400;   /* 常规 */
+  --font-weight-medium: 500;   /* 中等 */
+  --font-weight-semibold: 600; /* 半粗 */
+  --font-weight-bold: 700;     /* 粗体 */
+  --font-weight-extrabold: 800; /* 超粗 */
+  --font-weight-black: 900;    /* 最粗 */
+  
+  /* 间距系统 */
+  --spacing-s: 8px;
+  --spacing-m: 12px;
+  --spacing-l: 16px;
+  --spacing-xl: 20px;
+}
+.page { 
+  background: radial-gradient(120% 120% at 10% -10%, var(--color-bg) 0%, #FFF070 44%, var(--color-primary-lime) 88%) no-repeat;
+  padding: var(--spacing-xl); 
+  color: var(--color-ink); 
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  min-height: 100vh;
+}
+/* 贴纸卡片 - 卡通拟物风格 */
+.glass, .card-pop { 
+  background: var(--color-card); 
+  border: 1px solid var(--color-stroke); 
+  border-radius: var(--radius-lg); 
+  box-shadow: var(--shadow-soft); 
+  position: relative;
+  overflow: hidden;
+}
+
+/* 半色调纹理效果 */
+.glass::after, .card-pop--pattern::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(#00000008 1px, transparent 1px);
+  background-size: 6px 6px;
+  pointer-events: none;
+}
+
+/* 毛玻璃卡片基础样式 */
+.glass-card {
+  background: rgba(255, 246, 227, 0.8);
+  backdrop-filter: blur(20rpx);
+  border-radius: var(--card-radius);
+  border: 2rpx solid rgba(246, 198, 66, 0.2);
+  box-shadow: 
+    0 16rpx 80rpx rgba(74, 59, 32, 0.1),
+    inset 0 2rpx 4rpx rgba(255, 255, 255, 0.6),
+    inset 0 -2rpx 4rpx rgba(246, 198, 66, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2rpx;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+}
+
+/* 文本默认样式 - 修复重叠问题 */
+.text, text {
+  line-height: 1.5;
+}
+
+/* 果冻 CTA 按钮 */
+.btn-primary, .btn-jelly {
+  background: linear-gradient(180deg, #FFE96B, #FFBE2E);
+  color: var(--color-ink);
+  border-radius: var(--radius-pill);
+  padding: 14px 18px;
+  font-weight: var(--font-weight-extrabold);
+  text-align: center;
+  font-size: var(--font-size-base);
+  font-family: var(--font-primary);
+  border: none;
+  box-shadow: var(--shadow-sticker);
+  transition: transform .12s ease, box-shadow .12s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary:active, .btn-jelly:active {
+  transform: translateY(2px);
+  box-shadow: 0 6px 0 #E09B20, 0 10px 18px rgba(224,155,32,.22);
+}
+
+/* 次要按钮 */
+.btn-secondary {
+  background: var(--color-card);
+  color: var(--color-ink);
+  border: 1px solid var(--color-stroke);
+  border-radius: var(--radius-pill);
+  padding: 8px 12px;
+  font-weight: var(--font-weight-extrabold);
+  font-size: var(--font-size-sm);
+  font-family: var(--font-secondary);
+  box-shadow: var(--shadow-soft);
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: var(--color-primary);
+  color: var(--color-ink);
+  transform: translateY(-1px);
+}
+
+/* 文字样式系统 - Lexend字体 */
+.title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-ink);
+  line-height: 1.25;
+  font-family: var(--font-primary);
+}
+
+.body-text {
+  font-size: var(--font-size-base);
+  color: var(--color-ink);
+  line-height: 1.5;
+  font-weight: var(--font-weight-semibold);
+  font-family: var(--font-body);
+}
+
+/* 标题层级样式 */
+.h1, h1 {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-extrabold);
+  font-size: var(--font-size-2xl);
+  color: var(--color-ink);
+  line-height: 1.25;
+}
+
+.h2, h2 {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-extrabold);
+  font-size: var(--font-size-xl);
+  color: var(--color-ink);
+  line-height: 1.3;
+}
+
+.h3, h3 {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-lg);
+  color: var(--color-ink);
+  line-height: 1.4;
+}
+
+/* 正文和小字体 */
+.body, p {
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-base);
+  color: var(--color-ink);
+  line-height: 1.5;
+}
+
+.caption, .small {
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-xs);
+  color: var(--color-ink);
+  line-height: 1.33;
+}
+
+/* 胶囊分段控件 */
+.segment {
+  background: #FFF6C8;
+  padding: 6px;
+  border-radius: var(--radius-pill);
+  display: flex;
+  gap: 6px;
+  box-shadow: var(--shadow-soft);
+}
+
+.segment button {
+  border-radius: var(--radius-pill);
+  padding: 8px 12px;
+  font-weight: var(--font-weight-extrabold);
+  font-size: var(--font-size-sm);
+  font-family: var(--font-secondary);
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.segment .on {
+  background: var(--color-primary);
+  color: var(--color-ink);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.segment .off {
+  background: var(--color-card);
+  border: 1px solid var(--color-stroke);
+  color: var(--color-ink);
+}
+
+/* 卡通动效系统 */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+  100% { transform: translateY(0); }
+}
+
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+  0% { transform: rotate(0); }
+  25% { transform: rotate(1.5deg); }
+  75% { transform: rotate(-1.5deg); }
+  100% { transform: rotate(0); }
+}
+
+.wiggle:hover {
+  animation: wiggle .6s ease-in-out 1;
+}
+
+@keyframes bounce-in {
+  0% { transform: scale(0.9); opacity: 0; }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.bounce-in {
+  animation: bounce-in 0.25s cubic-bezier(.2,.8,.2,1);
+}
+
+/* 贴纸装饰效果 */
+.sticker {
+  position: absolute;
+  transform: rotate(15deg);
+  box-shadow: var(--shadow-lift);
+  border: 1px solid var(--color-ink);
+  z-index: 10;
+}
+
+/* 光晕效果 */
+.glow-effect {
+  position: relative;
+}
+
+.glow-effect::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, var(--color-halo) 0%, transparent 70%);
+  animation: glow 3s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes glow {
+  0% { opacity: 0.3; transform: scale(0.8); }
+  100% { opacity: 0.6; transform: scale(1.2); }
+}

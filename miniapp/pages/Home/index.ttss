@@ -1,10 +1,13 @@
 
-/* PawPlate Home Page - Yellow Glass UI */
+/* PawPlate Home Page - 卡通拟物风格 */
 .page { 
-  background: #FFF9EB; 
-  color: #3A2E16; 
+  /* 根据新规范更新背景为波普风格渐变 */
+  background: radial-gradient(120% 120% at 10% -10%, #FFFBF0 0%, #FFF070 44%, #C8FF4D 88%) no-repeat;
+  /* 更新文字颜色 */
+  color: #141414;
   font-family: system-ui, 'SF Pro Rounded', 'Nunito', sans-serif;
-  padding: 12px 12px calc(96px + env(safe-area-inset-bottom)) 12px;
+  /* 调整底部内边距，为悬浮按钮留出空间 */
+  padding-bottom: calc(160rpx + env(safe-area-inset-bottom));
 }
 
 /* Layout */
@@ -17,70 +20,118 @@
 .col-l { flex: 2 1 64%; }
 .col-r { flex: 1 1 36%; }
 
-/* Glass Cards */
+/* 卡通拟物卡片 */
 .card { 
   padding: 16px; 
-  border-radius: 24px; 
+  border-radius: 16px; 
 }
 .glass { 
-  background: rgba(255,246,227,.72); 
-  backdrop-filter: blur(18px); 
-  border-radius: 24px; 
-  box-shadow: 0 10px 28px rgba(58,46,22,.14); 
+  background:rgba(255, 255, 255, 0.5); 
+  border: 1px solid #EFEFEF; 
+  border-radius: 16px; 
+  box-shadow: 0 6px 16px rgba(0,0,0,.12); 
+  position: relative;
+  overflow: hidden;
 }
 
-/* Typography */
+.glass::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(#00000008 1px, transparent 1px);
+  background-size: 6px 6px;
+  pointer-events: none;
+}
+
+/* Typography - 卡通拟物风格 */
 .h1 { 
-  font-size: 24px; 
-  font-weight: 700; 
-  line-height: 30px; 
+  font-size: var(--font-size-2xl); 
+  font-weight: var(--font-weight-extrabold); 
+  line-height: 1.25; 
   margin: 0;
+  color: var(--color-ink);
+  font-family: var(--font-primary);
 }
 .h2 { 
-  font-size: 20px; 
-  font-weight: 700; 
-  line-height: 26px; 
+  font-size: var(--font-size-xl); 
+  font-weight: var(--font-weight-extrabold); 
+  line-height: 1.3; 
   margin: 0 0 12px 0;
+  color: var(--color-ink);
+  font-family: var(--font-primary);
 }
 .text { 
-  font-size: 16px; 
-  line-height: 24px; 
-  word-break: break-word; 
+  font-size: var(--font-size-base); 
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.5; 
+  word-break: break-word;
+  color: var(--color-ink);
+  font-family: var(--font-body); 
 }
 
-/* Buttons */
+/* 果冻风格按钮 */
 .btn-primary { 
-  background: linear-gradient(180deg, #F6C642, #E59A00); 
-  color: #fff; 
-  border-radius: 22px; 
+  background: linear-gradient(180deg, #FFE96B, #FFBE2E); 
+  color: var(--color-ink); 
+  border-radius: var(--radius-pill); 
   padding: 14px 18px; 
-  font-weight: 800; 
+  font-weight: var(--font-weight-extrabold); 
   text-align: center;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: var(--font-size-lg);
+  font-family: var(--font-primary);
+  line-height: 1.2;
   position: fixed;
   left: 20px;
   right: 20px;
   bottom: calc(16px + env(safe-area-inset-bottom));
   z-index: 999;
+  box-shadow: var(--shadow-sticker);
+  transition: transform .12s ease, box-shadow .12s ease;
+  border: none;
 }
+
+.btn-primary:active {
+  transform: translateY(2px);
+  box-shadow: 0 6px 0 #E09B20, 0 10px 18px rgba(224,155,32,.22);
+}
+
 .btn-secondary { 
-  background: rgba(0,0,0,.06); 
-  color: #3A2E16; 
-  border-radius: 20px; 
-  padding: 14px 18px; 
-  font-weight: 700; 
+  background: var(--color-card); 
+  color: var(--color-ink); 
+  border: 1px solid var(--color-stroke);
+  border-radius: var(--radius-pill); 
+  padding: 8px 12px; 
+  font-weight: var(--font-weight-extrabold); 
+  font-size: var(--font-size-sm);
+  font-family: var(--font-secondary);
   text-align: center;
   margin-top: 12px;
-  font-size: 16px;
+  font-size: 14px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.12);
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8rpx;
 }
+
+/* .btn-secondary:hover {
+  background: #F8F34A;
+  transform: translateY(-1px);
+} */
+
 .btn-secondary.mini { 
-  padding: 10px 12px;
+  padding: 8px 12px;
   min-width: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: 6rpx;
+}
+
+.btn-icon {
+  width: 24rpx;
+  height: 24rpx;
 }
 
 /* Ingredients List */
@@ -97,18 +148,670 @@
 .ing .name { font-weight: 500; }
 .ing .g { font-weight: 700; color: #E59A00; }
 
-/* Pet Card */
+/* 视频菜谱卡片样式 - 优化 */
+.video-recipe-card {
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+}
+
+.video-recipe-card .h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.25px;
+}
+
+/* Video Card 样式 - 优化 */
+.video-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+
+
+.video-thumbnail {
+  position: relative;
+  overflow: hidden;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 48px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+}
+
+
+
+.play-button .icon-play {
+  color: white;
+  font-size: 20px;
+  margin-left: 2px;
+}
+
+.video-duration {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.video-recipe-card .ing-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  min-height: 0;
+  /* 新增：让成分列表在内容溢出时可以滚动，防止遮挡按钮 */
+  overflow-y: auto;
+  /* 新增：为滚动条留出一些空间，避免内容紧贴边缘 */
+  padding-right: 8rpx;
+  /* 新增：美化滚动条（在支持的webkit内核浏览器中） */
+  scrollbar-width: thin;
+  scrollbar-color: #E09B20 #FFFFFF;
+}
+
+/* 新增：美化滚动条的样式 */
+.video-recipe-card .ing-list::-webkit-scrollbar {
+  width: 12rpx;
+}
+
+.video-recipe-card .ing-list::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 6rpx;
+}
+
+.video-recipe-card .ing-list::-webkit-scrollbar-thumb {
+  background-color: #FFBE2E;
+  border-radius: 6rpx;
+  border: 2rpx solid rgba(255, 255, 255, 0.8);
+}
+
+.video-recipe-card .ing {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+}
+
+.video-recipe-card .ing-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+.video-recipe-card .ing-name {
+  flex: 1;
+  font-size: 14px;
+  color: #4a5568;
+}
+
+.video-recipe-card .ing-amount {
+  font-size: 12px;
+  color: #718096;
+  font-weight: 500;
+}
+
+.video-recipe-card .btn-secondary.mini {
+  padding: 6px 12px;
+  font-size: 12px;
+  height: auto;
+  align-self: flex-start;
+}
+
+.video-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+  gap: 8px;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 10px;
+  color: #718096;
+}
+
+.meta-item .icon-eye,
+.meta-item .icon-heart {
+  font-size: 12px;
+  color: #F6C642;
+}
+
+.video-views,
+.video-likes {
+  font-weight: 500;
+}
+
+.view-btn {
+  background: linear-gradient(135deg, #F6C642, #E59A00);
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(246, 198, 66, 0.3);
+}
+
+
+
+/* 商品货架卡片样式 */
+.product-shelf-card {
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.product-shelf-card .h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 2px;
+}
+
+.product-shelf-card .product-carousel {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-shelf-card .product-page {
+  display: none;
+  grid-template-rows: 1fr;
+  gap: 12px;
+  height: 100%;
+  align-items: center;
+  justify-items: stretch;
+  padding: 0;
+}
+
+.product-shelf-card .product-page.active {
+  display: grid;
+}
+
+.product-shelf-card .product-item {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: var(--radius-md);
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+  transition: transform 0.2s ease;
+  min-height: 160px;
+  width: 100%;
+  max-width: none;
+  position: relative;
+}
+
+/* .product-shelf-card .product-item:hover {
+  transform: translateY(-2px);
+} */
+
+.product-shelf-card .product-image {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  object-fit: scale-down;
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  display: block;
+  flex-shrink: 0;
+}
+
+.product-shelf-card .product-name {
+  font-size: 12px;
+  color: #4a5568;
+  text-align: center;
+  line-height: 1.3;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.product-shelf-card .product-btn {
+  padding: 4px 8px;
+  font-size: 10px;
+  background: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+}
+
+/* .product-shelf-card .product-btn:hover {
+  background: #3182ce;
+} */
+
+.product-shelf-card .carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.product-shelf-card .indicator {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(66, 153, 225, 0.3);
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.product-shelf-card .indicator.active {
+  background: #4299e1;
+}
+
+/* 顶栏每日提示样式 */
+.top-tip-bar {
+  position: relative;
+  width: auto;
+  z-index: 10;
+  padding: 12px;
+  margin: 0 12px 16px 12px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(66, 153, 225, 0.3);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border-radius: var(--radius-md);
+}
+
+.tip-content {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #4a5568;
+  text-align: center;
+  display: block;
+  min-height: 22px;
+  animation: fadeInOut 5s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(5px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-5px); }
+}
+
+.btn-outline.mini {
+  padding: 6px 12px;
+  font-size: 12px;
+  height: auto;
+  background: transparent;
+  border: 1px solid #4299e1;
+  color: #4299e1;
+}
+
+/* 瀑布流推荐菜谱样式 - 优化布局 */
+.recipe-waterfall-card {
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.recipe-waterfall-card .h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #3A2E16;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+/* Waterfall Container 样式 - 优化布局 */
+.waterfall-container {
+  display: flex;
+  gap: 12px;
+  margin: 16px 0;
+  padding: 0 4px;
+  min-height: 400px;
+}
+.ai-customize-btn {
+  /* 定位 */
+  position: fixed;
+  bottom: calc(32rpx + env(safe-area-inset-bottom));
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+
+  /* 果冻风格 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #FFE96B, #FFBE2E);
+  color: #141414;
+  border-radius: 999rpx; /* pill shape */
+  padding: 28rpx 36rpx;
+  font-size: 36rpx;
+  font-weight: 800; /* 遵循规范，加粗 */
+  text-align: center;
+  /* 遵循规范，添加台阶式阴影 */
+  box-shadow: 0 16rpx 0 #E09B20, 0 32rpx 56rpx rgba(224, 155, 32, .25);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+
+/* 按钮按下效果 */
+.ai-customize-btn:active {
+  transform: translateX(-50%) translateY(4rpx);
+  box-shadow: 0 12rpx 0 #E09B20, 0 20rpx 36rpx rgba(224, 155, 32, .22);
+}
+
+.ai-customize-btn .btn-icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 16rpx;
+}
+.waterfall-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.waterfall-item {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(246, 198, 66, 0.15);
+  cursor: pointer;
+  position: relative;
+}
+
+
+
+.waterfall-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(246, 198, 66, 0.6), transparent);
+  opacity: 0;
+}
+
+
+
+/* 瀑布流卡片通用样式 - 优化 */
+.waterfall-item .card-image {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  background: linear-gradient(135deg, rgba(246, 198, 66, 0.1), rgba(255, 230, 181, 0.2));
+}
+
+
+
+.waterfall-item .card-content {
+  padding: 12px;
+}
+
+.waterfall-item .card-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #3A2E16;
+  margin: 0 0 8px 0;
+  line-height: 1.3;
+  word-break: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.recipe-waterfall {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.recipe-item {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* .recipe-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+} */
+
+.recipe-thumb {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.recipe-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  padding: 20px 16px 16px;
+  color: white;
+}
+
+.recipe-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.recipe-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+  font-size: 12px;
+  opacity: 0.9;
+  gap: 8px;
+}
+
+.recipe-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.recipe-tag {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  padding: 3px 6px;
+  border-radius: 10px;
+  font-size: 10px;
+  background: rgba(246, 198, 66, 0.15);
+  color: #6B5B35;
+  border: 1px solid rgba(246, 198, 66, 0.2);
+}
+
+
+
+.recipe-tag.time-tag {
+  background: rgba(52, 168, 83, 0.1);
+  color: #2E7D32;
+  border-color: rgba(52, 168, 83, 0.2);
+}
+
+.recipe-tag.difficulty-tag {
+  background: rgba(255, 152, 0, 0.1);
+  color: #E65100;
+  border-color: rgba(255, 152, 0, 0.2);
+}
+
+.recipe-time {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.recipe-difficulty {
+  padding: 2px 8px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  font-size: 10px;
+}
+
+.btn-outline.mini {
+  padding: 6px 12px;
+  font-size: 12px;
+  height: auto;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: white;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6rpx;
+}
+
+/* .btn-outline.mini:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.8);
+} */
+
+/* 宠物信息卡片样式 */
+.pet-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pet-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.pet-avatar image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pet-info {
+  flex: 1;
+}
+
+.btn-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+/* 每日提示卡片 */
+.tip-card {
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.h3 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-extrabold);
+  line-height: 1.3;
+  margin: 0 0 8px 0;
+  color: var(--color-ink);
+  font-family: var(--font-primary);
+}
+
+/* 3D宠物卡片 - 卡通拟物风格 */
 .pet-card { 
   margin-top: 12px; 
   padding: 32px; 
   text-align: center;
-  background: linear-gradient(45deg, #a8edea, #fed6e3);
+  background: linear-gradient(135deg, #FF6FAE 0%, #8FD2FF 50%, #FFA73A 100%);
+  border-radius: 16px;
   min-height: 160px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 10px 24px rgba(0,0,0,.16);
+  position: relative;
+  overflow: hidden;
+  animation: float 3s ease-in-out infinite;
 }
+
+.pet-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(#ffffff20 1px, transparent 1px);
+  background-size: 8px 8px;
+  pointer-events: none;
+}
+
+
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.stat-icon {
+  font-size: 14px;
+}
+
+.stat-text {
+  font-size: var(--font-size-xs);
+  color: rgba(58, 46, 22, 0.7);
+  font-weight: var(--font-weight-semibold);
+}
+
+
 
 /* Product Carousel Styles */
 .product-shelf {
@@ -232,7 +935,7 @@
 
 .recipe-card {
   background: rgba(255, 255, 255, 0.95);
-  border-radius: 20px;
+  border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: 0 6px 16px rgba(229,154,0,0.10);
   display: inline-block;
@@ -282,7 +985,7 @@
   position: relative;
   width: 100%;
   height: 160px;
-  border-radius: 20px;
+  border-radius: var(--radius-lg);
   overflow: hidden;
   background: transparent;
   backdrop-filter: none;
@@ -295,7 +998,7 @@
   height: 100%;
   object-fit: cover;
   background: rgba(255, 246, 227, 0.5);
-  border-radius: 20px;
+  border-radius: var(--radius-lg);
   border: 1px solid rgba(255, 215, 0, 0.3);
 }
 
@@ -307,8 +1010,8 @@
   padding: 16px;
   background: linear-gradient(180deg, rgba(255, 246, 227, 0) 0%, rgba(255, 246, 227, 0.9) 100%);
   backdrop-filter: blur(8px);
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: var(--radius-lg);
+  border-bottom-right-radius: var(--radius-lg);
 }
 
 .recipe-title {
@@ -332,7 +1035,7 @@
   color: #A0522D;
   background: rgba(255, 255, 255, 0.5);
   padding: 2px 6px;
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
 }
 
 .recipe-tags {
@@ -346,6 +1049,258 @@
   color: #B8860B;
   background: rgba(184, 134, 11, 0.1);
   padding: 2px 6px;
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   border: 1px solid rgba(184, 134, 11, 0.2);
+}
+
+/* 商品轮播样式 */
+.product-card {
+  margin-bottom: 12px;
+}
+
+.carousel-container {
+  margin-top: 16px;
+}
+
+.carousel {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+}
+
+.carousel-page {
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 8px;
+  height: 100%;
+}
+
+.product {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(240, 227, 200, 0.5);
+  border-radius: var(--radius-md);
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(229, 154, 0, 0.1);
+}
+
+.product-image {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  margin-bottom: 4px;
+}
+
+.product-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.product-name {
+  font-size: 10px;
+  font-weight: 600;
+  color: #3A2E16;
+  text-align: center;
+  line-height: 12px;
+  margin: 0;
+}
+
+.product-price {
+  font-size: 10px;
+  font-weight: 700;
+  color: #E59A00;
+  margin: 0;
+}
+
+.btn-buy {
+  background: linear-gradient(135deg, #F6C642, #E59A00);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 9px;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.indicator {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(58, 46, 22, 0.3);
+  transition: background 0.3s ease;
+}
+
+.indicator.active {
+  background: #F6C642;
+}
+
+/* Profile Entry Card 样式 */
+.profile-entry-card {
+  margin-bottom: 16px;
+  padding: 16px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(246, 198, 66, 0.2);
+}
+
+
+
+.profile-entry-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: linear-gradient(135deg, #FFE96B, #FFBE2E);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(246, 198, 66, 0.3);
+}
+
+.avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.profile-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #3A2E16;
+  line-height: 1.2;
+}
+
+.profile-subtitle {
+  font-size: 12px;
+  color: #718096;
+  line-height: 1.2;
+}
+
+.profile-arrow {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #F6C642;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* 动画效果 */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* 响应式布局调整 - 统一边距 */
+@media (max-width: 480px) {
+  .waterfall-container {
+    gap: 8px;
+    margin: 12px 0;
+    padding: 0 2px;
+  }
+  
+  .waterfall-column {
+    gap: 8px;
+  }
+  
+  .waterfall-item .card-content {
+    padding: 10px;
+  }
+  
+  .waterfall-item .card-title {
+    font-size: 13px;
+    margin: 0 0 6px 0;
+  }
+}
+
+@media (max-width: 320px) {
+  .row {
+    flex-direction: column;
+  }
+  
+  .col-l, .col-r {
+    flex: 1 1 100%;
+  }
+  
+  .recipe-content {
+    flex-direction: column;
+  }
+  
+  .recipe-image-container {
+    width: 100%;
+    height: 160px;
+  }
+  
+  .waterfall-container {
+    gap: 6px;
+    margin: 8px 0;
+    padding: 0;
+  }
+  
+  .waterfall-column {
+    gap: 6px;
+  }
+  
+  .waterfall-item .card-content {
+    padding: 8px;
+  }
+  
+  .waterfall-item .card-title {
+    font-size: 12px;
+    margin: 0 0 4px 0;
+  }
+  
+  .recipe-tag {
+    padding: 2px 4px;
+    font-size: 9px;
+  }
+  
+  .meta-item {
+    font-size: 9px;
+    gap: 2px;
+  }
 }

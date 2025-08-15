@@ -1,62 +1,91 @@
-<view class="page-container">
-  <view class="recipe-header">
-    <image class="recipe-image" src="{{recipe.image}}" mode="aspectFill"></image>
-    <view class="recipe-title">{{recipe.title_cn || recipe.name}}</view>
-    <view class="recipe-subtitle" wx:if="{{recipe.title_en}}">{{recipe.title_en}}</view>
-    <view class="recipe-description">{{recipe.description || recipe.cautions_cn}}</view>
+<view class="page">
+  <!-- Recipe Header Card -->
+  <view class="card glass recipe-header-card">
+    <view class="recipe-header-row">
+      <view class="recipe-image-container">
+        <image class="recipe-image" src="{{recipe.image}}" mode="aspectFill"></image>
+      </view>
+      <view class="recipe-info-compact">
+        <view class="recipe-title h2">{{recipe.title_en || recipe.name}}</view>
+        <view class="recipe-description text">{{recipe.description || recipe.cautions_en}}</view>
+        
+        <view class="meta-row">
+          <view class="meta-compact">
+            <text class="meta-icon">⏱️</text>
+            <text class="meta-value">{{recipe.prepTime}}min</text>
+          </view>
+          <view class="meta-compact">
+            <text class="meta-icon">🍳</text>
+            <text class="meta-value">{{recipe.cookTime}}min</text>
+          </view>
+          <view class="meta-compact">
+            <text class="meta-icon">📊</text>
+            <text class="meta-value">{{recipe.difficulty}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    
+    <!-- Action buttons positioned at bottom left -->
+    <view class="action-buttons-bottom-left">
+      <button class="action-btn-small favorite-btn {{isFavorited ? 'active' : ''}}" bindtap="addToFavorites">
+        <text>{{isFavorited ? '❤️' : '🤍'}}</text>
+      </button>
+      <button class="action-btn-small share-btn">
+        <text>📤</text>
+      </button>
+    </view>
   </view>
-  
-  <view class="recipe-info">
-    <view class="info-item">
-      <text class="icon-time icon-sm icon-primary"></text>
-      <text class="info-label">Prep Time:</text>
-      <text class="info-value">{{recipe.prepTime}} min</text>
-    </view>
-    <view class="info-item">
-      <text class="icon-cooking icon-sm icon-secondary"></text>
-      <text class="info-label">Cook Time:</text>
-      <text class="info-value">{{recipe.cookTime}} min</text>
-    </view>
-    <view class="info-item">
-      <text class="icon-difficulty icon-sm icon-accent"></text>
-      <text class="info-label">Difficulty:</text>
-      <text class="info-value">{{recipe.difficulty}}</text>
-    </view>
-  </view>
-  
-  <view class="ingredients-section">
+
+  <!-- Nutrition & Ingredients Card -->
+  <view class="card glass nutrition-ingredients-card">
     <view class="section-header">
-      <text class="icon-ingredient icon-md icon-primary"></text>
-      <view class="section-title">Ingredients</view>
+      <view class="h2">🥗 Nutrition & Ingredients</view>
     </view>
-    <ingredient-list ingredients="{{recipe.ingredients}}"></ingredient-list>
+    
+    <!-- Nutrition Info -->
+    <view class="nutrition-inline" wx:if="{{recipe.nutrition}}">
+      <view class="nutrition-compact" wx:for="{{recipe.nutrition}}" wx:key="name">
+        <text class="nutrition-icon">{{item.icon}}</text>
+        <text class="nutrition-value">{{item.value}}{{item.unit}}</text>
+      </view>
+    </view>
+    
+    <!-- Ingredients Grid -->
+    <view class="ingredients-compact">
+      <view class="ing-compact" wx:for="{{recipe.ingredients}}" wx:key="name">
+        <text class="ing-icon">🥘</text>
+        <text class="ing-name">{{item.name}}</text>
+        <text class="ing-amount">{{item.amount}}</text>
+      </view>
+    </view>
   </view>
-  
-  <view class="steps-section">
+
+  <!-- Cooking Steps & Tips Card -->
+  <view class="card glass steps-tips-card">
     <view class="section-header">
-      <text class="icon-steps icon-md icon-primary"></text>
-      <view class="section-title">Steps</view>
+      <view class="h2">👨‍🍳 Cooking Steps</view>
     </view>
-    <block wx:for="{{recipe.steps}}" wx:key="index">
-      <step-card step="{{item}}"></step-card>
-    </block>
-  </view>
-  
-  <view class="cautions-section" wx:if="{{recipe.cautions_cn}}">
-    <view class="section-header">
-      <text class="icon-warning icon-md icon-warning"></text>
-      <view class="section-title">Important Notes</view>
+    
+    <view class="steps-compact">
+      <view class="step-compact" wx:for="{{recipe.steps}}" wx:key="index">
+        <view class="step-number-compact">{{index + 1}}</view>
+        <view class="step-content-compact">
+          <view class="step-text-compact">{{item}}</view>
+        </view>
+      </view>
     </view>
-    <view class="caution-content">
-      <text class="caution-text">{{recipe.cautions_cn}}</text>
+    
+    <!-- Tips Section -->
+    <view class="tips-compact" wx:if="{{recipe.cautions_en}}">
+      <view class="tips-header">💡 Important Tips</view>
+      <view class="tip-compact">
+        <text class="tip-icon">⚠️</text>
+        <text class="tip-text">{{recipe.cautions_en}}</text>
+      </view>
     </view>
   </view>
-  
-  <view class="actions-section">
-    <buy-button text="Buy Ingredients" type="primary" url="/pages/BuyPage/BuyPage"></buy-button>
-    <button class="custom-button secondary-button icon-btn" bindtap="addToFavorites">
-      <text class="icon-heart icon-sm"></text>
-      <text>{{isFavorited ? 'Favorited' : 'Favorite'}}</text>
-    </button>
-  </view>
+
+  <!-- Fixed Bottom Action Button -->
+  <buy-button class="btn-primary" text="🛒 Buy All Ingredients" type="primary" url="/pages/BuyPage/BuyPage"></buy-button>
 </view>

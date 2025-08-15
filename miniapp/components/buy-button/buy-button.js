@@ -20,12 +20,12 @@ Component({
     onBuyTap() {
       if (this.data.url) {
         // Navigate to purchase link
-        wx.navigateTo({
+        tt.navigateTo({
           url: this.data.url
         });
       } else {
         // 显示提示信息
-        wx.showToast({
+        tt.showToast({
           title: 'Redirecting to purchase page',
           icon: 'none'
         });

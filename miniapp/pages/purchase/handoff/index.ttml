@@ -1,15 +1,65 @@
 
-<view class="page">
-  <view class="glass" style="padding:18px;">
-    <text class="h2">Shopping Cart Ready</text>
-    <text style="display:block;margin-top:8px;">Product: {{sku}}</text>
-    <text style="display:block;margin-top:4px;">Recommended Platform: {{platformName}}</text>
+<view class="page bg-pop">
+  <!-- Page Header -->
+  <view class="header">
+    <text class="icon-rocket icon-3d"></text>
+    <text class="title">Purchase Guide</text>
+    <text class="subtitle">Select your preferred shopping platform</text>
   </view>
-  <view style="margin-top:16px;display:flex;gap:12px;">
-    <view class="btn-primary" style="flex:1;" bindtap="open" data-platform="{{platform}}">Open {{platformName}}</view>
-    <view class="btn-secondary" style="flex:1;" bindtap="copyFallback">Copy List</view>
+
+  <!-- Shopping Cart Info -->
+  <view class="card-pop info-card">
+    <view class="info-icon">
+      <text class="icon-cart"></text>
+    </view>
+    <view class="info-content">
+      <text class="info-title">Your shopping cart is ready</text>
+      <text class="info-desc">We've prepared all the ingredients for your pet's recipe</text>
+    </view>
   </view>
-  <view class="glass" style="padding:12px;margin-top:16px;">
-    <text class="caption">If current city is not supported, self-prepared list will be shown</text>
+
+  <!-- Ingredients List -->
+  <view tt:if="{{ingredients.length > 0}}" class="card-pop ingredients-card">
+    <text class="section-title">Ingredients to Purchase</text>
+    <view class="ingredients-list">
+      <view class="ingredient-item" tt:for="{{ingredients}}" tt:key="name">
+        <view class="ingredient-info">
+          <text class="ingredient-name">{{item.name}}</text>
+          <text class="ingredient-amount">{{item.amount}}g</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- Product Information Card -->
+  <view class="card-pop product-card">
+    <image class="product-image" src="{{product.image}}" mode="aspectFit"></image>
+    <view class="product-info">
+      <text class="product-name">{{product.name}}</text>
+      <text class="product-price">¥{{product.price}}</text>
+      <text class="product-desc">{{product.description}}</text>
+    </view>
+  </view>
+
+  <!-- Platform Selection -->
+  <view class="card-pop platform-list">
+    <text class="section-title">Choose a delivery platform</text>
+    <view class="platform-item" tt:for="{{platforms}}" tt:key="id" bindtap="open" data-platform="{{item.id}}">
+      <view class="platform-icon-wrapper" style="background-color: {{item.bgColor}};">
+        <image class="platform-icon" src="{{item.icon}}" mode="aspectFit"></image>
+      </view>
+      <view class="platform-details">
+        <text class="platform-name">{{item.name}}</text>
+        <text class="platform-desc">{{item.description}}</text>
+      </view>
+      <view class="arrow-right"></view>
+    </view>
+  </view>
+  
+  <!-- Fallback Notice -->
+  <view class="card-pop notice-card">
+    <text class="notice-title">Can't find what you need?</text>
+    <text class="notice-text">If your city is not supported, we'll provide a shopping list you can copy and use on any platform.</text>
+    <view class="btn-secondary copy-btn" bindtap="copyFallback">Copy Shopping List</view>
   </view>
 </view>

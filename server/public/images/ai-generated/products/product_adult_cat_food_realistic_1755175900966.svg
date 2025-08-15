@@ -1,0 +1,74 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  
+    <defs>
+      <linearGradient id="bg_product_adult_cat_food" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#F6C642;stop-opacity:0.1" />
+        <stop offset="50%" style="stop-color:#FFD700;stop-opacity:0.2" />
+        <stop offset="100%" style="stop-color:#FF8C00;stop-opacity:0.1" />
+      </linearGradient>
+      <filter id="shadow_product_adult_cat_food" x="-20%" y="-20%" width="140%" height="140%">
+        <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#F6C64240"/>
+      </filter>
+      <filter id="glow_product_adult_cat_food" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+        <feMerge> 
+          <feMergeNode in="coloredBlur"/>
+          <feMergeNode in="SourceGraphic"/> 
+        </feMerge>
+      </filter>
+    </defs>
+  
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bg_product_adult_cat_food)"/>
+  
+  
+    <!-- Decorative background shapes -->
+    <circle cx="60" cy="80" r="8" fill="#FF8C00" opacity="0.3"/>
+    <circle cx="340" cy="120" r="6" fill="#FFD700" opacity="0.4"/>
+    <circle cx="40" cy="320" r="4" fill="#F6C642" opacity="0.5"/>
+    <circle cx="360" cy="280" r="5" fill="#FF8C00" opacity="0.3"/>
+    
+    <!-- Floating particles -->
+    <circle cx="100" cy="60" r="2" fill="#F6C642" opacity="0.6">
+      <animate attributeName="cy" values="60;40;60" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="300" cy="340" r="3" fill="#FFD700" opacity="0.5">
+      <animate attributeName="cy" values="340;360;340" dur="4s" repeatCount="indefinite"/>
+    </circle>
+  
+    <!-- Main content area -->
+    <rect x="40" y="80" 
+          width="320" height="240" 
+          rx="20" fill="white" opacity="0.9" 
+          filter="url(#shadow_product_adult_cat_food)"/>
+    
+    <!-- Central icon/illustration -->
+    <circle cx="200" cy="160" 
+            r="48" 
+            fill="url(#bg_product_adult_cat_food)" 
+            filter="url(#glow_product_adult_cat_food)"/>
+    
+    <!-- Category-specific elements -->
+    
+        <!-- Product package outline -->
+        <rect x="160" y="130" width="80" height="60" 
+              rx="8" fill="none" stroke="#F6C642" stroke-width="2" opacity="0.7"/>
+        <!-- Product label -->
+        <rect x="175" y="150" width="50" height="20" 
+              rx="4" fill="#FFD700" opacity="0.8"/>
+        <!-- Quality badge -->
+        <circle cx="225" cy="135" r="8" fill="#FF8C00" opacity="0.9"/>
+        <text x="225" y="138" font-size="8" text-anchor="middle" fill="white">★</text>
+    
+    <!-- Title -->
+    <text x="200" y="300" 
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
+          font-size="18" font-weight="600" 
+          text-anchor="middle" fill="#F6C642">Premium Adult Cat Food</text>
+    
+    <!-- Description -->
+    <text x="200" y="340" 
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
+          font-size="12" 
+          text-anchor="middle" fill="#666" opacity="0.8">High-quality nutrition for adult cats</text>
+</svg>

@@ -1,27 +1,88 @@
 
 <view class="page">
-  <view class="glass" style="padding:16px;">
+  <!-- 宠物档案管理 -->
+  <view class="card glass profile-section">
+    <!-- 小猫背景图 -->
+    <view class="profile-background">
+      <image class="profile-bg-image" src="/images/cat-background.jpeg" mode="aspectFill"></image>
+    </view>
     <view class="section-header">
-      <text class="icon-pet icon-md icon-primary"></text>
-      <text class="h2">宠物档案</text>
+      <view class="section-icon">
+        <image class="icon-image" src="/images/e802aa65c735bb665914e18bfa000010.jpg" mode="aspectFit"></image>
+      </view>
+      <text class="section-title">Pet Profile Management</text>
     </view>
-    <view class="profile-info" style="margin-top:10px;">
-      <text class="icon-info icon-sm icon-secondary"></text>
-      <text>{{profile.species}} · {{profile.breed}} · {{profile.age_months}}月 · {{profile.weight_kg}}kg</text>
+    <view class="profile-info">
+      <view class="profile-avatar-large">
+        <image class="avatar-large" src="{{profile.avatar || '/images/e802aa65c735bb665914e18bfa000010.jpg'}}" mode="aspectFit"></image>
+      </view>
+      <view class="profile-details">
+        <text class="profile-name">{{profile.name || 'My Pet'}}</text>
+        <text class="profile-meta">{{profile.species || 'Cat'}} · {{profile.breed || 'British Shorthair'}} · {{profile.age_months || 12}} months old</text>
+        <text class="profile-weight">Weight: {{profile.weight_kg || 4.5}}kg</text>
+      </view>
     </view>
-    <view class="btn-secondary icon-btn" style="margin-top:12px;width:160px;text-align:center;" bindtap="edit">
-      <text class="icon-edit icon-sm"></text>
-      <text>编辑档案</text>
+    <button class="btn-edit" bindtap="editProfile">
+      <image class="edit-icon" src="/images/icons/edit.svg" mode="aspectFit"></image>
+      <text>Edit Profile</text>
+    </button>
+  </view>
+
+  <!-- 收藏列表 -->
+  <view class="card glass favorites-section">
+    <view class="section-header">
+      <view class="section-icon heart-icon">
+        <image class="icon-heart" src="/images/icons/heart.svg" mode="aspectFit"></image>
+      </view>
+      <text class="section-title">Favorites</text>
+      <text class="item-count">({{favorites.length}})</text>
+    </view>
+    <!-- 收藏菜谱配图 -->
+    <view class="favorites-banner">
+      <image class="favorites-bg-image" src="/images/favorites-recipes.jpeg" mode="aspectFill"></image>
+    </view>
+    <view class="favorites-list">
+      <view tt:for="{{favorites}}" tt:key="id" class="favorite-item" bindtap="viewFavorite" data-id="{{item.id}}">
+        <image class="favorite-image" src="{{item.image}}" mode="aspectFill"></image>
+        <view class="favorite-content">
+          <text class="favorite-name">{{item.name}}</text>
+          <text class="favorite-type">{{item.type === 'recipe' ? 'Recipe' : 'Product'}}</text>
+        </view>
+        <view class="favorite-arrow">
+          <text class="icon-chevron-right">›</text>
+        </view>
+      </view>
+      <view tt:if="{{favorites.length === 0}}" class="empty-state">
+        <text class="empty-text">No favorites yet</text>
+      </view>
     </view>
   </view>
-  <view class="glass" style="padding:16px;margin-top:16px;">
+
+  <!-- 历史记录 -->
+  <view class="card glass history-section">
     <view class="section-header">
-      <text class="icon-heart icon-md icon-primary"></text>
-      <text class="h2">My Favorites</text>
+      <view class="section-icon history-icon">
+        <image class="icon-history" src="/images/icons/time.svg" mode="aspectFit"></image>
+      </view>
+      <text class="section-title">AI Customization History</text>
+      <text class="item-count">({{aiHistory.length}})</text>
     </view>
-    <view tt:for="{{favorites}}" tt:key="id" class="favorite-item" style="margin-top:10px;">
-      <text class="icon-star icon-xs icon-accent"></text>
-      <text>{{item}}</text>
+    <view class="history-list">
+      <view tt:for="{{aiHistory}}" tt:key="id" class="history-item" bindtap="viewHistory" data-id="{{item.id}}">
+        <view class="history-date">
+          <text class="date-text">{{item.date}}</text>
+        </view>
+        <view class="history-content">
+          <text class="history-recipe">{{item.recipeName}}</text>
+          <text class="history-pet">Customized for {{item.petName}}</text>
+        </view>
+        <view class="history-arrow">
+          <text class="icon-chevron-right">›</text>
+        </view>
+      </view>
+      <view tt:if="{{aiHistory.length === 0}}" class="empty-state">
+        <text class="empty-text">No customization history</text>
+      </view>
     </view>
   </view>
 </view>

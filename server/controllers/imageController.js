@@ -94,27 +94,27 @@ class ImageController {
       { name: '希尔斯狗粮', sku: 'HILLS_DOG_001', category: 'pet-food', species: 'dog' }
     ];
 
-    // 食材
+    // Ingredients
     const ingredients = [
-      { name: '鸡胸肉', category: 'ingredient', type: 'meat' },
-      { name: '南瓜', category: 'ingredient', type: 'vegetable' },
-      { name: '三文鱼', category: 'ingredient', type: 'fish' },
-      { name: '藜麦', category: 'ingredient', type: 'grain' },
-      { name: '胡萝卜', category: 'ingredient', type: 'vegetable' },
-      { name: '红薯', category: 'ingredient', type: 'vegetable' },
-      { name: '大米', category: 'ingredient', type: 'grain' },
-      { name: '土豆', category: 'ingredient', type: 'vegetable' },
-      { name: '鳕鱼', category: 'ingredient', type: 'fish' },
-      { name: '西兰花', category: 'ingredient', type: 'vegetable' },
-      { name: '西葫芦', category: 'ingredient', type: 'vegetable' }
+      { name: 'Chicken Breast', category: 'ingredient', type: 'meat' },
+      { name: 'Pumpkin', category: 'ingredient', type: 'vegetable' },
+      { name: 'Salmon', category: 'ingredient', type: 'fish' },
+      { name: 'Quinoa', category: 'ingredient', type: 'grain' },
+      { name: 'Carrot', category: 'ingredient', type: 'vegetable' },
+      { name: 'Sweet Potato', category: 'ingredient', type: 'vegetable' },
+      { name: 'Rice', category: 'ingredient', type: 'grain' },
+      { name: 'Potato', category: 'ingredient', type: 'vegetable' },
+      { name: 'Cod Fish', category: 'ingredient', type: 'fish' },
+      { name: 'Broccoli', category: 'ingredient', type: 'vegetable' },
+      { name: 'Zucchini', category: 'ingredient', type: 'vegetable' }
     ];
 
-    // 营养品
+    // Nutritional supplements
     const nutritions = [
-      { name: '猫用营养粉', category: 'nutrition', species: 'cat' },
-      { name: '狗用营养粉', category: 'nutrition', species: 'dog' },
-      { name: '宠物维生素', category: 'nutrition', species: 'both' },
-      { name: '钙片补充剂', category: 'nutrition', species: 'both' }
+      { name: 'Cat Nutrition Powder', category: 'nutrition', species: 'cat' },
+      { name: 'Dog Nutrition Powder', category: 'nutrition', species: 'dog' },
+      { name: 'Pet Vitamins', category: 'nutrition', species: 'both' },
+      { name: 'Calcium Supplement', category: 'nutrition', species: 'both' }
     ];
 
     return [...petFoods, ...ingredients, ...nutritions];

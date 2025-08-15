@@ -1,21 +1,38 @@
 
 <view class="page">
-  <view class="glass" style="padding:16px;">
-    <image class="recipe-hero-image" src="{{recipe.imageUrl}}" mode="aspectFill" tt:if="{{recipe.imageUrl}}" style="width:100%;height:200px;border-radius:12px;margin-bottom:16px;"/>
-    <text class="h1">{{recipe.title_en}}</text>
-    <view style="margin-top:12px;"><text class="caption">Cautions: {{recipe.cautions_en}}</text></view>
+  <!-- Recipe Cover Image -->
+  <image class="cover-image" src="{{recipe.image}}" mode="aspectFill"></image>
+
+  <!-- Recipe Title -->
+  <view class="title-wrapper">
+    <text class="section-title">{{recipe.name}}</text>
   </view>
-  <view class="glass" style="margin-top:16px; padding:16px;">
-    <text class="h2">Ingredients</text>
-    <view tt:for="{{recipe.ingredients}}" tt:key="name" style="display:flex;justify-content:space-between;margin-top:10px;">
-      <text>{{item.name}}</text><text>{{item.grams}}g</text>
+
+  <!-- Ingredients Card -->
+  <view class="card">
+    <text class="card-title">Ingredients List</text>
+    <view class="ingredient-list">
+      <view class="ingredient-item" tt:for="{{recipe.ingredients}}" tt:key="name">
+        <text class="ingredient-name">{{item.name}}</text>
+        <text class="ingredient-amount">{{item.amount}}</text>
+      </view>
     </view>
   </view>
-  <view class="glass" style="margin-top:16px; padding:16px;">
-    <text class="h2">Steps</text><text style="display:block;margin-top:10px;">{{recipe.steps_en}}</text>
+
+  <!-- Steps Card -->
+  <view class="card">
+    <text class="card-title">Cooking Steps</text>
+    <view class="step-list">
+      <view class="step-item" tt:for="{{recipe.steps}}" tt:key="*this" tt:for-index="idx">
+        <view class="step-number">{{idx + 1}}</view>
+        <text class="step-text">{{item}}</text>
+      </view>
+    </view>
   </view>
-  <view style="position:fixed;left:20px;right:20px;bottom:20px;display:flex;gap:12px;">
-    <view class="btn-secondary" bindtap="goBuy">Buy All</view>
-    <view class="btn-primary" style="flex:1;" bindtap="goAI">AI Customize</view>
+
+  <!-- Bottom Action Buttons -->
+  <view class="bottom-actions">
+    <button class="btn-jelly secondary">Share Recipe</button>
+    <button class="btn-jelly">Buy Ingredients</button>
   </view>
 </view>

@@ -1,0 +1,10 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100%" height="100%" fill="#3de29520"/>
+      <rect x="50" y="50" width="300" height="200" rx="20" fill="#3de29540"/>
+      <circle cx="200" cy="120" r="30" fill="#3de295"/>
+      <rect x="80" y="180" width="240" height="20" rx="10" fill="#3de29560"/>
+      <rect x="120" y="220" width="160" height="15" rx="7" fill="#3de29540"/>
+      <text x="200" y="320" text-anchor="middle" font-family="Arial" font-size="14" fill="#3de295">
+        鱼眼镜头，一只猫咪的头部，画面呈现出猫咪...
+      </text>
+    </svg>

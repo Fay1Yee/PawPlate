@@ -1,0 +1,111 @@
+<view class="page">
+  <!-- Compact Recipe Header -->
+  <view class="card glass recipe-header-card">
+    <view class="recipe-header-row">
+      <view class="recipe-image-container">
+        <image class="recipe-image" src="{{recipe.image || '/images/recipes/placeholder.svg'}}" mode="aspectFill"></image>
+      </view>
+      
+      <view class="recipe-info-compact">
+        <text class="h2 recipe-title">{{recipe.name || 'Delicious Pet Recipe'}}</text>
+        <text class="recipe-description">{{recipe.description || 'A nutritious and tasty meal for your beloved pet'}}</text>
+        
+        <view class="meta-row">
+          <view class="meta-compact">
+            <text class="meta-icon">⏱</text>
+            <text class="meta-value">{{recipe.cookingTime || '30min'}}</text>
+          </view>
+          <view class="meta-compact">
+            <text class="meta-icon">★</text>
+            <text class="meta-value">{{recipe.difficulty || 'Easy'}}</text>
+          </view>
+          <view class="meta-compact">
+            <text class="meta-icon">👤</text>
+            <picker class="servings-picker" mode="selector" range="{{[1,2,3,4,5]}}" value="{{servings-1}}" bindchange="onServingsChange">
+              <text class="meta-value">{{servings}} servings</text>
+            </picker>
+          </view>
+        </view>
+        
+        <view class="action-buttons-compact">
+          <button class="action-btn-small favorite-btn {{isFavorite ? 'active' : ''}}" bindtap="onToggleFavorite">♡</button>
+          <button class="action-btn-small share-btn" open-type="share">⤴</button>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- Compact Nutrition & Ingredients -->
+  <view class="card glass nutrition-ingredients-card">
+    <view class="section-header">
+      <text class="h2">Nutrition & Ingredients</text>
+    </view>
+    
+    <!-- Inline Nutrition Facts -->
+    <view class="nutrition-inline">
+      <view class="nutrition-compact">
+        <text class="nutrition-icon">🍖</text>
+        <text class="nutrition-value">{{recipe.nutrition.protein || '25g'}} protein</text>
+      </view>
+      <view class="nutrition-compact">
+        <text class="nutrition-icon">🥗</text>
+        <text class="nutrition-value">{{recipe.nutrition.fat || '12g'}} fat</text>
+      </view>
+      <view class="nutrition-compact">
+        <text class="nutrition-icon">🌾</text>
+        <text class="nutrition-value">{{recipe.nutrition.fiber || '8g'}} fiber</text>
+      </view>
+      <view class="nutrition-compact">
+        <text class="nutrition-icon">💧</text>
+        <text class="nutrition-value">{{recipe.nutrition.moisture || '65%'}} moisture</text>
+      </view>
+    </view>
+    
+    <!-- Compact Ingredients List -->
+    <view class="ingredients-compact">
+      <view class="ing-compact" tt:for="{{recipe.ingredients || ['Chicken Breast', 'Sweet Potato', 'Carrots', 'Spinach']}}" tt:key="*this">
+        <text class="ing-icon">●</text>
+        <text class="ing-name">{{item}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- Compact Instructions & Tips -->
+  <view class="card glass instructions-tips-card">
+    <view class="section-header">
+      <text class="h2">Instructions & Tips</text>
+    </view>
+    
+    <!-- Compact Instructions -->
+    <view class="instructions-compact">
+      <view class="instruction-compact" tt:for="{{recipe.steps || [{title: 'Prepare Ingredients', description: 'Wash and chop all vegetables into appropriate sizes for your pet'}, {title: 'Cook Protein', description: 'Cook chicken breast thoroughly until no pink remains'}, {title: 'Steam Vegetables', description: 'Steam sweet potato and carrots until tender'}, {title: 'Mix and Serve', description: 'Combine all ingredients and let cool before serving'}]}}" tt:key="title">
+        <view class="step-number-compact">{{index + 1}}</view>
+        <view class="step-content-compact">
+          <text class="step-title-compact">{{item.title}}</text>
+          <text class="step-description-compact">{{item.description}}</text>
+        </view>
+      </view>
+    </view>
+    
+    <!-- Inline Tips -->
+    <view class="tips-inline">
+      <text class="tips-header">💡 Quick Tips:</text>
+      <view class="tips-compact">
+        <text class="tip-compact" tt:for="{{recipe.tips || ['Always ensure ingredients are pet-safe', 'Let food cool before serving', 'Store leftovers for up to 3 days']}}" tt:key="*this">• {{item}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- Action Buttons -->
+  <view class="actions-row">
+    <button class="btn-secondary" bindtap="onToggleFavorite">
+      <text class="btn-icon">♡</text>
+      <text>{{isFavorite ? 'Unfavorite' : 'Favorite'}}</text>
+    </button>
+  </view>
+  
+  <!-- Primary Action Button -->
+  <button class="btn-primary" bindtap="onStartCooking">
+    <text>Buy</text>
+  </button>
+</view>

@@ -1,4 +1,0 @@
-<!--pages/profile/index/index.wxml-->
-<view class="container">
-  <view>User Profile</view>
-</view>

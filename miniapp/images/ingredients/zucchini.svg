@@ -1,0 +1,21 @@
+<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad_zucchini" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9ACD32;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ADFF2F;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow_zucchini" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#9ACD3230"/>
+    </filter>
+  </defs>
+  
+  <!-- Background circle/shape -->
+  <rect x="8" y="8" width="48" height="48" rx="20px" 
+        fill="url(#grad_zucchini)" 
+        filter="url(#shadow_zucchini)"/>
+  <image x="20" y="20" width="24" height="24" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAEbklEQVR4nIWW229UVRTGf2vvM53pTC/IvQl4Q4xYQlvFhqAPprxh4MWQ+sL/4LuEF/8DfTVREhOjTxq0BiWmgRAwFW8JEFJMIAQFWqGd6W3O2XstH86ZaYdW3ck5mb3OnO9b61trr3XkwNCICa0l+MSzum+b19s2+IOpEWNcY1eS1osiAiI06nXMDOc8uUmQf0W3HBxDVRERarUaZhSXkAg5sJqiIXD8+DFGR0fp6anhnCsINmYws9xPjSwuLnH16lXOfXcOIX/HTJChoREThDRLOX36NOPjJ/5TjP9bExPf8N6pU3jnUTUSEUe9Ps/Y2BHGx0+wsNDAjA1lEREMwcTodmVSDahpLpIZInD06FtMTk5y9uzX9PT04syMZjNjeGS4CFnw3uNc5+W9B+colRIq0sVvczdZYokkSXCJJ0mStmwHD76aE4vg0hAxoFattvVeq7kUFaRmOBzNLOXbhz/y/s2PuLF4i4orodaqHCkS3YN3DjASM0MA711H4lZJDDXDgL+XH3Pq2ifcLj/ipe27mE7vMxwXSfAdUjrnaBW2o/2zU3Qzw8yIUVkJGWkW+Xz6eyZnb9BvFWQZ/li4y/Wl25RdCUU7ctXCSCg8bj9sRWFGVKUZIyEad+bvMDHzM5t7+qk4x3xYIqYr1MMC0gnRjryIQNaZrQBPo9IMgTRLmbh/idsssKu3n6i5rE0L9LkqSnGyNliuxdTiUVVUI5kqaQx4c1ycmeLL+u/s6N/EU11lgoL3RpckDHRtJmjscFOk4DNwOf4qu5kSFUJUPI6p2V/54N45KJfY09NPpoYTCJIxUNrCttImgsXOHBaYBjikvc/bhRohRsSEu/P3+HD6Kx7EJnuq/XigkaWUE6FpKcO15ym7rhxKVh1dK5ZbuzOFqJDFQIzK5T9/4dbsfXZSpqSRB8sLNMIKJhn9dPNa3z5SDbjcz85cFhq5tSGpGiEE0iyQpimzi48pLTapLqf8NfeI6bkZShJprNR5s2+IgfI2ghbytETP0YtKhKQdluUJDjESg2Jm7O15ml4z5h4+ZIaM2uYai5oyvGU/x3a+QaoZTty6vqUFOEgeQX6gYlFB+YHJYsqBrft4+4UxKhnsaMLOeWWsa5B3X3yHbt9dVGZeiLZGJNWYk2AkIKgq9Xq9YDY8QkkS1EWOPnuE0a2DzDXnGNi0nf27XyYplQimOEnaJZ4rkEvTqDfQqBiWd1PnPT9NTaEhkvgEKZLT5RIqpQrPbHmOw3sOMbh7EBUhRAVzqOaTLEYtJlo+oK5cuYw4h6qSqEZq1RoXLlzkzJmPOXnyJM4ntIJ2zuG9wyceJ5KDOFlX95ZPCr747FPOn/+BWq1KjIrs3bvPzIwYIllY4fXDh3hlZJhqdxXnHG4N2JPJtKI6VJVms8m1a9e5dPkKSamEE59P7BYBahjGwmKDELKiI64eEmnfQNreFy3ZObz3lLsq1HprRavInyVtCCeg0NfbXwxsK8Jeu54YRCJ4V8hXDBi1PD/Ftwb/AJPcb5CoimzhAAAAAElFTkSuQmCC"/>
+  
+  <!-- Optional category indicator -->
+  <circle cx="52" cy="16" r="6" fill="#9ACD32" opacity="0.8"/>
+  <circle cx="52" cy="16" r="4" fill="white" opacity="0.9"/>
+</svg>

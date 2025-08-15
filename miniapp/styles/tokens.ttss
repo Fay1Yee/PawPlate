@@ -5,6 +5,30 @@
   --color-text: #3A2E16;
   --color-text-secondary: #6B5B35;
   --color-bg: #FFF9EB;
+  
+  /* Lexend字体系统 */
+  --font-primary: 'Lexend', 'PingFang SC', 'HarmonyOS Sans', sans-serif;
+  --font-secondary: 'Lexend', 'PingFang SC', 'HarmonyOS Sans', sans-serif;
+  --font-body: 'Lexend', 'PingFang SC', 'HarmonyOS Sans', sans-serif;
+  
+  /* 字号规范 */
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 28px;
+  --font-size-4xl: 32px;
+  
+  /* 字重规范 */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
 }
 
 /* 文本颜色 */
@@ -30,18 +54,21 @@
 
 /* 文字层级 */
 .h1 {
-  font-size: 24px;
+  font-size: var(--font-size-2xl);
   line-height: 30px;
-  font-weight: 700;
+  font-weight: var(--font-weight-extrabold);
+  font-family: var(--font-primary);
 }
 .h2 {
-  font-size: 20px;
+  font-size: var(--font-size-xl);
   line-height: 26px;
-  font-weight: 700;
+  font-weight: var(--font-weight-extrabold);
+  font-family: var(--font-primary);
 }
 .body {
-  font-size: 16px;
+  font-size: var(--font-size-base);
   line-height: 24px;
+  font-family: var(--font-body);
 }
 
 /* 按钮 */
@@ -50,12 +77,14 @@
   color: #fff;
   border-radius: 22px;
   padding: 14px 18px;
-  font-weight: 800;
+  font-weight: var(--font-weight-extrabold);
+  font-family: var(--font-primary);
 }
 .btn-secondary {
   background: rgba(0, 0, 0, 0.06);
   color: var(--color-text);
   border-radius: 20px;
   padding: 14px 18px;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-secondary);
 }
