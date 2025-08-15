@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-gradient-鸡胸肉" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFB74D;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#FFB74D;stop-opacity:0.3" />
+    </linearGradient>
+    <linearGradient id="main-gradient-鸡胸肉" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFB74D;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#FFB74D;stop-opacity:0.6" />
+    </linearGradient>
+    <filter id="shadow-鸡胸肉" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#FFB74D" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- 背景圆形 -->
+  <circle cx="60" cy="60" r="55" fill="url(#bg-gradient-鸡胸肉)" stroke="#FFB74D" stroke-width="1" stroke-opacity="0.2"/>
+  
+  <!-- 主要装饰圆形 -->
+  <circle cx="60" cy="60" r="35" fill="url(#main-gradient-鸡胸肉)" filter="url(#shadow-鸡胸肉)"/>
+  
+  <!-- 高光效果 -->
+  <ellipse cx="50" cy="45" rx="12" ry="8" fill="white" opacity="0.3"/>
+  
+  <!-- Emoji图标 -->
+  <text x="60" y="70" font-family="Apple Color Emoji, Segoe UI Emoji, sans-serif" font-size="24" text-anchor="middle" fill="white">🐔</text>
+  
+  <!-- 食材名称 -->
+  <text x="60" y="105" font-family="PingFang SC, Helvetica Neue, sans-serif" font-size="12" font-weight="500" text-anchor="middle" fill="#FFB74D">鸡胸肉</text>
+</svg>

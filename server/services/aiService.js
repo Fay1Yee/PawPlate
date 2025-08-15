@@ -4,9 +4,9 @@ const https = require('https');
 class DoubaoAIService {
   constructor() {
     // 豆包大模型配置
-    this.apiKey = process.env.DOUBAO_API_KEY || 'your-doubao-api-key';
+    this.apiKey = process.env.DOUBAO_API_KEY || 'e779c50a-bc8c-4673-ada3-30c4e7987018';
     this.baseUrl = 'https://ark.cn-beijing.volces.com/api/v3';
-    this.modelId = 'ep-20241201234567-abcde'; // 豆包模型ID
+    this.modelId = 'doubao-seed-1-6-250615'; // 豆包模型ID
   }
 
   // 调用豆包大模型生成定制菜谱
@@ -122,7 +122,17 @@ class DoubaoAIService {
   // 解析AI响应
   parseAIResponse(response) {
     try {
+      console.log('豆包API原始响应:', JSON.stringify(response, null, 2));
+      
+      // 检查响应结构
+      if (!response || !response.choices || !Array.isArray(response.choices) || response.choices.length === 0) {
+        console.error('豆包API响应结构异常:', response);
+        throw new Error('API响应结构异常');
+      }
+      
       const content = response.choices[0].message.content;
+      console.log('豆包API返回内容:', content);
+      
       // 尝试提取JSON部分
       const jsonMatch = content.match(/\{[\s\S]*\}/);
       if (jsonMatch) {

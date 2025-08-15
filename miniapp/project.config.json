@@ -1,1 +1,18 @@
-{"setting":{"urlCheck":false,"es6":true,"postcss":true,"minified":true,"newFeature":true,"autoCompile":true,"compileHotReLoad":true,"nativeCompile":true},"appid":"tt1f81693c808e763701","projectname":"PawPlate","douyinProjectType":"native"}
+{
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true,
+    "autoCompile": true,
+    "compileHotReLoad": true,
+    "nativeCompile": true,
+    "request": {
+      "domainWhiteList": ["ark.cn-beijing.volces.com"]
+    }
+  },
+  "appid": "tt1f81693c808e763701",
+  "projectname": "PawPlate",
+  "douyinProjectType": "native"
+}

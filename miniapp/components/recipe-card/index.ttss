@@ -3,19 +3,19 @@
 .recipe-card {
   background: rgba(255, 228, 181, 0.3);
   backdrop-filter: blur(10px);
-  border-radius: 16px;
+  border-radius: var(--radius-lg);
   padding: 16px;
   margin-bottom: 12px;
   border: 1px solid rgba(255, 215, 0, 0.2);
   box-shadow: 0 4px 12px rgba(255, 215, 0, 0.1);
   overflow: hidden;
-  font-family: var(--font-cartoon-body);
+  font-family: var(--font-body);
 }
 
 .recipe-image {
   width: 100%;
   height: 200px;
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   margin-bottom: 12px;
   object-fit: cover;
 }
@@ -41,9 +41,9 @@
 }
 
 .recipe-title {
-  font-size: 18px;
-  font-weight: 400;
-  font-family: var(--font-cartoon-primary);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-normal);
+  font-family: var(--font-primary);
   color: #8B4513;
   line-height: 1.3;
   margin: 0;
@@ -51,8 +51,8 @@
 }
 
 .recipe-ingredients {
-  font-size: 14px;
-  font-family: var(--font-cartoon-body);
+  font-size: var(--font-size-sm);
+  font-family: var(--font-body);
   color: #A0522D;
   opacity: 0.8;
   line-height: 1.4;
@@ -61,10 +61,10 @@
 }
 
 .recipe-tag {
-  font-size: 12px;
-  font-family: var(--font-cartoon-secondary);
+  font-size: var(--font-size-xs);
+  font-family: var(--font-secondary);
   color: #B8860B;
-  font-weight: 400;
+  font-weight: var(--font-weight-normal);
   opacity: 0.7;
   margin: 0;
   flex: 1;

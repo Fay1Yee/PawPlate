@@ -1,11 +1,12 @@
 {
   "pages": [
-    "pages/home/index",
+    "pages/Home/index",
     "pages/recipe/index",
     "pages/ai/form/index",
     "pages/ai/result/index",
     "pages/purchase/handoff/index",
-    "pages/profile/index"
+    "pages/Profile/index",
+    "pages/RecipeDetail/RecipeDetail"
   ],
   "window": {
     "navigationStyle": "default",

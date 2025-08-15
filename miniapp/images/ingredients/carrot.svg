@@ -1,0 +1,21 @@
+<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad_carrot" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF8C00;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow_carrot" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#FF8C0030"/>
+    </filter>
+  </defs>
+  
+  <!-- Background circle/shape -->
+  <rect x="8" y="8" width="48" height="48" rx="20px" 
+        fill="url(#grad_carrot)" 
+        filter="url(#shadow_carrot)"/>
+  <image x="20" y="20" width="24" height="24" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAD1ElEQVR4nH2WS28cRRSFv1vVPQ+PM0nAdmTkBWyIgpBAwCIrWCCBxIIdf4F/x44V7FjCCgkpPIISpCROYjuZxOOZ7umue1h0T0+PLSipH9VV995T577a/vrrb3F5qP1k1s4Bu7Lrf4e1YlmnAPWWesrbT9Zfu4poS1oCmUBGtla+ASkww9YqrRFbP4W6tY1ywyRQOzNAzZ6sb12A9ZBbMMys+9bcw5WDuHsrC/hGo4CsT+9GmbEz2SHLM+wSMR0VtjFpZhRFQVGUWAA5YMIkwmUk8/mCPM8ZZBFSQinh7nhKeEpEAtECCDzVyBNy58b1KePxqGe8AZAhcIQknj09ATMODw+o63qLBjMjWGJWHPN09pCwU/Du9HOqVCE3ViEwmexQLEuQdzRlQsidxWLJk+NnHB29RTAjdRiay1PNw0f/8Nv5d5R6zdtH73Ce3mPH9nGDlBIhRmIM1HJMhnCCJNyd5bKkqqrL0dlcBrOTU/zXH/n48SM+kqjnT3g8+5ncIgFvo0ndaQWoo0hCajZxKe3kiYtFwfyXHzi4/z0HR3tk+YRXjAmHd0HeAtkWXMdAJtRl7tYWgXticX7O8Z/3Gfz+E+WqYl6uGNWR6csZXiypBoGgupertrEgCNbp01ZGuyeq1YoXZy9ZPX3AKM2Y7u0SJNLZA6rFK5TvgqcGn3rIWsyCXpj24bd+WZUly4slcfaY+tULUnJiPiCdv8YPPkG7ByhVYFeTbz0N2qK9pUpN2FarFVVRkC1OmExzYhYgXTC8dUS88xWpKnEzZOBsR8daZ+ijV8+aJKqqxlclzE/JopHlGdXrOdz+Gr92iNcVsoDLtujd1J5LmdxWiTbcREoJpRWhOEcEQj1nePtTuP0FabXAQ8TN2mq7DpTm9GuFoU9L4xx17y6RQo4GI2J5hnaPsLvfkjAcwy00JPSAyzeGkNp+0PPC4mKBuwgxMhwNieMdFne+pNSHXP/sG9JkD08rFDKEgZrzhhBJdcKTdwygdcMBYozkec7z5895dnyTW4eHvLG3z+61a8QP3mcyvYHVJfKaEMcdLJcgJTzVXCxLXE3pxluW7t37Q14nlkXByckZp6dnBK958+aU8c6Y2GaKp9Q0oq6WNO+D4YDpjZsMRmOSa9MrW1IywwghMBwO2d/fY3d3QlmWVGXJfFlu+nPrtKY2NTKD4YDRYAwxb5T3kK9HZmYQA7kZWYyMxyPM6BpPh4hNt2sMNEaaYPD//DHIMDAZxAZd6BDb1qM/DEMCT975Yt3st8Q6J3c/EtZubpq8tHWAjeQ6LA1Mm8qJmnm3x+BfEKsnymXdxQwAAAAASUVORK5CYII="/>
+  
+  <!-- Optional category indicator -->
+  <circle cx="52" cy="16" r="6" fill="#FF8C00" opacity="0.8"/>
+  <circle cx="52" cy="16" r="4" fill="white" opacity="0.9"/>
+</svg>

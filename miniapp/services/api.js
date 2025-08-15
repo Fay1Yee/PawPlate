@@ -3,7 +3,7 @@ const BASE_URL = 'http://localhost:3000/api';
 // 获取所有菜谱
 const getAllRecipes = () => {
   return new Promise((resolve, reject) => {
-    wx.request({
+    tt.request({
       url: `${BASE_URL}/recipes`,
       method: 'GET',
       success(res) {
@@ -23,7 +23,7 @@ const getAllRecipes = () => {
 // 根据ID获取特定菜谱
 const getRecipeById = (id) => {
   return new Promise((resolve, reject) => {
-    wx.request({
+    tt.request({
       url: `${BASE_URL}/recipes/${id}`,
       method: 'GET',
       success(res) {
@@ -43,7 +43,7 @@ const getRecipeById = (id) => {
 // 生成推荐食谱
 const generateRecommendations = (petProfile) => {
   return new Promise((resolve, reject) => {
-    wx.request({
+    tt.request({
       url: `${BASE_URL}/recommendations`,
       method: 'POST',
       data: petProfile,
@@ -63,7 +63,7 @@ const generateRecommendations = (petProfile) => {
 
 const customizeRecipe = (data) => {
   return new Promise((resolve, reject) => {
-    wx.request({
+    tt.request({
       url: `${BASE_URL}/ai/customize`,
       method: 'POST',
       data,
@@ -83,7 +83,7 @@ const customizeRecipe = (data) => {
 
 const purchaseLink = (ingredients) => {
   return new Promise((resolve, reject) => {
-    wx.request({
+    tt.request({
       url: `${BASE_URL}/purchase/link`,
       method: 'POST',
       data: { ingredients },

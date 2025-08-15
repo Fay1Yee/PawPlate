@@ -1,0 +1,319 @@
+/* Global pop background */
+.bg-pop {
+  background: radial-gradient(120% 120% at 10% -10%, #FFFBF0 0%, #FFF070 44%, #C8FF4D 88%);
+  background-attachment: fixed;
+}
+
+/* Page overall style */
+.page {
+  min-height: 100vh;
+  padding: 40rpx;
+  box-sizing: border-box;
+  color: #141414;
+  font-family: var(--font-body);
+}
+
+/* Header styles */
+.header {
+  text-align: center;
+  margin-bottom: 40rpx;
+}
+
+.icon-3d {
+  width: 160rpx;
+  height: 160rpx;
+  margin-bottom: 16rpx;
+  animation: float 3s ease-in-out infinite;
+}
+
+.title {
+  display: block;
+  font-size: 48rpx;
+  font-weight: 800;
+  margin-bottom: 8rpx;
+}
+
+.subtitle {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #666;
+}
+
+/* Section title */
+.section-title {
+  display: block;
+  font-size: 36rpx;
+  font-weight: 700;
+  margin-bottom: 24rpx;
+  color: #333;
+}
+
+/* Unified card style */
+.card-pop {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid #EFEFEF;
+  border-radius: 32rpx;
+  box-shadow: 0 12rpx 32rpx rgba(0,0,0,.12);
+  margin-bottom: 32rpx;
+  padding: 32rpx;
+  overflow: hidden;
+}
+
+/* Info card */
+.info-card {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #E3F9FF 0%, #C4F0FF 100%);
+  border: none;
+}
+
+.info-icon {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 24rpx;
+  flex-shrink: 0;
+}
+
+.icon-cart::before {
+  content: '';
+  font-size: 40rpx;
+}
+
+.info-content {
+  flex: 1;
+}
+
+.info-title {
+  font-size: 32rpx;
+  font-weight: 700;
+  color: #0066CC;
+  display: block;
+  margin-bottom: 8rpx;
+}
+
+.info-desc {
+  font-size: 28rpx;
+  color: #0066CC;
+}
+
+/* Ingredients card styles */
+.ingredients-card {
+  background: linear-gradient(135deg, #FFF8E1 0%, #FFECB3 100%);
+  border: 1px solid #FFD54F;
+}
+
+.ingredients-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16rpx;
+}
+
+.ingredient-item {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 16rpx;
+  padding: 20rpx 24rpx;
+  border: 1px solid rgba(255, 193, 7, 0.3);
+}
+
+.ingredient-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ingredient-name {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #333;
+}
+
+.ingredient-amount {
+  font-size: 28rpx;
+  font-weight: 700;
+  color: #FF6F00;
+  background: rgba(255, 111, 0, 0.1);
+  padding: 8rpx 16rpx;
+  border-radius: 12rpx;
+}
+
+/* Product card */
+.product-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 32rpx;
+}
+
+.product-image {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 16rpx;
+  background: #f7f7f7;
+  flex-shrink: 0;
+  object-fit: contain;
+  border: 1px solid #EFEFEF;
+}
+
+.product-info {
+  flex: 1;
+}
+
+.product-name {
+  font-size: 32rpx;
+  font-weight: 700;
+  margin-bottom: 8rpx;
+  display: block;
+}
+
+.product-price {
+  font-size: 36rpx;
+  font-weight: 800;
+  color: #FFA73A;
+  margin-bottom: 12rpx;
+  display: block;
+}
+
+.product-desc {
+  font-size: 26rpx;
+  color: #666;
+  line-height: 1.4;
+  display: block;
+}
+
+/* Platform list */
+.platform-list {
+  padding: 24rpx;
+}
+
+.platform-item {
+  display: flex;
+  align-items: center;
+  padding: 24rpx;
+  border-radius: 24rpx;
+  transition: all 0.2s ease;
+  margin-bottom: 16rpx;
+  border: 1px solid transparent;
+}
+
+.platform-item:active {
+  background-color: #f0f0f0;
+  border-color: #e0e0e0;
+  transform: translateY(2rpx);
+}
+
+.platform-icon-wrapper {
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 24rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 24rpx;
+}
+
+.platform-icon {
+  width: 88rpx;
+  height: 88rpx;
+  object-fit: cover;
+  border-radius: 24rpx;
+}
+
+.platform-details {
+  flex: 1;
+  margin-right: 16rpx;
+}
+
+.platform-name {
+  display: block;
+  font-size: 32rpx;
+  font-weight: 700;
+  margin-bottom: 6rpx;
+}
+
+.platform-desc {
+  display: block;
+  font-size: 24rpx;
+  color: #666;
+  line-height: 1.3;
+}
+
+.arrow-right {
+  width: 16rpx;
+  height: 16rpx;
+  border-top: 4rpx solid #ccc;
+  border-right: 4rpx solid #ccc;
+  transform: rotate(45deg);
+  margin-left: 8rpx;
+  flex-shrink: 0;
+}
+
+/* Notice card */
+.notice-card {
+  background: #FFFDF0;
+  border: 1px solid #FFE58F;
+}
+
+.notice-title {
+  display: block;
+  font-size: 30rpx;
+  font-weight: 700;
+  margin-bottom: 12rpx;
+  color: #D48806;
+}
+
+.notice-text {
+  display: block;
+  font-size: 26rpx;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 24rpx;
+}
+
+.copy-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16rpx 32rpx;
+  background: #FFF;
+  border: 1px solid #D9D9D9;
+  border-radius: 8rpx;
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #555;
+  transition: all 0.2s;
+}
+
+.copy-btn:active {
+  background: #F5F5F5;
+  transform: translateY(2rpx);
+}
+
+/* Button styles */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16rpx 32rpx;
+  background: #FFF;
+  border: 1px solid #D9D9D9;
+  border-radius: 8rpx;
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #555;
+  transition: all 0.2s;
+}
+
+.btn-secondary:active {
+  background: #F5F5F5;
+}
+
+/* Animations */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12rpx); }
+  100% { transform: translateY(0); }
+}

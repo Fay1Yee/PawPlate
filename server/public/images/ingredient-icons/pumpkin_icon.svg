@@ -1,0 +1,36 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- 背景渐变 -->
+    <radialGradient id="bg_pumpkin" cx="0.3" cy="0.3" r="0.8">
+      <stop offset="0%" stop-color="#FFEFD5"/>
+      <stop offset="100%" stop-color="#FF8C00"/>
+    </radialGradient>
+    
+    <!-- 主要渐变 -->
+    <radialGradient id="main_pumpkin" cx="0.4" cy="0.4" r="0.6">
+      <stop offset="0%" stop-color="#FF8C00"/>
+      <stop offset="100%" stop-color="#FF7F00"/>
+    </radialGradient>
+    
+    <!-- 阴影滤镜 -->
+    <filter id="shadow_pumpkin">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="rgba(0,0,0,0.2)"/>
+    </filter>
+  </defs>
+  
+  <!-- 背景圆形 -->
+  <circle cx="40" cy="40" r="35" fill="url(#bg_pumpkin)" filter="url(#shadow_pumpkin)"/>
+  
+  <!-- 主要装饰圆形 -->
+  <circle cx="40" cy="40" r="28" fill="url(#main_pumpkin)" opacity="0.9"/>
+  
+  <!-- 高光效果 -->
+  <circle cx="35" cy="32" r="8" fill="rgba(255,255,255,0.4)"/>
+  
+  <!-- Emoji图标 -->
+  <text x="40" y="48" text-anchor="middle" font-size="24" dominant-baseline="middle">🎃</text>
+  
+  <!-- 食材名称 -->
+  <text x="40" y="68" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" 
+        font-size="10" font-weight="600" fill="#FF7F00">南瓜</text>
+</svg>

@@ -77,18 +77,18 @@ Page({
       return;
     }
     
-    // 构建跳转参数
+    // Build navigation parameters
     const params = {
       recipeId: recipe.id,
-      recipeName: recipe.name || '营养餐'
+      recipeName: recipe.name || 'Nutritious Meal'
     };
     
-    // 如果有食材信息，也传递过去
+    // Pass ingredients information if available
     if (recipe.ingredients && recipe.ingredients.length > 0) {
       params.ingredients = encodeURIComponent(JSON.stringify(recipe.ingredients));
     }
     
-    // 构建URL参数字符串
+    // Build URL parameter string
     const paramString = Object.keys(params)
       .map(key => `${key}=${params[key]}`)
       .join('&');

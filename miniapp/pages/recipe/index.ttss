@@ -1,1 +1,142 @@
-.h1{}
+/* 页面整体样式 */
+.page {
+  padding: 24rpx;
+  padding-bottom: 200rpx; /* 为底部按钮留出空间 */
+  background: #FFFBF0;
+  color: #141414;
+}
+
+.cover-image {
+  width: 100%;
+  height: 420rpx;
+  border-radius: 32rpx;
+  margin-bottom: 32rpx;
+}
+
+.title-wrapper {
+  margin-bottom: 32rpx;
+}
+
+.section-title {
+  font-size: 52rpx;
+  font-weight: 800;
+  line-height: 1.3;
+  text-align: center;
+}
+
+/* 卡片样式 */
+.card {
+  background: #fff;
+  border: 2rpx solid #EFEFEF;
+  border-radius: var(--radius-xl);
+  padding: 32rpx;
+  margin-bottom: 32rpx;
+  box-shadow: 0 12rpx 32rpx rgba(0,0,0,.12);
+}
+
+.card-title {
+  display: block;
+  font-size: 36rpx;
+  font-weight: 800;
+  margin-bottom: 24rpx;
+}
+
+/* 食材列表 */
+.ingredient-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24rpx;
+}
+
+.ingredient-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 32rpx;
+}
+
+.ingredient-name {
+  font-weight: 600;
+}
+
+.ingredient-amount {
+  font-weight: 700;
+  color: #FFA73A;
+}
+
+/* 步骤列表 */
+.step-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32rpx;
+}
+
+.step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 24rpx;
+}
+
+.step-number {
+  flex-shrink: 0;
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: 50%;
+  background: #F8F34A;
+  color: #141414;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+}
+
+.step-text {
+  font-size: 30rpx;
+  line-height: 1.6;
+  font-weight: 600;
+}
+
+/* 底部操作按钮 */
+.bottom-actions {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  gap: 24rpx;
+  padding: 24rpx;
+  padding-bottom: calc(24rpx + env(safe-area-inset-bottom));
+  background: #FFFBF0;
+  border-top: 2rpx solid #EFEFEF;
+}
+
+.btn-jelly {
+  flex: 1;
+  background: linear-gradient(180deg, #FFE96B, #FFBE2E);
+  color: #141414;
+  border-radius: 999px;
+  padding: 28rpx;
+  font-weight: 800;
+  text-align: center;
+  font-size: 32rpx;
+  box-shadow: 0 8rpx 0 #E09B20, 0 16rpx 28rpx rgba(224,155,32,.25);
+  transition: transform .12s ease, box-shadow .12s ease;
+  border: none;
+}
+
+.btn-jelly:active {
+  transform: translateY(2px);
+  box-shadow: 0 6rpx 0 #E09B20, 0 10rpx 18rpx rgba(224,155,32,.22);
+}
+
+.btn-jelly.secondary {
+  background: #fff;
+  border: 2rpx solid #EFEFEF;
+  box-shadow: 0 8rpx 0 #EAEAEA, 0 16rpx 28rpx rgba(0,0,0,.08);
+}
+
+.btn-jelly.secondary:active {
+  transform: translateY(2px);
+  box-shadow: 0 6rpx 0 #EAEAEA, 0 10rpx 18rpx rgba(0,0,0,.06);
+}

@@ -1,0 +1,31 @@
+.step-card {
+  background-color: white;
+  border-radius: var(--radius-md);
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+}
+
+.step-header {
+  border-bottom: 2rpx solid #f5f5f5;
+  padding-bottom: 10rpx;
+  margin-bottom: 20rpx;
+}
+
+.step-number {
+  font-size: 30rpx;
+  font-weight: bold;
+  font-family: var(--font-primary);
+  color: #4caf50;
+}
+
+.step-description {
+  font-size: 28rpx;
+  font-family: var(--font-body);
+  margin-bottom: 20rpx;
+}
+
+.step-image {
+  width: 100%;
+  border-radius: var(--radius-md);
+}

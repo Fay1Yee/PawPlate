@@ -1,0 +1,6 @@
+/* components/EmptyState/index.ttss */
+.empty-state {
+  text-align: center;
+  padding: 20px;
+  color: #999;
+}

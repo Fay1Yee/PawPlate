@@ -1,0 +1,13 @@
+<view class="ingredient-list">
+  <view class="list-header">
+    <text class="header-title">Ingredients List</text>
+  </view>
+  <view class="ingredients">
+    <block wx:for="{{ingredients}}" wx:key="index">
+      <view class="ingredient-item">
+        <text class="ingredient-name">{{item.name}}</text>
+        <text class="ingredient-amount">{{item.amount}}</text>
+      </view>
+    </block>
+  </view>
+</view>

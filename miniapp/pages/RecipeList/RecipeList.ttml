@@ -1,0 +1,66 @@
+<!--pages/RecipeList/RecipeList.wxml-->
+<view class="container">
+  <!-- 搜索栏 -->
+  <view class="search-section">
+    <view class="search-bar">
+      <input class="search-input" placeholder="搜索食谱或食材" bindinput="onSearchInput" value="{{searchKeyword}}"></input>
+      <text class="icon-search search-icon"></text>
+    </view>
+  </view>
+
+  <!-- 筛选标签 -->
+  <view class="filter-section">
+    <text class="filter-label">难度筛选：</text>
+    <view class="filter-tags">
+      <text class="filter-tag {{selectedDifficulty === 'all' ? 'active' : ''}}" bindtap="onDifficultyChange" data-difficulty="all">全部</text>
+      <text class="filter-tag {{selectedDifficulty === '简单' ? 'active' : ''}}" bindtap="onDifficultyChange" data-difficulty="简单">简单</text>
+      <text class="filter-tag {{selectedDifficulty === '中等' ? 'active' : ''}}" bindtap="onDifficultyChange" data-difficulty="中等">中等</text>
+      <text class="filter-tag {{selectedDifficulty === '困难' ? 'active' : ''}}" bindtap="onDifficultyChange" data-difficulty="困难">困难</text>
+    </view>
+  </view>
+
+  <!-- 食谱列表 -->
+  <view class="recipe-list">
+    <view wx:for="{{filteredRecipes}}" wx:key="id" class="recipe-item" bindtap="onRecipeClick" data-id="{{item.id}}">
+      <image class="recipe-image" src="{{item.image}}" mode="aspectFill"></image>
+      <view class="recipe-info">
+        <text class="recipe-name">{{item.name}}</text>
+        <text class="recipe-description">{{item.description}}</text>
+        <view class="recipe-meta">
+          <view class="meta-item">
+            <text class="icon-clock meta-icon"></text>
+            <text class="meta-text">{{item.cookingTime}}</text>
+          </view>
+          <view class="meta-item">
+            <text class="icon-star meta-icon"></text>
+            <text class="meta-text">{{item.difficulty}}</text>
+          </view>
+        </view>
+        <view class="recipe-ingredients">
+          <text class="ingredients-label">主要食材：</text>
+          <view class="ingredients-list">
+            <view wx:for="{{item.ingredients}}" wx:key="*this" class="ingredient-item">
+              <image wx:if="{{ingredientIcons[item]}}" class="ingredient-icon" src="{{ingredientIcons[item]}}" mode="aspectFit"></image>
+              <text class="ingredient-name">{{item}}</text>
+            </view>
+          </view>
+        </view>
+        <view class="recipe-nutrition">
+          <text class="nutrition-label">营养成分：</text>
+          <view class="nutrition-list">
+            <text class="nutrition-item">蛋白质 {{item.nutrition.protein}}</text>
+            <text class="nutrition-item">脂肪 {{item.nutrition.fat}}</text>
+            <text class="nutrition-item">纤维 {{item.nutrition.fiber}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 空状态 -->
+  <view wx:if="{{filteredRecipes.length === 0}}" class="empty-state">
+    <text class="icon-search empty-icon"></text>
+    <text class="empty-text">没有找到相关食谱</text>
+    <text class="empty-hint">试试调整搜索条件或筛选标签</text>
+  </view>
+</view>

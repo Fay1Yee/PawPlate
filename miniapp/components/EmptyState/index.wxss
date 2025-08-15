@@ -1,6 +1,0 @@
-/* components/EmptyState/index.wxss */
-.empty-state {
-  text-align: center;
-  padding: 20px;
-  color: #999;
-}

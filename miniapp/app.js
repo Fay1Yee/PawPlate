@@ -10,7 +10,7 @@ App({
     console.log('Pet Food Recommendation Mini App started');
     
     // Set home page to newly created Home page
-    wx.setStorageSync('homePage', 'pages/Home/Home');
+    tt.setStorageSync('homePage', 'pages/Home/index');
   },
   
   onShow() {

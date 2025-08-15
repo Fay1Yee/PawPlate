@@ -1,0 +1,4 @@
+<button class="buy-button {{type}}" bindtap="onBuyTap">
+  <text class="icon-shopping-cart buy-icon"></text>
+  <text class="buy-text">{{text}}</text>
+</button>

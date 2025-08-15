@@ -1,3 +1,0 @@
-<button class="buy-button {{type}}" bindtap="onBuyTap">
-  <text class="buy-text">{{text}}</text>
-</button>

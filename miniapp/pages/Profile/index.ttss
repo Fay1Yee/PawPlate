@@ -1,40 +1,528 @@
-/* Profile page styles - 卡通字体和图标 */
+/* Profile page styles - 卡通风格 */
 .page {
   background: radial-gradient(120% 100% at 50% 0%, #FFF9EB 0%, #FFE7A8 42%, #F6C642 100%);
   min-height: 100vh;
   padding: 20px;
   color: #3A2E16;
-  font-family: var(--font-cartoon-body);
+  font-family: var(--font-body);
+  padding-bottom: calc(20px + env(safe-area-inset-bottom));
+}
+
+/* 卡片样式 */
+.card {
+  padding: 16px;
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid #EFEFEF;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.12);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(#00000008 1px, transparent 1px);
+  background-size: 6px 6px;
+  pointer-events: none;
 }
 
 /* 节标题样式 */
 .section-header {
+  display: -webkit-flex;
   display: flex;
+  -webkit-align-items: center;
   align-items: center;
-  gap: 8px;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
-.h2 {
+.section-header > * {
+  margin-right: 8px;
+}
+
+.section-header > *:last-child {
+  margin-right: 0;
+}
+
+.section-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FFE96B, #FFBE2E);
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(255, 190, 46, 0.3);
+}
+
+.icon-image {
+  width: 20px;
+  height: 20px;
+}
+
+.heart-icon {
+  background: linear-gradient(135deg, #FF96B6, #FF4D7E);
+  box-shadow: 0 4px 8px rgba(255, 77, 126, 0.3);
+}
+
+.history-icon {
+  background: linear-gradient(135deg, #96C7FF, #4D8EFF);
+  box-shadow: 0 4px 8px rgba(77, 142, 255, 0.3);
+}
+
+.section-title {
   font-size: 18px;
-  font-weight: 400;
-  font-family: var(--font-cartoon-primary);
-  color: #3A2E16;
-  margin: 0;
+  font-weight: 600;
+  color: #2d3748;
 }
 
-/* 个人信息样式 */
+.item-count {
+  font-size: 14px;
+  color: #718096;
+  margin-left: 4px;
+}
+
+/* 宠物档案样式 */
+.profile-section {
+  margin-bottom: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 宠物资料管理背景图 */
+.profile-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.profile-bg-image {
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  object-fit: cover;
+}
+
+/* 确保内容在背景图之上 */
+.profile-section > .section-header,
+.profile-section > .profile-info,
+.profile-section > .btn-edit {
+  position: relative;
+  z-index: 1;
+}
+
 .profile-info {
+  display: -webkit-flex;
   display: flex;
+  -webkit-align-items: center;
   align-items: center;
-  gap: 8px;
-  font-family: var(--font-cartoon-body);
+  margin-bottom: 16px;
 }
 
-/* Favorite item styles */
-.favorite-item {
+.profile-info > * {
+  margin-right: 16px;
+}
+
+.profile-info > *:last-child {
+  margin-right: 0;
+}
+
+.profile-avatar-large {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FFE96B, #FFBE2E);
+  display: -webkit-flex;
   display: flex;
+  -webkit-align-items: center;
   align-items: center;
-  gap: 8px;
-  font-family: var(--font-cartoon-body);
+  -webkit-justify-content: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(255, 190, 46, 0.3);
+  overflow: hidden;
+}
+
+.avatar-large {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.profile-details {
+  -webkit-flex: 1;
+  flex: 1;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+.profile-details > * {
+  margin-bottom: 4px;
+}
+
+.profile-details > *:last-child {
+  margin-bottom: 0;
+}
+
+.profile-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.profile-meta {
+  font-size: 14px;
+  color: #4a5568;
+}
+
+.profile-weight {
+  font-size: 14px;
+  color: #718096;
+  font-weight: 500;
+}
+
+.btn-edit {
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 8px 16px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #4a5568;
+  transition: all 0.2s;
+}
+
+.btn-edit > * {
+  margin-right: 8px;
+}
+
+.btn-edit > *:last-child {
+  margin-right: 0;
+}
+
+.btn-edit {
+  box-shadow: 0 2px 4px rgba(0,0,0,.05);
+  width: 120px;
+}
+
+.edit-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.icon-heart {
+  width: 20px;
+  height: 20px;
+}
+
+.icon-history {
+  width: 20px;
+  height: 20px;
+}
+
+/* 收藏列表样式 */
+.favorites-section {
+  margin-bottom: 16px;
+}
+
+/* 收藏菜谱配图 */
+.favorites-banner {
+  height: 120px;
+  margin: 12px 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.favorites-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.favorites-list {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.favorite-item {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+
+
+.favorite-item:last-child {
+  border-bottom: none;
+}
+
+.favorite-image {
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  object-fit: cover;
+  background: transparent;
+  border: 1px solid #e2e8f0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+
+.favorite-content {
+  -webkit-flex: 1;
+  flex: 1;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.favorite-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #2d3748;
+  line-height: 1.3;
+  margin-bottom: 2px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.favorite-type {
+  font-size: 12px;
+  color: #718096;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.favorite-arrow {
+  color: #a0aec0;
+  font-size: 16px;
+}
+
+/* 历史记录样式 */
+.history-section {
+  margin-bottom: 16px;
+}
+
+.history-list {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.history-item {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+
+
+.history-item:last-child {
+  border-bottom: none;
+}
+
+.history-date {
+  width: 80px;
+  text-align: center;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+
+.date-text {
+  font-size: 12px;
+  color: #718096;
+  background: rgba(237, 242, 247, 0.8);
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.history-content {
+  -webkit-flex: 1;
+  flex: 1;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.history-recipe {
+  font-size: 15px;
+  font-weight: 600;
+  color: #2d3748;
+  line-height: 1.3;
+  margin-bottom: 2px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.history-pet {
+  font-size: 12px;
+  color: #718096;
+  font-weight: 500;
+}
+
+.history-arrow {
+  color: #a0aec0;
+  font-size: 16px;
+}
+
+/* 空状态样式 */
+.empty-state {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.empty-text {
+  font-size: 14px;
+  color: #a0aec0;
+}
+
+/* 图标样式 */
+.icon-chevron-right {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* 响应式调整 */
+/* Profile页面响应式布局 */
+@media (max-width: 480px) {
+  .page {
+    padding: 16px;
+  }
+  
+  .profile-info {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .profile-avatar-large {
+    margin-bottom: 12px;
+  }
+  
+  .btn-edit {
+    width: 100%;
+    margin-top: 12px;
+  }
+  
+  .favorite-item, .history-item {
+    padding: 12px 0;
+  }
+  
+  .favorite-image {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 375px) {
+  .page {
+    padding: 12px;
+  }
+  
+  .section-title {
+    font-size: 16px;
+  }
+  
+  .profile-name {
+    font-size: 16px;
+  }
+  
+  .profile-meta, .profile-weight {
+    font-size: 13px;
+  }
+  
+  .card {
+    padding: 12px;
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 320px) {
+  .page {
+    padding: 8px;
+  }
+  
+  .section-title {
+    font-size: 15px;
+  }
+  
+  .profile-name {
+    font-size: 15px;
+  }
+  
+  .profile-meta, .profile-weight {
+    font-size: 12px;
+  }
+  
+  .avatar-large {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .favorite-image {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .favorite-name, .history-recipe {
+    font-size: 13px;
+  }
+  
+  .favorite-type, .history-pet {
+    font-size: 11px;
+  }
+  
+  .card {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
 }
